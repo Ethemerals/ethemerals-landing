@@ -28,10 +28,7 @@ module.exports = {
         sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: theme => ({
-        'home-supply2': "url('https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fddumeg9-e1573263-bdf8-4946-99b0-bc5766d66963.jpg?alt=media&token=0e396734-7552-4e3a-9ad3-f7e0a85940d1')",
-        'home-supply': "url('https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2F8627.jpg?alt=media&token=0ff0893c-348e-41fa-bdf4-5153b32f04f3')",
-        'home-land': "url('https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fmap.jpg?alt=media&token=c1683cf4-705a-4812-a56f-77da9c62a99a')",
-        "home-elf": "url('https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2F1097490.jpg?alt=media&token=6bb1aaf5-8e12-47cf-827f-d723e9e5055b')"
+        'home-land': "url('https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Flandsales.jpg?alt=media&token=709767e5-eafe-4fc1-bf28-b77120246fe1')",
       })
     },
   },

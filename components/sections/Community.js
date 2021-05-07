@@ -1,11 +1,29 @@
+import { useEffect, useState } from 'react'
+
 const Community = () => {
+
+  const [imgTeam, setImgTeam] = useState('');
+
+  useEffect(() => {
+    getImages('community', setImgTeam);
+
+  }, [])
+
+  const getImages = async (imageName, setImg) => {
+    try {
+      const response = await fetch(`api/images/${imageName}`);
+      const json = await response.json();
+      setImg(json.url)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
   const img1 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fdiscord.png?alt=media&token=cfb3cb84-7840-4589-8b10-fc770c0403cf';
   const img2 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fdiscourse.png?alt=media&token=22959544-27b1-4cce-9804-038094aaf250';
   const img3 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Freddit.png?alt=media&token=f52a4d06-df90-4770-ada7-0564df770aae';
   const img4 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Ftwitter.png?alt=media&token=c1bc09d7-2f9d-423f-aafe-8a05dab95842';
-
-  const imgTeam = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2FNicePng_girl-sitting-png_868044.png?alt=media&token=a41049c2-893f-41c9-9526-27336dc7b42a';
 
   return (
     <section className="bg-gray-200 px-4 pb-12 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32">

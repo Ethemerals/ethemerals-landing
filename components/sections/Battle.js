@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react';
+
 const Battle = () => {
 
-  const imgBattle1 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fadventure-39ea842a422b6a06a2365ade9075bd52%401x.webp?alt=media&token=f19c742b-ac0e-4265-a357-8b62fb1c9c41';
-  const imgBattle2 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fbattle-5931a0fe652f7c54505376b293d8638d%401x.webp?alt=media&token=8aa41c6a-00e1-45ba-9a44-cbbfca926f2f';
-  const imgBattle3 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fbreeding-9e219af5186fc66e913716c8ddb2621e%401x.webp?alt=media&token=98379e18-37ee-4e6c-b44f-fdda21106e0a';
+  const [imgBattle1, setImgBattle1] = useState('');
+  const [imgBattle2, setImgBattle2] = useState('');
+  const [imgBattle3, setImgBattle3] = useState('');
+
+  useEffect(() => {
+    getImages('pvpbattle', setImgBattle1);
+    getImages('eternalbattle', setImgBattle2);
+    getImages('raidbattle', setImgBattle3);
+  }, [])
+
+  const getImages = async (imageName, setImg) => {
+    try {
+      const response = await fetch(`api/images/${imageName}`);
+      const json = await response.json();
+      setImg(json.url)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
   return (
     <section className="battleBg px-4 pb-12 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32">
@@ -18,10 +37,10 @@ const Battle = () => {
       </div>
       <div className="mt-20 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 lg:gap-x-20 lg:max-w-4xl">
 
-          <div className="visible xs:hidden flex-shrink-0">
+          <div className="visible xs:hidden sm:block sm:flex-shrink-0">
             <img src={imgBattle2} className="rounded-lg mx-auto justify-center"/>
             <p className="text-2xl font-extrabold leading-none text-white pt-4">
-              PvP
+              PvP2
             </p>
             <p className="mt-2 xs:mb-20 text-base leading-6 text-white">
               Settle those scores! Send your team of Ethemerals into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.

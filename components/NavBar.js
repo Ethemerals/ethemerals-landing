@@ -2,10 +2,12 @@ import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 
 
-const Navbar = ({ toggle, isOpen, logo }) => {
+const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 
   const [navbarOpacity, setNavbarOpacity] = useState(0);
   const [navbarOpac, setNavbarOpac] = useState(false);
+
+  const webappMainURL = "https://d1b1rc939omrh2.cloudfront.net"
 
   let headerCSS = 'top-0 left-0 right-0 z-20 fixed bg-black xs:bg-opacity-0 md:bg-opacity-0';
   let headerCSSOpac = 'top-0 left-0 right-0 z-20 fixed bg-black xs:bg-opacity-0 md:bg-opacity-100';
@@ -48,10 +50,13 @@ const Navbar = ({ toggle, isOpen, logo }) => {
             <div className="hidden md:flex items-center space-x-1">
               <a href="#ethemerals" className="px-3 text-white hover:text-gray-300">Ethemerals</a>
               <a href="#battle" className="px-3 text-white hover:text-gray-300">Battle</a>
-              <a href="#elf" className="px-3 text-white hover:text-gray-300">$ELF</a>
+              <a href="#elf" className="px-3 text-white hover:text-gray-300 flex items-center">
+                <img src={symbol} className="w-6 h-6"></img>
+                <span className="pl-1">ELF</span>
+              </a>
               <a href="#land" className="px-3 text-white hover:text-gray-300">Land</a>
               <a href="#community" className="px-3 text-white hover:text-gray-300">Community</a>
-              <a href="#" className="py-2 px-3 bg-pink-600 hover:bg-yellow-300 text-white hover:text-yellow-800 rounded transition duration-300">Play Now</a>
+              <a href={webappMainURL} className="py-2 px-3 bg-pink-600 hover:bg-yellow-300 text-white hover:text-yellow-800 rounded transition duration-300">Play Now</a>
             </div>
 
 
@@ -80,7 +85,7 @@ const Navbar = ({ toggle, isOpen, logo }) => {
           <a onClick={toggle} href="#elf" className="block py-2 px-7 text-sm text-right text-white hover:text-gray-300">$ELF Token</a>
           <a onClick={toggle} href="#land" className="block py-2 px-7 text-sm text-right text-white hover:text-gray-300">Land</a>
           <a onClick={toggle} href="#community" className="block py-2 px-7 text-sm text-right text-white hover:text-gray-300">Community</a>
-          <a onClick={toggle} href="#" className="block py-2 px-7 text-sm text-right text-white hover:text-gray-300">Play Now</a>
+          <a onClick={toggle} href={webappMainURL} className="block py-2 px-7 text-sm text-right text-white hover:text-gray-300">Play Now</a>
           <div onClick={toggle} className="fixed w-full h-screen mt-16"></div>
         </div>
       </div>

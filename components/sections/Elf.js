@@ -1,4 +1,22 @@
+import { useState, useEffect } from 'react'
 const Elf = () => {
+
+  const [imgElfsymbol, setImgElfsymbol] = useState('');
+
+  useEffect(() => {
+    getImages('elflogo', setImgElfsymbol);
+
+  }, [])
+
+  const getImages = async (imageName, setImg) => {
+    try {
+      const response = await fetch(`api/images/${imageName}`);
+      const json = await response.json();
+      setImg(json.url)
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   // const imgAllocation = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fallocation-e88513e826c94a5e88326327aed01cd6%401x.webp?alt=media&token=f1a6a7da-7399-498c-a019-ba183b3e6658';
   const imgAllocation = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fpngfind.com-token-png-4487535.png?alt=media&token=add046b2-de60-4f91-87b0-e906471370ed';
@@ -10,7 +28,10 @@ const Elf = () => {
         <div className="max-w-4xl mx-auto text-center">
             <a id="elf">
               <h2 className="text-center text-black xs:text-5xl md:text-7xl xs:pt-10 sm:pt-16 md:pt-24">
-                $ELF
+                <span className="flex text-center items-center mx-auto justify-center">
+                  <img src={imgElfsymbol} className="w-14 h-14"></img>
+                  <span>ELF</span>
+                </span>
               </h2>
             </a>
             <h3 className="xs:text-xl sm:text-2xl font-extrabold leading-9 text-indigo-900 sm:leading-10 xs:pt-4 md:pt-8">

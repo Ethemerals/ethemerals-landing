@@ -1,14 +1,29 @@
+import { useEffect, useState } from 'react';
 import Carousel from '../Carousel';
 
 const Ethemerals = () => {
 
-  const imgCard1 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2F9ac964ac3bd51968ce03b143c3d43e6b.jpg?alt=media&token=8501ce3f-b998-4228-bfae-ab4f15b900f4';
-  const imgCard2 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fc0892eaa786d9698bbb7e3eda6c04053.jpg?alt=media&token=cbe9c6df-91f1-4338-a1df-852c63e98835';
-  const imgCard3 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2F02f31bf2e2b4ae6608e1143ce7821d3e.jpg?alt=media&token=d5146231-4ba5-4f72-9b61-5625a49128b8';
+  const [imgIniSupply, setImgIniSupply] = useState('');
+  const [imgInflation, setImgInflation] = useState('');
+  const [imgTotalSupply, setImgTotalSupply] = useState('');
 
-  const imgIniSupply = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2FinitialSupply.png?alt=media&token=699843e1-76cd-4551-877d-672f18bc2adf';
-  const imgInflation = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2FinflationRate.png?alt=media&token=7e5ebf6d-2bdf-4002-9369-d303ca6381ba';
-  const imgTotalSupply = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2FtotalSupply.png?alt=media&token=c55a06bf-ae19-4a91-bfa8-36870dd48e98';
+  useEffect(() => {
+    getImages('initialsupply', setImgIniSupply);
+    getImages('inflationrate', setImgInflation);
+    getImages('totalsupply', setImgTotalSupply);
+
+  }, [])
+
+  const getImages = async (imageName, setImg) => {
+    try {
+      const response = await fetch(`api/images/${imageName}`);
+      const json = await response.json();
+      setImg(json.url)
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
   const descriptionListItem = (props) => (
     <li className="flex">
