@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import Image from 'next/image';
+
 const Battle = () => {
 	const [imgBattle1, setImgBattle1] = useState('');
 	const [imgBattle2, setImgBattle2] = useState('');
@@ -62,11 +64,15 @@ const Battle = () => {
 				<div className="flex-shrink-0">
 					<img src={imgBattle3} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-extrabold leading-none text-white pt-4">Boss Raids</p>
-					<p className="mt-2 xs:mb-20 text-base leading-6 text-white">Invaders are approacing the Kingdom! Gather your Ethemerals, Stand beside your allies and defend this scared land.</p>
+					<p className="mt-2 xs:mb-10 text-base leading-6 text-white">Invaders are approacing the Kingdom! Gather your Ethemerals, Stand beside your allies and defend this scared land.</p>
 				</div>
 			</div>
-			<div className="max-w-4xl mx-auto text-center xs:pt-10 pt-20">
-				<h3 className="xs:text-xl sm:text-2xl leading-9 text-white sm:leading-10">Play to Earn, claim rewards!</h3>
+			<div className="flex mx-auto text-center items-center justify-center shadow-inner">
+				<Image src="/icon_playtoearn.png" alt="icon" width="256" height="256" />
+			</div>
+			<div className="max-w-4xl mx-auto text-center xs:pt-0 pt-6">
+				<p className="text-2xl font-extrabold leading-none text-white">Play to Earn</p>
+
 				<p className="mt-3 text-base leading-7 sm:mt-4 text-white">
 					Ethemerals earn $ELF (Ethemeral Life Force) every time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards gets allocated to the{' '}
 					<span className="font-bold">Highest Honor fund </span>. Redeemable by the top ranking Ethemeral

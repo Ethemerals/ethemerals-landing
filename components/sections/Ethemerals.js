@@ -1,31 +1,23 @@
 import { useEffect, useState } from 'react';
 import Carousel from '../Carousel';
 
+import Image from 'next/image';
+
 const Ethemerals = () => {
-	const [imgIniSupply, setImgIniSupply] = useState('');
-	const [imgInflation, setImgInflation] = useState('');
-	const [imgTotalSupply, setImgTotalSupply] = useState('');
-
-	useEffect(() => {
-		getImages('initialsupply', setImgIniSupply);
-		getImages('inflationrate', setImgInflation);
-		getImages('totalsupply', setImgTotalSupply);
-	}, []);
-
-	const getImages = async (imageName, setImg) => {
-		try {
-			const response = await fetch(`api/images/${imageName}`);
-			const json = await response.json();
-			setImg(json.url);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
 	const descriptionListItem = (props) => (
 		<li className="flex">
-			<div className="px-2">
-				<h3 className="text-xl font-semibold">{props.title}</h3>
+			<div className="">
+				<h3 className="text-xl font-semibold">
+					<span className="flex items-center">
+						<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M9.76953 7.8079L7.31215 5.76008C6.79109 5.32586 6 5.69639 6 6.37466V9.62526C6 10.3035 6.79109 10.6741 7.31215 10.2398L9.76953 8.19201C9.88947 8.09207 9.88947 7.90785 9.76953 7.8079Z"
+								fill="#E0F8FF"
+							/>
+						</svg>
+						{props.title}
+					</span>
+				</h3>
 				<p className="text-white leading-loose">{props.body}</p>
 			</div>
 		</li>
@@ -38,12 +30,12 @@ const Ethemerals = () => {
 
 	const liItem2 = {
 		title: 'Enter the Battlefield',
-		body: <span>Owning an Ethemeral gives access to the ecosystem of Onchain games</span>,
+		body: <span>For glory and Honor! Own an Ethemeral to unlock the suite of onchain games</span>,
 	};
 
 	const liItem3 = {
 		title: 'Playable Characters',
-		body: <span>All Ethemerals are born equal, but with skillful play gain ranks and earn rewards for the player</span>,
+		body: <span>All Ethemerals are born equal, but with skill and perseverance can gain ranks and earn rewards</span>,
 	};
 
 	const liItem4 = {
@@ -110,32 +102,33 @@ const Ethemerals = () => {
 
 			<div className="xs:mx-auto xs:flex sm:flex flex-wrap justify-center items-center text-center gap-6 lg:gap-12 xs:py-3 sm:py-12 md:py-18 lg:py-30 lg:mt-20">
 				<div className="w-full xs:w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-blue-200 shadow-lg rounded-lg bg-opacity-90">
-					<div className="flex-shrink-0">
-						<img src={imgIniSupply} className="rounded mx-auto justify-center h-12 w-12" />
+					<div className="flex rounded bg-customblue mx-auto text-center items-center justify-center w-12 h-12 shadow-inner">
+						<Image src="/icon_ini_supply.png" alt="icon" width="34" height="34" />
 					</div>
-					<h3 className="text-2xl sm:text-xl text-black font-semibold xs:py-2 py-4">Initial Supply</h3>
+					<h3 className="text-2xl sm:text-xl text-gray-700 font-semibold xs:py-2 py-4">Initial Supply</h3>
 					<p className="text-gray-700 xs:py-2 py-4">
 						<span className="font-bold">60 Ethemeral Classes</span> released at launch, with a maximum of <span className="font-bold">10 editions</span> each. Classes based on CoinMarketcap rankings
 						snapshot taken on the 31 July 2021.
 					</p>
 				</div>
 				<div className="w-full xs:w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-green-200 shadow-lg rounded-lg bg-opacity-90">
-					<div className="flex-shrink-0">
-						<img src={imgInflation} className="rounded mx-auto justify-center h-12 w-12" />
+					<div className="flex rounded bg-customblue mx-auto text-center items-center justify-center w-12 h-12 shadow-inner">
+						<Image src="/icon_inflation.png" alt="icon" width="34" height="34" />
 					</div>
-					<h3 className="text-2xl sm:text-xl text-black font-semibold xs:py-2 py-4">Inflation Rate</h3>
+					<h3 className="text-2xl sm:text-xl text-gray-700 font-semibold xs:py-2 py-4">Inflation Rate</h3>
 					<p className="text-gray-700 xs:py-2 py-4">
 						When new coins enter the <span className="font-bold">top 100 CoinMarketcap rankings</span> they will be given the honor of becoming an Ethemeral. Given life by our artists, become mintable
 						and playable. On average a single mintable Ehemeral class will be released each week
 					</p>
 				</div>
 				<div className="w-full xs:w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-blue-200 shadow-lg rounded-lg bg-opacity-90">
-					<div className="flex-shrink-0">
-						<img src={imgTotalSupply} className="rounded mx-auto justify-center h-12 w-12" />
+					<div className="flex rounded bg-customblue mx-auto text-center items-center justify-center w-12 h-12 shadow-inner">
+						<Image src="/icon_totalsupply.png" alt="icon" width="34" height="34" />
 					</div>
-					<h3 className="text-2xl sm:text-xl text-black font-semibold xs:py-2 py-4">Total Supply</h3>
+					<h3 className="text-2xl sm:text-xl text-gray-700 font-semibold xs:py-2 py-4">Total Supply</h3>
 					<p className="text-gray-700 xs:py-2 py-4">
-						A Maximum 420 Ethemeral coins, with 10 editions each, for a total of 4200 ever to be mintable. At the inflation rate, the last coin will be minted in 6 years. Open a capsule now!
+						A Maximum 420 Ethemeral coins, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be mintable. At the inflation rate, the last coin will be minted in 6
+						years. <span className="font-bold">Open a capsule now!</span>
 					</p>
 				</div>
 			</div>

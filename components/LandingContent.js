@@ -9,21 +9,19 @@ import Land from './sections/Land';
 import Community from './sections/Community';
 import Footer from './sections/Footer';
 
-
 const Content = () => {
-
-  return (
-    <>
-      <Title />
-      <Ethemerals />
-      <Battle />
-      <Elf />
-      <Roadmap />
-      <Land />
-      <Community />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Title />
+			<Ethemerals />
+			<Battle />
+			<Elf />
+			<Land />
+			<Community />
+			<Roadmap />
+			<Footer />
+		</>
+	);
 };
 
 export default Content;

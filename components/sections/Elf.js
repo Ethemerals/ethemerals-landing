@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
+
 const Elf = () => {
 	const [imgElfsymbol, setImgElfsymbol] = useState('');
 
@@ -23,7 +25,7 @@ const Elf = () => {
 	const imgBg = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2F1097490.jpg?alt=media&token=6bb1aaf5-8e12-47cf-827f-d723e9e5055b';
 
 	return (
-		<section className="elfBg px-4 pb-12 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32">
+		<section className="px-4 pb-12 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 bg-gray-200">
 			<div className="max-w-4xl mx-auto text-center">
 				<a id="elf">
 					<h2 className="text-center text-black xs:text-5xl md:text-7xl xs:pt-16 sm:pt-16 md:pt-24">
@@ -37,10 +39,6 @@ const Elf = () => {
 				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
 					The Ethemeral Life Force <span className="font-bold">(ELF token)</span> flows within each Ethemeral and is integral part of the ecosystem. ELF holder will be able revive damaged Ethemerals,
 					to mint at a discount, purchase land and items, participate in community building and direction. ELF tokens do not have monetry value and are used to incentivize player participation.
-					Inspect the smart contract{' '}
-					<a href="#" className="font-bold">
-						here
-					</a>
 				</p>
 				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
 					When an Ethemeral is born they contain a certain number of ELF. More ELF can be gained by joining in battles. To promote and reward dedicated players, more ELF is distributed to the most
@@ -49,54 +47,32 @@ const Elf = () => {
 			</div>
 			<div className="text-center md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-x-8 sm:grid lg:max-w-7xl m-auto">
 				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 m-auto" fill="darkBlue" viewBox="0 0 24 24" stroke="currentColor">
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"
-						/>
-					</svg>
+					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+						<Image src="/icon_gift.png" alt="icon" width="60" height="60" />
+					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Rewards</p>
 					<p className="text-gray-400 text-sm mb-4">
 						Participate in battles and earn ELF. Climb the rankings for a chance to redeem the Highest Honor reward reserved for the top ranking Ethemeral holder.
 					</p>
 				</div>
 				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 m-auto" fill="darkBlue" viewBox="0 0 24 24" stroke="currentColor">
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-						/>
-					</svg>
+					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+						<Image src="/icon_heart.png" alt="icon" width="60" height="60" />
+					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Staking</p>
 					<p className="text-gray-400 text-sm mb-4">ELF holders and liquidity providers can lock up their tokens to earn ELF.</p>
 				</div>
 				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 m-auto" fill="darkBlue" viewBox="0 0 24 24" stroke="currentColor">
-						<path d="M12 14l9-5-9-5-9 5 9 5z" />
-						<path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-						/>
-					</svg>
+					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+						<Image src="/icon_gov.png" alt="icon" width="60" height="60" />
+					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Governance</p>
 					<p className="text-gray-400 text-sm mb-4">Bonus Ethemeral coin classes, art and design upgrades and ecosystem changes can be voted on by ELF holders.</p>
 				</div>
 				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 m-auto" fill="darkBlue" viewBox="0 0 24 24" stroke="currentColor">
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-						/>
-					</svg>
+					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+						<Image src="/icon_payment.png" alt="icon" width="60" height="60" />
+					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Payment</p>
 					<p className="text-gray-400 text-sm mb-4">ELF will be accepted as payment within the Kingdom of the Ethemerals. Future land sales and items can be purchased with ELF</p>
 				</div>
