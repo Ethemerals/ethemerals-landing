@@ -57,9 +57,6 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 										<img src={symbol} className="w-6 h-6"></img>
 										<span className="pl-1">ELF</span>
 									</a>
-									<a href="#land" className="px-3 text-white hover:text-gray-300">
-										Land
-									</a>
 									<a href="#community" className="px-3 text-white hover:text-gray-300">
 										Community
 									</a>
@@ -93,27 +90,28 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 					</div>
 					<div className={isOpen ? 'md:hidden w-full flex justify-center' : 'hidden'}>
 						<div onClick={toggle} className="fixed w-full h-screen"></div>
-						<div className="fixed top-20 w-3/4 justify-center font-bold rounded-2xl bg-customblue-dark text-center shadow-2xl bg-opacity-100 py-4 mx-auto">
-							<a onClick={toggle} href="#" className="block pt-0 pb-4 text-white hover:text-gray-300 border-b border-gray-800">
+						<div className="fixed top-20 w-3/4 justify-center font-bold rounded-2xl bg-gray-200 text-gray-500 text-center shadow-2xl bg-opacity-100 py-4 mx-auto border-4 border-gray-500">
+							<a onClick={toggle} href="#" className="block pt-0 pb-4 border-b border-gray-300">
 								Home
 							</a>
-							<a onClick={toggle} href="#ethemerals" className="block py-4 text-white hover:text-gray-300 border-b border-gray-800">
+							<a onClick={toggle} href="#ethemerals" className="block py-4 border-b border-gray-300">
 								Ethemerals
 							</a>
-							<a onClick={toggle} href="#battle" className="block py-4 text-white hover:text-gray-300 border-b border-gray-800">
+							<a onClick={toggle} href="#battle" className="block py-4 border-b border-gray-300">
 								Battle
 							</a>
-							<a onClick={toggle} href="#elf" className="block py-4 text-white hover:text-gray-300 border-b border-gray-800">
+							<a onClick={toggle} href="#elf" className="block py-4 border-b border-gray-300">
 								$ELF Token
 							</a>
-							<a onClick={toggle} href="#land" className="block py-4 text-white hover:text-gray-300 border-b border-gray-800">
+							<a onClick={toggle} href="#land" className="block py-4 border-b border-gray-300">
 								Land
 							</a>
-							<a onClick={toggle} href="#roadmap" className="block py-4 text-white hover:text-gray-300 border-b border-gray-800">
-								Roadmap
-							</a>
-							<a onClick={toggle} href="#community" className="block py-4 text-white hover:text-gray-300 border-b border-gray-800">
+
+							<a onClick={toggle} href="#community" className="block py-4 border-b border-gray-300">
 								Community
+							</a>
+							<a onClick={toggle} href="#roadmap" className="block py-4 border-b border-gray-300">
+								Roadmap
 							</a>
 							<div>
 								<a onClick={toggle} href={webappMainURL} className="block pt-4 pb-0 text-pink-600 hover:text-gray-300">

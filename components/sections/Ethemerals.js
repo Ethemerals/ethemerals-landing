@@ -25,12 +25,12 @@ const Ethemerals = () => {
 
 	const liItem1 = {
 		title: 'Crypto Sweat and Tears',
-		body: <span>When a cryptocurrency hits the top 100 marketcap rankings they are rebirthed as an Ethemeral</span>,
+		body: <span>When a cryptocurrency hits the top 100 market cap rankings they are rebirthed as an Ethemeral</span>,
 	};
 
 	const liItem2 = {
 		title: 'Enter the Battlefield',
-		body: <span>For glory and Honor! Own an Ethemeral to unlock the suite of onchain games</span>,
+		body: <span>For glory and Honor! Own an Ethemeral to unlock the suite of on chain games</span>,
 	};
 
 	const liItem3 = {
@@ -118,7 +118,7 @@ const Ethemerals = () => {
 					<h3 className="text-2xl sm:text-xl text-gray-700 font-semibold xs:py-2 py-4">Inflation Rate</h3>
 					<p className="text-gray-700 xs:py-2 py-4">
 						When new coins enter the <span className="font-bold">top 100 CoinMarketcap rankings</span> they will be given the honor of becoming an Ethemeral. Given life by our artists, become mintable
-						and playable. On average a single mintable Ehemeral class will be released each week
+						and playable. On average a single mintable Ethemeral class will be released each week
 					</p>
 				</div>
 				<div className="w-full xs:w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-blue-200 shadow-lg rounded-lg bg-opacity-90">

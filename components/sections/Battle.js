@@ -31,7 +31,7 @@ const Battle = () => {
 				</a>
 				<div className="text-center md:mb-12 lg:mb-20 xs:py-6 sm:py-12 lg:pb-0">
 					<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 leading-loose text-white xs:text-base md:text-2xl sm:font-normal">
-						Kingdom of the Ethemerals needs you! Send your Ethemerals to battle to gain ranks, earn rewards and honor. Only the skilled and degenerates will rise to greatness.
+						The Kingdom of the Ethemerals needs you! Send your Ethemerals to battle to gain ranks, earn rewards and honor. Only the skilled and degenerates will rise to greatness.
 					</p>
 				</div>
 			</div>
@@ -48,7 +48,7 @@ const Battle = () => {
 					<img src={imgBattle1} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-extrabold leading-none text-white pt-4">Eternal Battle</p>
 					<p className="mt-2 xs:mb-20 text-base leading-6 text-white">
-						Join the eternal battle between cryptocurrencys. Stake your Ethemerals Honor Points and have real price data from Oracles determine the outcome. But watch out! There are reaper Ethemerals
+						Join the eternal battle between cryptocurrencies. Stake your Ethemerals Honor Points and have real price data from Oracles determine the outcome. But watch out! There are reaper Ethemerals
 						waiting on the sidelines.
 					</p>
 				</div>
@@ -64,7 +64,7 @@ const Battle = () => {
 				<div className="flex-shrink-0">
 					<img src={imgBattle3} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-extrabold leading-none text-white pt-4">Boss Raids</p>
-					<p className="mt-2 xs:mb-10 text-base leading-6 text-white">Invaders are approacing the Kingdom! Gather your Ethemerals, Stand beside your allies and defend this scared land.</p>
+					<p className="mt-2 xs:mb-10 text-base leading-6 text-white">Invaders are approaching the Kingdom! Gather your Ethemerals, Stand beside your allies and defend this sacred land.</p>
 				</div>
 			</div>
 			<div className="flex mx-auto text-center items-center justify-center shadow-inner">

@@ -30,6 +30,18 @@ FiraSans
 }
 
 @layer components {
+	.metricsA {
+		background: #def2ff; /* fallback for old browsers */
+	}
+	.metricsB {
+		background: #fed8ff; /* fallback for old browsers */
+	}
+	.metricsC {
+		background: #d4cfec; /* fallback for old browsers */
+	}
+	.textMetric {
+		color: #004371;
+	}
 	.navBg {
 		background: #030029; /* fallback for old browsers */
 	}

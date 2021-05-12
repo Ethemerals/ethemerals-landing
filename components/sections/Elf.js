@@ -37,8 +37,9 @@ const Elf = () => {
 				</a>
 				<h3 className="xs:text-lg sm:text-2xl font-extrabold leading-9 text-indigo-900 sm:leading-10 xs:pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>
 				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
-					The Ethemeral Life Force <span className="font-bold">(ELF token)</span> flows within each Ethemeral and is integral part of the ecosystem. ELF holder will be able revive damaged Ethemerals,
-					to mint at a discount, purchase land and items, participate in community building and direction. ELF tokens do not have monetry value and are used to incentivize player participation.
+					The Ethemeral Life Force <span className="font-bold">(ELF token)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able revive damaged
+					Ethemerals, to mint at a discount, purchase land and items, participate in community building and direction. ELF tokens do not have monetary value and are used to incentivize player
+					participation.
 				</p>
 				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
 					When an Ethemeral is born they contain a certain number of ELF. More ELF can be gained by joining in battles. To promote and reward dedicated players, more ELF is distributed to the most
@@ -113,22 +114,24 @@ const Elf = () => {
 				</div>
 			</div>
 			<div className="m-auto text-center max-w-5xl">
-				<h2 className="sm:mb-8 md:text-6xl leading-9 text-gray-600 xs:text-4xl sm:leading-10 uppercase xs:p-8 sm:p-16 pt-20 xs:pt-20 sm:pt-30 md:pt-40">Metrics</h2>
+				<h2 className="sm:mb-8 md:text-6xl leading-9 text-gray-600 xs:text-4xl sm:leading-10 uppercase xs:p-8 sm:p-16 pt-20 xs:pt-40 md:pt-40">Metrics</h2>
 				<div className="text-center md:grid md:grid-cols-2">
-					<img src={imgAllocation} className="rounded-lg mx-auto justify-center w-full p-10" />
+					<div className="flex mx-auto text-center items-center justify-center">
+						<Image src="/piechart.png" alt="icon" width="400" height="400" />
+					</div>
 					<div className="text-left md:px-10 xs:px-4">
-						<div className="p-4 my-4 shadow-md bg-gray-100 text-gray-600">
-							<h3 className="font-semibold text-lg mb-1">40% Gameplay Rewards</h3>
+						<div className="metricsA p-4 my-4 shadow-md text-gray-600">
+							<h3 className="textMetric font-semibold text-lg mb-1">40% Gameplay Rewards</h3>
 							<p className="leading-tight">Majority of the ELF tokens will be locked within the core contract and can only be redeemed as rewards to active players.</p>
 						</div>
-						<div className="p-4 my-4 shadow-md bg-gray-100 text-gray-600">
-							<h3 className="font-semibold text-lg mb-1">30% - Liquidity</h3>
+						<div className="metricsB p-4 my-4 shadow-md text-gray-600">
+							<h3 className="textMetric font-semibold text-lg mb-1">30% - Liquidity</h3>
 							<p className="leading-tight">Locked for liquidity on Uniswap and other exchanges. Staking and farming bonuses</p>
 						</div>
-						<div className="p-4 my-4 shadow-md bg-gray-100 text-gray-600">
-							<h3 className="font-semibold text-lg mb-1">30% - Contributers</h3>
+						<div className="metricsC p-4 my-4 shadow-md text-gray-600">
+							<h3 className="textMetric font-semibold text-lg mb-1">30% - Community</h3>
 							<p className="leading-tight">
-								To promote community involvement, an ELF fund is reserved for bug bounties, artist, designers, community managers and community developers extending the NFT gameplay contracts and
+								To promote community involvement, an ELF fund is reserved for bug bounties, artists, designers, community managers and community developers extending the NFT gameplay contracts and
 								ecosystem.
 							</p>
 						</div>
