@@ -109,7 +109,6 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 							<a onClick={toggle} href="#landsmall" className="block py-4 border-b border-gray-300">
 								Land
 							</a>
-
 							<a onClick={toggle} href="#community" className="block py-4 border-b border-gray-300">
 								Community
 							</a>
