@@ -57,7 +57,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 										<img src={symbol} className="w-6 h-6"></img>
 										<span className="pl-1">ELF</span>
 									</a>
-									<a href="#land" className="px-3 text-white hover:text-gray-300">
+									<a href="#landbig" className="px-3 text-white hover:text-gray-300">
 										Land
 									</a>
 									<a href="#community" className="px-3 text-white hover:text-gray-300">
@@ -106,7 +106,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 							<a onClick={toggle} href="#elf" className="block py-4 border-b border-gray-300">
 								$ELF Token
 							</a>
-							<a onClick={toggle} href="#land" className="block py-4 border-b border-gray-300">
+							<a onClick={toggle} href="#landsmall" className="block py-4 border-b border-gray-300">
 								Land
 							</a>
 

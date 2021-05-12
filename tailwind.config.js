@@ -34,7 +34,7 @@ module.exports = {
 				sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
 			},
 			backgroundImage: (theme) => ({
-				'home-land': "url('https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Flandsales.jpg?alt=media&token=709767e5-eafe-4fc1-bf28-b77120246fe1')",
+				'home-land': "url('/bg_landing.png')",
 				roadmap: "url('/bg_roadmap.png')",
 			}),
 		},

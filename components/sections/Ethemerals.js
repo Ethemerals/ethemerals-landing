@@ -45,7 +45,7 @@ const Ethemerals = () => {
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless, Proceed with caution or be reaped (liquidated) by other Ethemerals</span>,
+		body: <span>Ethemerals are ruthless, Proceed with caution or be reaped by other Ethemerals</span>,
 	};
 
 	const liItem6 = {
@@ -108,7 +108,7 @@ const Ethemerals = () => {
 					<h3 className="text-2xl sm:text-xl text-gray-700 font-semibold xs:py-2 py-4">Initial Supply</h3>
 					<p className="text-gray-700 xs:py-2 py-4">
 						<span className="font-bold">60 Ethemeral Classes</span> released at launch, with a maximum of <span className="font-bold">10 editions</span> each. Classes based on CoinMarketcap rankings
-						snapshot taken on the 31 July 2021.
+						snapshot taken on 31st July 2021.
 					</p>
 				</div>
 				<div className="w-full xs:w-5/6 sm:w-1/2 md:w-1/2 lg:w-1/4 px-4 py-4 bg-green-200 shadow-lg rounded-lg bg-opacity-90">
@@ -127,7 +127,7 @@ const Ethemerals = () => {
 					</div>
 					<h3 className="text-2xl sm:text-xl text-gray-700 font-semibold xs:py-2 py-4">Total Supply</h3>
 					<p className="text-gray-700 xs:py-2 py-4">
-						A Maximum 420 Ethemeral coins, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be mintable. At the inflation rate, the last coin will be minted in 6
+						A Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be mintable. At the inflation rate, the last coin will be minted in 6
 						years. <span className="font-bold">Open a capsule now!</span>
 					</p>
 				</div>
