@@ -57,6 +57,9 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 										<img src={symbol} className="w-6 h-6"></img>
 										<span className="pl-1">ELF</span>
 									</a>
+									<a href="#land" className="px-3 text-white hover:text-gray-300">
+										Land
+									</a>
 									<a href="#community" className="px-3 text-white hover:text-gray-300">
 										Community
 									</a>

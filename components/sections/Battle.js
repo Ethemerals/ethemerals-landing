@@ -67,7 +67,7 @@ const Battle = () => {
 					<p className="mt-2 xs:mb-10 text-base leading-6 text-white">Invaders are approaching the Kingdom! Gather your Ethemerals, Stand beside your allies and defend this sacred land.</p>
 				</div>
 			</div>
-			<div className="flex mx-auto text-center items-center justify-center shadow-inner">
+			<div className="flex mx-auto text-center items-center justify-center xs:pt-20 sm:pt-0">
 				<Image src="/icon_playtoearn.png" alt="icon" width="256" height="256" />
 			</div>
 			<div className="max-w-4xl mx-auto text-center xs:pt-0 pt-6">
