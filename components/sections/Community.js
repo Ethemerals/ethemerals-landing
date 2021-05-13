@@ -7,7 +7,7 @@ const imgTeam = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.
 const Community = () => {
 	return (
 		<>
-			<section className="bg-gray-200 mx-auto px-6 lg:px-8">
+			<section className="bg-gray-200 mx-auto px-6 lg:px-8 pb-10">
 				<div className="max-w-4xl mx-auto text-center">
 					<a id="community">
 						<h2 className="text-center text-4xl md:text-7xl pt-16 md:pt-20 text-gray-700">Community</h2>
@@ -48,7 +48,7 @@ const Community = () => {
 				</div>
 
 				<div className="max-w-4xl mx-auto text-center pt-10 md:pt-20 text-black">
-					<h3 className="xs:text-xl sm:text-2xl font-extrabold leading-9 leading-10">About the Team</h3>
+					<h3 className="xs:text-xl sm:text-2xl font-extrabold leading-10">About the Team</h3>
 					<p className="mt-3 text-base leading-7 sm:mt-4">
 						Kingdom of the Ethemerals was created by a small team of Developers and Artists. We are crypto enthusiasts, grew up on anime and consume too many memes.
 						<br></br>
@@ -58,8 +58,8 @@ const Community = () => {
 					<p>To get in touch, please email ethemerals@gmail.com</p>
 				</div>
 			</section>
-			<div className="mx-auto flex w-full pt-10 bg-gray-200">
-				<img src={imgTeam} alt="icon" />
+			<div className="mx-auto justify-items-center w-full bg-gray-200">
+				<img src={imgTeam} alt="icon" width="2048" height="537" />
 			</div>
 		</>
 	);
