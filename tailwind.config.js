@@ -6,21 +6,12 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		screens: {
-			xs: '400px',
-			sm: '640px',
-			// => @media (min-width: 640px) { ... }
-
-			md: '768px',
-			// => @media (min-width: 768px) { ... }
-
-			lg: '1024px',
-			// => @media (min-width: 1024px) { ... }
-
-			xl: '1280px',
-			// => @media (min-width: 1280px) { ... }
-
-			'2xl': '1536px',
-			// => @media (min-width: 1536px) { ... }
+			xs: { max: '575px' }, // Mobile (iPhone 3 - iPhone XS Max).
+			sm: { min: '576px' }, // Mobile (matches max: iPhone 11 Pro Max landscape @ 896px).
+			md: { min: '898px' }, // Tablet (matches max: iPad Pro @ 1112px).
+			lg: { min: '1200px' }, // Desktop smallest.
+			xl: { min: '1159px' }, // Desktop wide.
+			xxl: { min: '1359px' }, // Desktop widescreen.
 		},
 		extend: {
 			colors: {

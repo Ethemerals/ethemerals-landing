@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<footer className="titleBg pb-8 xs:pt-8 md:pt-12 xl:pt-16 border-gray-600 border-t-2">
+		<footer className="titleBg pb-8 pt-8 md:pt-12 xl:pt-16 border-gray-600 border-t-2">
 			<div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 text-gray-400 ">
 				<ul className="text-lg font-light pb-8 flex flex-wrap justify-center">
 					<li className="w-1/2 md:w-1/3 lg:w-1/3">
@@ -28,7 +28,7 @@ const Footer = () => {
 						</div>
 					</li>
 				</ul>
-				<div className="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-center gap-x-9">
+				<div className="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-center space-x-6">
 					<a href="#">
 						<svg width="20" height="20" fill="currentColor" className="text-xl  hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
 							<path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"></path>

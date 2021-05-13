@@ -1,41 +1,21 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+const imgElfsymbol = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Felflogo?alt=media&token=0f925aa3-0f38-4ce2-8713-0d767f82d3dd';
+
 const Elf = () => {
-	const [imgElfsymbol, setImgElfsymbol] = useState('');
-
-	useEffect(() => {
-		getImages('elflogo', setImgElfsymbol);
-	}, []);
-
-	const getImages = async (imageName, setImg) => {
-		try {
-			const response = await fetch(`api/images/${imageName}`);
-			const json = await response.json();
-			setImg(json.url);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
-	// const imgAllocation = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fallocation-e88513e826c94a5e88326327aed01cd6%401x.webp?alt=media&token=f1a6a7da-7399-498c-a019-ba183b3e6658';
-	const imgAllocation =
-		'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2Fpngfind.com-token-png-4487535.png?alt=media&token=add046b2-de60-4f91-87b0-e906471370ed';
-
-	const imgBg = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Ffrontend%2Fhome%2F1097490.jpg?alt=media&token=6bb1aaf5-8e12-47cf-827f-d723e9e5055b';
-
 	return (
 		<section className="px-4 pb-12 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 bg-gray-200">
 			<div className="max-w-4xl mx-auto text-center">
 				<a id="elf">
-					<h2 className="text-center text-black xs:text-5xl md:text-7xl xs:pt-16 sm:pt-16 md:pt-24">
+					<h2 className="text-center text-black text-5xl md:text-7xl pt-16 sm:pt-16 md:pt-24">
 						<span className="flex text-center items-center mx-auto justify-center">
 							<img src={imgElfsymbol} className="w-14 h-14"></img>
 							<span>ELF</span>
 						</span>
 					</h2>
 				</a>
-				<h3 className="xs:text-lg sm:text-2xl font-extrabold leading-9 text-indigo-900 sm:leading-10 xs:pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>
+				<h3 className="text-lg sm:text-2xl font-extrabold leading-9 text-indigo-900 sm:leading-10 pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>
 				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
 					The Ethemeral Life Force <span className="font-bold">(ELF token)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able revive damaged
 					Ethemerals, to mint at a discount, purchase land and items, participate in community building and direction. ELF tokens do not have monetary value and are used to incentivize player
@@ -46,9 +26,9 @@ const Elf = () => {
 					skilled Ethemerals. Players are then able to redeem the locked ELF from their Ethemerals.
 				</p>
 			</div>
-			<div className="text-center md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-x-8 sm:grid lg:max-w-7xl m-auto">
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+			<div className="text-center justify-center grid md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-x-8 lg:max-w-7xl m-auto">
+				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
+					<div className="flex m-auto items-center w-16 h-16 justify-center">
 						<Image src="/icon_gift.png" alt="icon" width="60" height="60" />
 					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Rewards</p>
@@ -56,29 +36,29 @@ const Elf = () => {
 						Participate in battles and earn ELF. Climb the rankings for a chance to redeem the Highest Honor reward reserved for the top ranking Ethemeral holder.
 					</p>
 				</div>
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
+					<div className="flex m-auto items-center w-16 h-16 justify-center">
 						<Image src="/icon_heart.png" alt="icon" width="60" height="60" />
 					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Staking</p>
 					<p className="text-gray-400 text-sm mb-4">ELF holders and liquidity providers can lock up their tokens to earn ELF.</p>
 				</div>
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
+					<div className="flex m-auto items-center w-16 h-16 justify-center">
 						<Image src="/icon_gov.png" alt="icon" width="60" height="60" />
 					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Governance</p>
 					<p className="text-gray-400 text-sm mb-4">Bonus Ethemeral coin classes, art and design upgrades and ecosystem changes can be voted on by ELF holders.</p>
 				</div>
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative overflow-hidden xs:mx-auto xs:my-10 sm:my-5 m-5 md:mx-auto">
-					<div className="flex mx-auto text-center items-center justify-center w-16 h-16">
+				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
+					<div className="flex m-auto items-center w-16 h-16 justify-center">
 						<Image src="/icon_payment.png" alt="icon" width="60" height="60" />
 					</div>
 					<p className="text-gray-800 text-xl font-medium mb-2">Payment</p>
 					<p className="text-gray-400 text-sm mb-4">ELF will be accepted as payment within the Kingdom of the Ethemerals. Future land sales and items can be purchased with ELF</p>
 				</div>
 			</div>
-			<div className="justify-center mx-auto text-center mt-20">
+			<div className="justify-center mx-auto text-center mt-10 md:mt-20">
 				<div className="max-w-sm mx-auto bg-white p-4 mb-4 rounded-lg shadow-lg">
 					<svg viewBox="0 0 961 240" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -89,32 +69,19 @@ const Elf = () => {
 						/>
 					</svg>
 				</div>
-				<p className="xs:mb-8 sm:mb-16 text-pink-700">Trade $ELF on Uniswap Exchange</p>
+				<p className="mb-12 sm:mb-16 text-pink-700">Trade $ELF on Uniswap Exchange</p>
 			</div>
-			<div className="xs:hidden sm:grid sm:grid-cols-2 py-4 mx-auto text-center">
-				<a
-					href="#"
-					className="uppercase py-2 px-2 xs:mr-2 sm:mr-5 md:mr-8 lg:mr-10 ml-auto lg:w-1/2 md:text-lg shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300"
-				>
+			<div className="grid sm:grid-cols-2 text-center justify-center max-w-lg justify-items-center mx-auto gap-6">
+				<a href="#" className="uppercase py-2 px-2 mr-2 shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
 					Provide Liquidity
 				</a>
-				<a href="#" className="uppercase py-2 px-2 sm:ml-5 md:ml-8 lg:ml-10 lg:w-1/2 md:text-lg shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
+				<a href="#" className="uppercase py-2 px-2 mr-2 shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
 					Stake and Earn $ELF
 				</a>
 			</div>
-			<div className="sm:hidden xs:block mx-auto text-center">
-				<a href="#" className="uppercase p-2 px-4 shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
-					Provide Liquidity
-				</a>
-				<br></br>
-				<div className="mt-8">
-					<a href="#" className="uppercase p-2 px-4 shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
-						Stake and Earn $ELF
-					</a>
-				</div>
-			</div>
-			<div className="m-auto text-center max-w-5xl">
-				<h2 className="sm:mb-8 md:text-6xl leading-9 text-gray-600 xs:text-4xl sm:leading-10 uppercase xs:p-8 sm:p-16 pt-20 xs:pt-40 md:pt-40">Metrics</h2>
+
+			<div className="m-auto text-center max-w-5xl pb-30">
+				<h2 className="my-8 md:text-6xl text-gray-600 text-4xl leading-10 uppercase pt-20">Metrics</h2>
 				<div className="text-center md:grid md:grid-cols-2">
 					<div className="flex mx-auto text-center items-center justify-center">
 						<Image src="/piechart.png" alt="icon" width="400" height="400" />

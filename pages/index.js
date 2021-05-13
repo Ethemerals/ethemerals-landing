@@ -1,50 +1,31 @@
 import { useState, useEffect } from 'react';
 
-import { isMobile } from "react-device-detect";
+import { isMobile } from 'react-device-detect';
 import NavBar from '../components/NavBar';
 import LandingContent from '../components/LandingContent';
 
+const imgEthemavator = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fethemavator?alt=media&token=bf7c5413-970a-4705-afca-cd71a46b4ba0';
+const imgElfsymbol = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Felflogo?alt=media&token=0f925aa3-0f38-4ce2-8713-0d767f82d3dd';
 
 export default function Home() {
+	const [isOpen, setIsOpen] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
+	let bodyClassName = '';
 
-  let bodyClassName = "";
+	if (isMobile) {
+		bodyClassName = 'overflow-hidden';
+	}
 
-  if(isMobile){
-    bodyClassName = "overflow-hidden";
-  }
+	const toggle = () => {
+		setIsOpen(!isOpen);
+	};
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const [imgEthemavator, setEthemavator] = useState('');
-  const [imgElfsymbol, setImgElfsymbol] = useState('');
-
-  useEffect(() => {
-    getImages('ethemavator', setEthemavator);
-    getImages('elflogo', setImgElfsymbol);
-
-  }, [])
-
-  const getImages = async (imageName, setImg) => {
-    try {
-      const response = await fetch(`api/images/${imageName}`);
-      const json = await response.json();
-      setImg(json.url)
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  return (
-    <body className={bodyClassName}>
-      <div className="text-white bg-black">
-        <NavBar toggle={toggle} isOpen={isOpen} logo={imgEthemavator} symbol={imgElfsymbol}/>
-        <LandingContent />
-      </div>
-    </body>
-
-  )
+	return (
+		<body className={bodyClassName}>
+			<div className="text-white bg-black">
+				<NavBar toggle={toggle} isOpen={isOpen} logo={imgEthemavator} symbol={imgElfsymbol} />
+				<LandingContent />
+			</div>
+		</body>
+	);
 }

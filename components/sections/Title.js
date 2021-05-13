@@ -4,26 +4,9 @@ import { useState, useEffect } from 'react';
 // const storageRef = app.storage('gs://cbae-f9c77.appspot.com').ref();
 
 const urlMain = 'https://d1b1rc939omrh2.cloudfront.net/';
+const imgTitlebg = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Ftitlebg?alt=media&token=c7590252-c365-4f17-8f09-ec1f372bcf67';
 
 const Title = ({ data }) => {
-	const [imgTitlebg, setTitlebg] = useState('');
-	const [imgEthemavator, setEthemavator] = useState('');
-
-	useEffect(() => {
-		getImages('titlebg', setTitlebg);
-		getImages('ethemavator', setEthemavator);
-	}, []);
-
-	const getImages = async (imageName, setImg) => {
-		try {
-			const response = await fetch(`api/images/${imageName}`);
-			const json = await response.json();
-			setImg(json.url);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
 	return (
 		<div className="titleBg bg-black h-screen">
 			<img src={imgTitlebg} className="absolute h-full w-full object-cover" />
@@ -31,19 +14,19 @@ const Title = ({ data }) => {
 			{/* to bake in */}
 			<div className="inset-0 bg-black opacity-25 absolute"></div>
 
-			<div className="container mx-auto px-4 md:px-12 relative z-10 flex items-center xs:pt-12 sm:pt-20 md:pt-32 xl:py-40">
-				<div className="xl:w-4/5 lg:w-3/5 flex flex-col items-start relative z-10 pt-12 sm:pt-0">
-					<span className="flex font-bold uppercase xl:text-4xl sm:text-2xl xs:text-lg text-yellow-400">
-						<span className="px-4 hidden sm:hidden md:flex -ml-4">Kingdom of the Ethemerals</span>
+			<div className="container mx-auto px-4 md:px-8 relative z-10 flex items-center pt-4 sm:pt-20 md:pt-32 xl:py-40">
+				<div className="flex flex-col items-start relative z-10 pt-8 sm:pt-16 md:w-3/4 xl:w-4/5 lg:w-3/5">
+					<span className="font-bold uppercase text-2xl xl:text-4xl text-yellow-400">
+						<span className="hidden md:flex">Kingdom of the Ethemerals</span>
 					</span>
-					<h1 className="font-bold text-6xl xl:text-8xl sm:text-7xl text-gray-100 leading-tight mt-4 xs:mt-2 sm:mt-3">
+					<h1 className="font-medium md:font-bold text-6xl md:text-7xl xl:text-8xl text-gray-100 leading-tight mt-2 md:mt-6">
 						Join the Battle
 						<br />
 						of a lifetime
 					</h1>
 					<span className="pt-6 text-xl sm:text-2xl">Unique and Verifiably Rare NFT Collectables</span>
 					<span className="pt-2 text-sm sm:text-base">Each playable token unlocks an ecosystem of onchain games. Are you ready to take on the challenge?</span>
-					<div className="flex items-center space-x-5 py-4 lg:mb-12">
+					<div className="flex items-center space-x-5 py-4 lg:mb-8">
 						<a href="#">
 							<svg fill="white" className="text-xl w-7 h-7 hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"></path>
@@ -106,10 +89,10 @@ const Title = ({ data }) => {
 							</svg>
 						</a>
 					</div>
-					<a href={urlMain} className="block bg-pink-600 shadow-lg bg-opacity-100 hover:bg-yellow-300 py-3 px-4 rounded-lg text-lg font-bold uppercase xs:mt-6 sm:mt-10  transition duration-300">
+					<a href={urlMain} className="block bg-pink-600 shadow-lg bg-opacity-100 hover:bg-yellow-300 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16  transition duration-300">
 						Open a Capsule
 					</a>
-					<div className="block bg-indigo-900 shadow-lg bg-opacity-100 hover:bg-yellow-300 p-4 py-3 mt-6 text-sm font-bold cursor-pointer transition duration-300">
+					<div className="block bg-indigo-900 shadow-lg bg-opacity-100 hover:bg-yellow-300 p-3 py-2 mt-6 text-sm font-bold cursor-pointer transition duration-300">
 						$ELF launched! 🚀 Trade on Uniswap
 					</div>
 				</div>

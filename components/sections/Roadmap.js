@@ -116,8 +116,8 @@ const Roadmap = () => {
 	return (
 		<section className="bg-roadmap bg-center bg-cover">
 			<a id="roadmap"></a>
-			<div className="container m-auto py-48 xs:py-20 xs:pb-48">
-				<h2 className="text-center xs:text-5xl md:text-7xl p-8 text-gray-200">Roadmap</h2>
+			<div className="container m-auto md:py-48 py-20 pb-48">
+				<h2 className="text-center text-5xl md:text-7xl p-8 text-gray-200">Roadmap</h2>
 				<div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
 					{/* <!-- left --> */}
 					<div className="flex flex-row-reverse md:contents">
