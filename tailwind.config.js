@@ -14,6 +14,25 @@ module.exports = {
 			xxl: { min: '1359px' }, // Desktop widescreen.
 		},
 		extend: {
+			keyframes: {
+				wiggle: {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' },
+				},
+				mobileMenuOn: {
+					'0%': { opacity: 0 },
+					'100%': { opacity: 1 },
+				},
+				navbarOn: {
+					'0%': { backgroundColor: 'rgba(14, 21, 28, 0)' },
+					'100%': { backgroundColor: 'rgba(14, 21, 28, 1)' },
+				},
+			},
+			animation: {
+				wiggle: 'wiggle 1s ease-in-out infinite',
+				mobileMenuOn: 'mobileMenuOn 0.5s ease-in-out forwards',
+				navbarOn: 'navbarOn 0.5s ease-in-out forwards',
+			},
 			colors: {
 				customblue: {
 					light: '#372D3C',
@@ -25,7 +44,7 @@ module.exports = {
 				sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
 			},
 			backgroundImage: (theme) => ({
-				'home-land': "url('/bg_landing.png')",
+				land: "url('/bg_landsales.jpg')",
 				roadmap: "url('/bg_roadmap.png')",
 			}),
 		},

@@ -2,19 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const webappMainURL = 'https://d1b1rc939omrh2.cloudfront.net';
+
 const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 	const [navbarOpac, setNavbarOpac] = useState(false);
 
-	const webappMainURL = 'https://d1b1rc939omrh2.cloudfront.net';
-
-	let headerCSS = 'top-0 left-0 right-0 z-20 fixed bg-customblue-dark md:bg-opacity-0';
-	let headerCSSOpac = 'top-0 left-0 right-0 z-20 fixed bg-customblue-dark md:bg-opacity-100';
-
-	let headerCSSXS = 'top-0 left-0 right-0 z-20 fixed bg-customblue-dark mx-auto w-full bg-opacity-0 md:hidden';
-	let headerCSSOpacXS = 'top-0 left-0 right-0 z-20 fixed bg-customblue-dark mx-auto w-full bg-opacity-100 md:hidden';
-
 	const changeBackground = () => {
-		if (window.scrollY >= 100) {
+		if (window.scrollY >= 20) {
 			setNavbarOpac(true);
 		} else {
 			setNavbarOpac(false);
@@ -28,7 +22,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 	return (
 		// <!-- navbar goes here -->
 		<>
-			<header className={navbarOpac ? headerCSSOpac : headerCSS}>
+			<header className={`top-0 left-0 right-0 z-20 fixed bg-customblue-dark md:bg-opacity-0 ${navbarOpac ? 'animate-navbarOn' : ''}`}>
 				<div className="hidden md:flex">
 					<nav className="container mx-auto md:px-10 py-2">
 						<div className="flex justify-between">
@@ -68,7 +62,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 					</nav>
 				</div>
 			</header>
-			<header className={navbarOpac ? headerCSSOpacXS : headerCSSXS}>
+			<header className={`top-0 left-0 right-0 z-20 fixed bg-customblue-dark mx-auto w-full bg-opacity-0 md:hidden ${navbarOpac ? 'animate-navbarOn' : ''}`}>
 				<nav>
 					{/* <!-- mobile menu --> */}
 					{/* <!-- mobile button goes here --> */}
@@ -87,7 +81,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 							</svg>
 						</button>
 					</div>
-					<div className={isOpen ? 'w-full flex justify-center' : 'hidden'}>
+					<div className={isOpen ? 'w-full flex justify-center animate-mobileMenuOn' : 'hidden'}>
 						<div onClick={toggle} className="fixed w-full h-screen"></div>
 						<div className="fixed top-20 w-3/4 justify-center font-bold rounded-2xl text-gray-300 text-center shadow-2xl bg-opacity-100 py-4 mx-auto border-4 border-gray-800 bg-customblue-dark">
 							<a onClick={toggle} href="#" className="block pt-0 pb-4 border-b border-gray-800">
