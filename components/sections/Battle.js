@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import Image from 'next/image';
 
+import Links from '../../constants/Links';
+
 const imgBattle1 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fpvpbattle?alt=media&token=bc25debd-9313-4845-842b-8968434036f5';
 const imgBattle2 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Feternalbattle?alt=media&token=b3ca31de-e04b-4249-a07b-11ec8f108f4e';
 const imgBattle3 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fraidbattle?alt=media&token=17537bb7-c763-45d1-a846-26f64d0b60e9';
@@ -63,7 +65,7 @@ const Battle = () => {
 				</p>
 			</div>
 			<div className="flex justify-center py-20">
-				<a href="#" className="uppercase py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-300 ">
+				<a href={Links.Battle} className="uppercase py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-300 ">
 					Onto Battle!
 				</a>
 			</div>

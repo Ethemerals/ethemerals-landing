@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Links from '../../constants/Links';
 
 const imgTeam = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fcommunity?alt=media&token=646ab889-f210-4086-ae26-95f3bd7775d9';
 // const imgTeam = '/community.png';
@@ -18,28 +19,28 @@ const Community = () => {
 				</div>
 				<div className="text-center md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-x-8 sm:grid lg:max-w-7xl m-auto text-gray-600">
 					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
-						<a className="cursor-pointer">
+						<a href={Links.DISCORD} className="cursor-pointer">
 							<Image src="/icon_big_discord.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Discord</h3>
 						Chat live with the Ethemeral community, artist and developers
 					</div>
 					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
-						<a className="cursor-pointer">
+						<a href={Links.TWITTER} className="cursor-pointer">
 							<Image src="/icon_big_twitter.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Twitter</h3>
 						Follow @Ethemerals for the latest news and announcements
 					</div>
 					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
-						<a className="cursor-pointer">
+						<a href={Links.INSTAGRAM} className="cursor-pointer">
 							<Image src="/icon_big_instagram.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Instagram</h3>
 						Get the latest art and design updates
 					</div>
 					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
-						<a className="cursor-pointer">
+						<a href={Links.GITHUB} className="cursor-pointer">
 							<Image src="/icon_big_github.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Github</h3>

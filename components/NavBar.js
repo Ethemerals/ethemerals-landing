@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Links from '../constants/Links';
 
-const webappMainURL = 'https://d1b1rc939omrh2.cloudfront.net';
+const webappMainURL = Links.APP;
 
 const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 	const [navbarOpac, setNavbarOpac] = useState(false);

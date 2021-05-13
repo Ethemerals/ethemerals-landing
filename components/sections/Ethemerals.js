@@ -3,6 +3,8 @@ import Carousel from '../Carousel';
 
 import Image from 'next/image';
 
+import Links from '../../constants/Links';
+
 const Ethemerals = () => {
 	const descriptionListItem = (props) => (
 		<div className="p-4">
@@ -75,7 +77,7 @@ const Ethemerals = () => {
 				{descriptionListItem(liItem6)}
 			</div>
 			<div className="flex justify-center py-10 md:py-14">
-				<a href="#" className="uppercase py-4 px-6 text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-300 ">
+				<a href={Links.ETHEMERALS} className="uppercase py-4 px-6 text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-300 ">
 					All Minted Ethemerals
 				</a>
 			</div>

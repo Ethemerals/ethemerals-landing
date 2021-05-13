@@ -1,25 +1,21 @@
-import { useState, useEffect } from 'react';
-// import fetch from "node-fetch";
-// import { app } from '../../../services/base';
-// const storageRef = app.storage('gs://cbae-f9c77.appspot.com').ref();
+import Links from '../../constants/Links';
 
 const urlMain = 'https://d1b1rc939omrh2.cloudfront.net/';
-const imgTitlebg = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Ftitlebg?alt=media&token=c7590252-c365-4f17-8f09-ec1f372bcf67';
+const imgTitlebg = '/bg_title.jpg';
 
 const Title = ({ data }) => {
 	return (
-		<div className="titleBg bg-black h-screen">
+		<div className="titleBgColor h-screen">
 			<img src={imgTitlebg} className="absolute h-full w-full object-cover" />
 
 			{/* to bake in */}
-			<div className="inset-0 bg-black opacity-25 absolute"></div>
 
-			<div className="container mx-auto px-4 md:px-8 relative z-10 flex items-center pt-4 sm:pt-20 md:pt-32 xl:py-40">
-				<div className="flex flex-col items-start relative z-10 pt-8 sm:pt-16 md:w-3/4 xl:w-4/5 lg:w-3/5">
+			<div className="homeContainer md:items-center container mx-auto px-4 md:px-8 relative z-10 flex h-full">
+				<div className="flex flex-col items-start relative z-10 md:w-3/4 xl:w-4/5 lg:w-3/5 md:-mt-20">
 					<span className="font-bold uppercase text-2xl xl:text-4xl text-yellow-400">
 						<span className="hidden md:flex">Kingdom of the Ethemerals</span>
 					</span>
-					<h1 className="font-medium md:font-bold text-6xl md:text-7xl xl:text-8xl text-gray-100 leading-tight mt-2 md:mt-6">
+					<h1 className="font-medium md:font-bold text-6xl md:text-7xl xl:text-8xl text-gray-100 leading-tight">
 						Join the Battle
 						<br />
 						of a lifetime
@@ -27,12 +23,12 @@ const Title = ({ data }) => {
 					<span className="pt-6 text-xl sm:text-2xl">Unique and Verifiably Rare NFT Collectables</span>
 					<span className="pt-2 text-sm sm:text-base">Each playable token unlocks an ecosystem of onchain games. Are you ready to take on the challenge?</span>
 					<div className="flex items-center space-x-5 py-4 lg:mb-8">
-						<a href="#">
+						<a href={Links.TWITTER}>
 							<svg fill="white" className="text-xl w-7 h-7 hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
 								<path d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"></path>
 							</svg>
 						</a>
-						<a href="#">
+						<a href={Links.DISCORD}>
 							<svg className="text-xl w-7 h-7 hover:text-white transition-colors duration-200" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 245 240">
 								<path
 									class="st0"
@@ -44,7 +40,7 @@ const Title = ({ data }) => {
 								/>
 							</svg>
 						</a>
-						<a href="#">
+						<a href={Links.MEDIUM}>
 							<svg width="28" height="22" viewBox="0 0 48 39" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M5.70454 8.41083C5.76297 7.83357 5.54283 7.263 5.11178 6.87448L0.720964 1.58505V0.794922H14.3544L24.8924 23.906L34.157 0.794922H47.1538V1.58505L43.3997 5.1845C43.076 5.4312 42.9155 5.83668 42.9826 6.23799V32.6852C42.9155 33.0865 43.076 33.492 43.3997 33.7387L47.066 37.3381V38.1283H28.6246V37.3381L32.4227 33.6509C32.7959 33.2778 32.7959 33.168 32.7959 32.5974V11.2202L22.236 38.0405H20.8089L8.51466 11.2202V29.1955C8.41216 29.9512 8.66315 30.7121 9.19524 31.2586L14.1349 37.2503V38.0405H0.128204V37.2503L5.06787 31.2586C5.59609 30.7112 5.83244 29.9453 5.70454 29.1955V8.41083Z"
@@ -52,7 +48,7 @@ const Title = ({ data }) => {
 								/>
 							</svg>
 						</a>
-						<a href="#">
+						<a href={Links.GITHUB}>
 							<svg width="23" height="23" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M24.0002 0C10.747 0 0 11.0169 0 24.6076C0 35.4799 6.87679 44.7039 16.4128 47.9577C17.6123 48.1855 18.0526 47.4239 18.0526 46.7739C18.0526 46.1872 18.0304 44.2487 18.02 42.1925C11.3431 43.6811 9.93424 39.2891 9.93424 39.2891C8.84249 36.4448 7.26945 35.6885 7.26945 35.6885C5.09192 34.1613 7.43359 34.1926 7.43359 34.1926C9.84363 34.3662 11.1126 36.7285 11.1126 36.7285C13.2532 40.4904 16.7272 39.4028 18.0967 38.7741C18.3121 37.1836 18.9341 36.0981 19.6205 35.4836C14.2897 34.8613 8.6859 32.7513 8.6859 23.3224C8.6859 20.6358 9.62345 18.4406 11.1587 16.7174C10.9095 16.0976 10.088 13.5947 11.3912 10.2052C11.3912 10.2052 13.4066 9.54387 17.993 12.7276C19.9074 12.1824 21.9606 11.9089 24.0002 11.8996C26.0398 11.9089 28.0946 12.1824 30.0126 12.7276C34.5934 9.54387 36.606 10.2052 36.606 10.2052C37.9123 13.5947 37.0905 16.0976 36.8413 16.7174C38.3801 18.4406 39.3113 20.6358 39.3113 23.3224C39.3113 32.7738 33.6968 34.8548 28.3525 35.464C29.2133 36.2276 29.9804 37.7252 29.9804 40.021C29.9804 43.3135 29.9526 45.9634 29.9526 46.7739C29.9526 47.4288 30.3846 48.1961 31.6011 47.9544C41.132 44.697 48 35.4762 48 24.6076C48 11.0169 37.2546 0 24.0002 0Z"
@@ -89,11 +85,11 @@ const Title = ({ data }) => {
 							</svg>
 						</a>
 					</div>
-					<a href={urlMain} className="block bg-pink-600 shadow-lg bg-opacity-100 hover:bg-yellow-300 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16  transition duration-300">
+					<a href={Links.APP} className="block bg-pink-600 shadow-lg bg-opacity-100 hover:bg-yellow-300 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16  transition duration-300">
 						Open a Capsule
 					</a>
 					<div className="block bg-indigo-900 shadow-lg bg-opacity-100 hover:bg-yellow-300 p-3 py-2 mt-6 text-sm font-bold cursor-pointer transition duration-300">
-						$ELF launched! 🚀 Trade on Uniswap
+						<a href={Links.UNISWAP}>$ELF launched! 🚀 Trade on Uniswap</a>
 					</div>
 				</div>
 			</div>

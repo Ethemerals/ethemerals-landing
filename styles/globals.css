@@ -30,6 +30,18 @@ FiraSans
 }
 
 @layer components {
+	.titleBgColor {
+		background: #003973; /* fallback for old browsers */
+	}
+	.homeContainer {
+		top: 10%;
+	}
+	.homeContainerMD {
+		top: 16%;
+	}
+	.homeContainerLG {
+		top: 24%;
+	}
 	.metricsA {
 		background: #def2ff; /* fallback for old browsers */
 	}
@@ -54,11 +66,6 @@ FiraSans
 	}
 	.elfBg {
 		background: #e6dada; /* fallback for old browsers */
-	}
-	.roadmapBg {
-		background: #e6dada; /* fallback for old browsers */
-		background: -webkit-linear-gradient(to bottom, #e6dada, #b2bdc2); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom, #e6dada, #b2bdc2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	}
 	.ethemeralsBg {
 		background: #003973; /* fallback for old browsers */
