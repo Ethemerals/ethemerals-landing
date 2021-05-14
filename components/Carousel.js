@@ -9,6 +9,7 @@ const imgCard2 = '/char2.png';
 const imgCard3 = '/char3.png';
 const imgCard4 = '/char4.png';
 const imgCard5 = '/char5.png';
+const imgCard6 = '/char6.png';
 
 const items = [
 	<img className="m-auto" src={imgCard1} onDragStart={handleDragStart} />,
@@ -16,6 +17,7 @@ const items = [
 	<img className="m-auto" src={imgCard3} onDragStart={handleDragStart} />,
 	<img className="m-auto" src={imgCard4} onDragStart={handleDragStart} />,
 	<img className="m-auto" src={imgCard5} onDragStart={handleDragStart} />,
+	<img className="m-auto" src={imgCard6} onDragStart={handleDragStart} />,
 ];
 
 const Carousel = () => {
