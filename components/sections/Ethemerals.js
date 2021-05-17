@@ -1,11 +1,33 @@
 import { useEffect, useState } from 'react';
-import Carousel from '../Carousel';
+// import Carousel from '../Carousel';
 
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import Links from '../../constants/Links';
 
+const CharStage = dynamic(import('../pixi/CharStage'), { ssr: false });
+
 const Ethemerals = () => {
+	const [windowWidth, setWindowWidth] = useState(400);
+
+	const handleResize = (e) => {
+		setWindowWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+			window.addEventListener('resize', handleResize);
+			setWindowWidth(window.innerWidth);
+		}
+
+		return () => {
+			if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+				window.addEventListener('resize', handleResize);
+			}
+		};
+	}, []);
+
 	const descriptionListItem = (props) => (
 		<div className="p-4">
 			<h3 className="text-xl font-semibold">
@@ -57,16 +79,16 @@ const Ethemerals = () => {
 		// bake in
 		<section className="ethemeralsBg bg-opacity-80 pb-20">
 			<a id="ethemerals">
-				<h2 className="text-center xs:text-4xl md:text-7xl pt-16 md:pt-20">Meet the Ethemerals</h2>
+				<h2 className="text-center text-4xl md:text-7xl pt-16 md:pt-20">Meet the Ethemerals</h2>
 			</a>
-			<div className="text-center md:mb-12 lg:mb-20 xs:py-6 sm:py-12 lg:pb-0">
-				<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 xs:pb-3 leading-loose text-white xs:text-base md:text-2xl sm:font-normal">
+			<div className="text-center my-5">
+				<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 pb-3 leading-loose text-white xs:text-base md:text-2xl sm:font-normal">
 					Ethemerals are beautifully handcrafted limited edition collectibles. Each Ethemeral is backed by a unique NFT minted on the Ethereum Blockchain. Owning one gives you exclusive access to the
 					Kingdom of The Ethemerals Universe.
 				</p>
 			</div>
-			<div className="w-full lg:w-2/3 overflow-hidden m-auto justify-center">
-				<Carousel />
+			<div className="overflow-hidden m-auto justify-center flex">
+				<CharStage windowWidth={windowWidth} />
 			</div>
 			<div className="justify-center grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}

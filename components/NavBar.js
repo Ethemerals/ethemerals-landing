@@ -16,9 +16,11 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 		}
 	};
 
-	if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-		window.addEventListener('scroll', changeBackground);
-	}
+	useEffect(() => {
+		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+			window.addEventListener('scroll', changeBackground);
+		}
+	}, []);
 
 	return (
 		// <!-- navbar goes here -->
