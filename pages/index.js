@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 import { isMobile } from 'react-device-detect';
 import NavBar from '../components/NavBar';
@@ -21,11 +22,20 @@ export default function Home() {
 	};
 
 	return (
-		<body className={bodyClassName}>
+		<div className={bodyClassName}>
+			<Head>
+				<title>Ethemerals</title>
+				{/* <script
+					src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.0.2/cjs/pixi.min.js"
+					integrity="sha512-w09iXrkpadaMLRJP87uD4vYRfySJQDpktdXsUD0qsFd1UuHIoMluHhIgAqUz6kUquJxzBsmJ332djDVGOXDw4w=="
+					crossOrigin="anonymous"
+					referrerPolicy="no-referrer"
+				></script> */}
+			</Head>
 			<div className="text-white bg-black">
 				<NavBar toggle={toggle} isOpen={isOpen} logo={imgEthemavator} symbol={imgElfsymbol} />
 				<LandingContent />
 			</div>
-		</body>
+		</div>
 	);
 }

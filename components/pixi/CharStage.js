@@ -1,33 +1,33 @@
-import { useReducer, useRef, useState, useEffect } from 'react';
-import { Stage, Sprite, Container, useTick } from '@inlet/react-pixi';
-// import Rectangle from './Rectangle';
+import React, { useState, useEffect } from 'react';
+import { Stage, Container, Sprite, useTick, render } from '@inlet/react-pixi';
+import {} from 'pixi.js';
 
-const reducer = (_, { data }) => data;
-
-const Bunny = () => {
-	const [motion, update] = useReducer(reducer);
-	const iter = useRef(0);
-	useTick((delta) => {
-		const i = (iter.current += 0.05 * delta);
-		update({
-			type: 'update',
-			data: {
-				x: Math.sin(i) * 100,
-				y: Math.sin(i / 1.5) * 100,
-				rotation: Math.sin(i) * Math.PI,
-				anchor: Math.sin(i / 2),
-			},
-		});
-	});
-	return <Sprite image="./icon_heart.png" {...motion} />;
+const RotatingBunny = () => {
+	const [rotation, setRotation] = useState(0);
+	useTick((delta) => delta && setRotation(rotation + 0.05 * delta));
+	return <Sprite image="https://s3-us-west-2.amazonaws.com/s.cdpn.io/693612/IaUrttj.png" anchor={0.5} scale={2} rotation={rotation} />;
 };
 
-const maxWidth = 800;
-
-const CharStage = ({ windowWidth }) => {
-	const [stageWidth, setStageWidth] = useState(maxWidth);
+const CharStage = () => {
+	const [windowWidth, setWindowWidth] = useState(800);
+	const [stageWidth, setStageWidth] = useState(windowWidth);
 	const [scaleWidth, setScaleWidth] = useState(maxWidth);
-	console.log(windowWidth);
+	console.log(render);
+
+	// CONSTANTS
+	const maxWidth = 800;
+
+	const handleResize = (e) => {
+		setWindowWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+			window.addEventListener('resize', handleResize);
+			handleResize();
+		}
+	}, []);
+
 	useEffect(() => {
 		if (windowWidth > 800) {
 			setStageWidth(800);
@@ -43,12 +43,9 @@ const CharStage = ({ windowWidth }) => {
 	}, [stageWidth]);
 
 	return (
-		<Stage width={stageWidth} height={stageWidth} options={{ backgroundColor: 0xeef1f5 }}>
-			{/* <Rectangle x={100} y={100} width={500} heigth={300} fill={0xff0000} /> */}
-			<Container position={[0, 0]} scale={(scaleWidth, scaleWidth)}>
-				<Sprite image="./char1.png" />
-
-				<Bunny />
+		<Stage width={windowWidth} height={windowWidth} options={{ backgroundColor: 0xc22e00, antialias: true }}>
+			<Container position={[windowWidth / 2, windowWidth / 2]}>
+				<RotatingBunny />
 			</Container>
 		</Stage>
 	);

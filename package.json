@@ -9,6 +9,10 @@
 	},
 	"dependencies": {
 		"@inlet/react-pixi": "^6.5.2",
+		"@pixi/app": "^6.0.4",
+		"@pixi/display": "^6.0.4",
+		"@pixi/loaders": "^6.0.4",
+		"@pixi/sprite": "^6.0.4",
 		"firebase": "^8.5.0",
 		"next": "10.0.9",
 		"nextjs-cors": "^1.0.5",

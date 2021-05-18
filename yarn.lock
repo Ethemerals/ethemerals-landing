@@ -388,7 +388,7 @@
     "@pixi/display" "6.0.4"
     "@pixi/utils" "6.0.4"
 
-"@pixi/app@6.0.4":
+"@pixi/app@6.0.4", "@pixi/app@^6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@pixi/app/-/app-6.0.4.tgz#138ce670c057dc351f3b88e6f27ac0fa6edf5cb0"
   integrity sha512-+BiuaQtnOBR5/Q8+nXnHE2tuZyuBnqy/cwbIR1ImPnKAs7UaCcRLf1R0RvnRFu4KMP4ozTd810p0k84TzIguTA==
@@ -434,7 +434,7 @@
     "@pixi/ticker" "6.0.4"
     "@pixi/utils" "6.0.4"
 
-"@pixi/display@6.0.4":
+"@pixi/display@6.0.4", "@pixi/display@^6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@pixi/display/-/display-6.0.4.tgz#f192edb57a1d68d0616b2d379284a84490df0411"
   integrity sha512-v6hjx5Gm5aIlLQ7xrsZ2lstI1cv/MtbWXJOhU8LXckkrHHUvAuJgml3+0pcHw8YLuOlepZngUuiqy/XjceVk8A==
@@ -519,7 +519,7 @@
     "@pixi/ticker" "6.0.4"
     "@pixi/utils" "6.0.4"
 
-"@pixi/loaders@6.0.4":
+"@pixi/loaders@6.0.4", "@pixi/loaders@^6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@pixi/loaders/-/loaders-6.0.4.tgz#1d7dc1aa762627396e63d0bc1276e134d12c2ef3"
   integrity sha512-cw8QSkn8l8P06fINfwCZW+vUdhtOJ5G+T2qQm3HIDgI/J1tAsiRj3ufHop8xkHwYXrUeTf1LTqw+QdlZEVpJfg==
@@ -649,7 +649,7 @@
     "@pixi/sprite" "6.0.4"
     "@pixi/utils" "6.0.4"
 
-"@pixi/sprite@6.0.4":
+"@pixi/sprite@6.0.4", "@pixi/sprite@^6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@pixi/sprite/-/sprite-6.0.4.tgz#71af3d0fbbe6752db4b4e3b2c69192bccadcfbb3"
   integrity sha512-6yMoHmfFhSRERLM1PUXceq9e6e1UH0YJkLoPVLv6gxMunfk6jPXeO8p9dDS2FQ8ZMSkO/16BKq27HIMKvF6Cvg==

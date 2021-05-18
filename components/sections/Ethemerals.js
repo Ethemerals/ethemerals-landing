@@ -1,33 +1,19 @@
-import { useEffect, useState } from 'react';
-// import Carousel from '../Carousel';
+import React, { useEffect, useState } from 'react';
+import Carousel from '../Carousel';
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import Links from '../../constants/Links';
 
-const CharStage = dynamic(import('../pixi/CharStage'), { ssr: false });
+// const CharStage = dynamic(import('../pixi/CharStage'), { ssr: false });
+// const PixiApp = dynamic(import('../pixi/PixiApp'), { ssr: false });
+// const PixiComponent = dynamic(import('../pixi/PixiComponent'), { ssr: false });
+// import PixiApp from '../pixi/PixiApp';
+// import Test from '../three/test';
+// const Three = dynamic(import('../three/test'), { ssr: false });
 
 const Ethemerals = () => {
-	const [windowWidth, setWindowWidth] = useState(400);
-
-	const handleResize = (e) => {
-		setWindowWidth(window.innerWidth);
-	};
-
-	useEffect(() => {
-		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-			window.addEventListener('resize', handleResize);
-			setWindowWidth(window.innerWidth);
-		}
-
-		return () => {
-			if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-				window.addEventListener('resize', handleResize);
-			}
-		};
-	}, []);
-
 	const descriptionListItem = (props) => (
 		<div className="p-4">
 			<h3 className="text-xl font-semibold">
@@ -88,7 +74,10 @@ const Ethemerals = () => {
 				</p>
 			</div>
 			<div className="overflow-hidden m-auto justify-center flex">
-				<CharStage windowWidth={windowWidth} />
+				{/* <CharStage /> */}
+				<Carousel />
+				{/* <PixiComponent props={windowWidth} /> */}
+				{/* <Three /> */}
 			</div>
 			<div className="justify-center grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}
