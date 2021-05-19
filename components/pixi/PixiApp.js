@@ -12,17 +12,17 @@ export default class PixiApp {
 	constructor() {
 		// objects
 
-		this.app;
+		this.render;
 
 		this.init();
 		// this.load();
 	}
 
 	init() {
-		this.app = new Application({
-			width: 256,
-			height: 256,
-			backgroundColor: 0x4890b9,
+		this.render = new Application({
+			width: 512,
+			height: 512,
+			backgroundColor: 0x2998c2,
 			antialias: true,
 			transparent: false,
 			resolution: 1,
@@ -42,7 +42,7 @@ export default class PixiApp {
 		// this.containerUI = new Container();
 		// this.render.stage.addChild(this.containerUI);
 
-		this.app.loader.add('./char1.png').load(this.run);
+		// this.app.loader.add('./char1.png').load(this.run);
 	}
 
 	// load() {
@@ -52,14 +52,19 @@ export default class PixiApp {
 	run() {
 		console.log('loaded running');
 
-		console.log(this.app);
+		try {
+			let sprite = new Sprite(this.app.loader.resources['./char1.png'].texture);
+			// let sprite = Sprite.from('./char1.png');
+			sprite.width = 512;
+			sprite.height = 512;
 
-		// let sprite = new Sprite(this.app.loader.resources['./char1.png'].texture);
-		// let sprite = Sprite.from('./char1.png');
-		// sprite.width = 512;
-		// sprite.height = 512;
+			this.app.stage.addChild(sprite);
+		} catch (error) {
+			console.log(error);
+		}
+		// this.app.render.ticker.add((delta) => gameLoop(delta));
 
-		// this.app.stage.addChild(sprite);
+		console.log('loaded end');
 		// this.app.ticker.add();
 		// console.log(this.app);
 		// this.app.render();
