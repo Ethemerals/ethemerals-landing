@@ -7,13 +7,17 @@ import * as PIXI from 'pixi.js';
 // import { Container } from '@pixi/display';
 
 const app = new PIXI.Application({
-	width: 512,
-	height: 512,
+	autoResize: true,
 	backgroundColor: 0x2998c2,
 	antialias: true,
 	transparent: false,
-	resolution: 1,
+	resolution: devicePixelRatio,
 });
+
+function resize(width, scale) {
+	app.renderer.resize(width, width);
+	app.stage.scale.set(scale);
+}
 
 function run() {
 	console.log('hello');
@@ -23,7 +27,7 @@ function run() {
 		app.renderer.plugins.interaction.autoPreventDefault = false;
 		app.renderer.view.style.touchAction = 'auto';
 		let sprite = new PIXI.Sprite(app.loader.resources.char1.texture);
-		console.log(app.renderer.plugins.interaction);
+
 		sprite.anchor.set(0.5);
 
 		// Move the sprite to the center of the screen
@@ -35,26 +39,56 @@ function run() {
 		// Listen for animate update
 		app.ticker.add(function (delta) {
 			// Rotate mr rabbit clockwise
-			sprite.rotation += 0.1 * delta;
+			sprite.rotation += 0.01 * delta;
 		});
-
-		// app.render.ticker.add(delta => gameLoop(delta));
 	} catch (error) {
 		console.log(error);
 	}
-	// // this.app.render.ticker.add((delta) => gameLoop(delta));
 
 	console.log('loaded end');
 }
 
 const PixiComponent = () => {
 	const gameCanvas = useRef(null);
-	const started = useRef(false);
+
+	const maxWidth = 800;
+	const [windowWidth, setWindowWidth] = useState(maxWidth);
+	const [stageWidth, setStageWidth] = useState(windowWidth);
+	const [scaleWidth, setScaleWidth] = useState(1);
+
+	const handleResize = (e) => {
+		setWindowWidth(window.innerWidth);
+	};
+
+	useEffect(() => {
+		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+			window.addEventListener('resize', handleResize);
+			handleResize();
+		}
+	}, []);
+
+	useEffect(() => {
+		if (windowWidth > 800) {
+			setStageWidth(800);
+		} else if (windowWidth < 256) {
+			setStageWidth(256);
+		} else {
+			setStageWidth(windowWidth);
+		}
+	}, [windowWidth]);
+
+	useEffect(() => {
+		setScaleWidth(stageWidth / maxWidth);
+	}, [stageWidth]);
+
+	useEffect(() => {
+		resize(stageWidth, scaleWidth);
+	});
 
 	useEffect(() => {
 		if (gameCanvas.current.childNodes.length < 1) {
 			gameCanvas.current.appendChild(app.view);
-			app.loader.add('char1', './char1.png').load(run);
+			app.loader.add('char1', './pixi/char1.png').load(run);
 		}
 	}, []);
 
