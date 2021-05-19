@@ -1,54 +1,30 @@
-import React, { useEffect, useState } from 'react';
-// import app from './PixiApp';
+import React, { useEffect, useState, useRef } from 'react';
+import PixiApp from './PixiApp';
 import { Application } from '@pixi/app';
 // import { AppLoaderPlugin } from '@pixi/loaders';
 // import { Sprite } from '@pixi/sprite';
 // import { Container } from '@pixi/display';
 
-class PixiComponent extends React.Component {
-	gameCanvas;
+const PixiComponent = () => {
+	const gameCanvas = useRef(null);
+	const started = useRef(false);
 
-	constructor() {
-		super();
-		this.state = { windowWidth: 800 };
-	}
+	useEffect(() => {
+		const app = new PixiApp();
 
-	componentDidMount() {
-		const app = new Application({
-			width: this.state.windowWidth,
-			height: this.state.windowWidth,
-			backgroundColor: 0x2980b9,
-			antialias: true,
-			transparent: false,
-			resolution: 1,
-		});
+		// console.log(app);
+		// gameCanvas.current.remove();
 
-		this.getSize();
-
-		this.gameCanvas.appendChild(this.app.view);
-		this.app.render();
-	}
-
-	handleResize() {
-		this.setState({ windowWidth: window.innerWidth });
-
-		console.log(window.innerWidth);
-	}
-
-	getSize() {
-		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-			window.addEventListener('resize', this.handleResize());
-			this.handleResize();
+		if (gameCanvas.current.childNodes.length < 1) {
+			gameCanvas.current.appendChild(app.app.view);
 		}
-	}
+	}, []);
 
-	render() {
-		return (
-			<>
-				<div ref={(node) => (this.gameCanvas = node)}></div>
-			</>
-		);
-	}
-}
+	return (
+		<>
+			<div ref={gameCanvas}></div>
+		</>
+	);
+};
 
 export default PixiComponent;

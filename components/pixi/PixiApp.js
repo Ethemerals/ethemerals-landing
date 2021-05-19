@@ -8,43 +8,60 @@ import { Container } from '@pixi/display';
 
 Application.registerPlugin(AppLoaderPlugin);
 
-const appContainer = {};
-const app = new Application({
-	width: 300,
-	height: 300,
-	backgroundColor: 0x2980b9,
-	antialias: true,
-	transparent: false,
-	resolution: 1,
-});
+export default class PixiApp {
+	constructor() {
+		// objects
 
-app.loader.add('./char1.png');
-app.loader.load(() => {
-	setup();
-});
+		this.app;
 
-//load an image and run the `setup` function when it's done
-// Loader.add('./char1.png').load(setup);
-// console.log(Loader);
+		this.init();
+		// this.load();
+	}
 
-//This `setup` function will run when the image has loaded
-function setup() {
-	console.log('loaded');
+	init() {
+		this.app = new Application({
+			width: 256,
+			height: 256,
+			backgroundColor: 0x4890b9,
+			antialias: true,
+			transparent: false,
+			resolution: 1,
+		});
 
-	let container = new Container();
-	container.width = 512;
-	container.height = 512;
-	container.backgroundColor = 0xc22e00;
-	let sprite = Sprite.from('./char1.png');
-	sprite.width = 512;
-	sprite.height = 512;
+		// this.app.renderer.autoResize = true;
 
-	app.stage.addChild(sprite);
-	app.ticker.add();
-	console.log(app);
+		// PIXI CONTAINERS
+		// this.containerBG = new Container();
+		// this.containerBG.x = this.width / 2;
+		// this.containerBG.y = this.height / 2;
+		// this.containerBG.pivot.x = this.containerBG.width / 2;
+		// this.containerBG.pivot.y = this.containerBG.height / 2;
+		// this.render.stage.addChild(this.containerBG);
+		// this.containerCam = new Container();
+		// this.render.stage.addChild(this.containerCam);
+		// this.containerUI = new Container();
+		// this.render.stage.addChild(this.containerUI);
 
-	// let cat = new PIXI.Sprite(PIXI.Loader.resources['./char.png'].texture);
-	// app.stage.addChild(cat);
+		this.app.loader.add('./char1.png').load(this.run);
+	}
+
+	// load() {
+	// 	loader.add(['./bg_title.jpg']).load(run);
+	// }
+
+	run() {
+		console.log('loaded running');
+
+		console.log(this.app);
+
+		// let sprite = new Sprite(this.app.loader.resources['./char1.png'].texture);
+		// let sprite = Sprite.from('./char1.png');
+		// sprite.width = 512;
+		// sprite.height = 512;
+
+		// this.app.stage.addChild(sprite);
+		// this.app.ticker.add();
+		// console.log(this.app);
+		// this.app.render();
+	}
 }
-
-export default app;

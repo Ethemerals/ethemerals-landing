@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+
 import Carousel from '../Carousel';
 
 import dynamic from 'next/dynamic';
@@ -12,6 +13,8 @@ import Links from '../../constants/Links';
 // import PixiApp from '../pixi/PixiApp';
 // import Test from '../three/test';
 // const Three = dynamic(import('../three/test'), { ssr: false });
+
+const Stage = dynamic(import('../three/Stage'), { ssr: false });
 
 const Ethemerals = () => {
 	const descriptionListItem = (props) => (
@@ -73,12 +76,16 @@ const Ethemerals = () => {
 					Kingdom of The Ethemerals Universe.
 				</p>
 			</div>
-			<div className="overflow-hidden m-auto justify-center flex">
-				{/* <CharStage /> */}
-				<Carousel />
-				{/* <PixiComponent props={windowWidth} /> */}
-				{/* <Three /> */}
+			<div className={`overflow-hidden hidden md:flex three-stage m-auto`}>
+				<Stage />
 			</div>
+
+			<div className="overflow-hidden md:hidden three-stage-sm">
+				<div className="three-stage-content-sm">
+					<Stage />
+				</div>
+			</div>
+			{/* <div className="overflow-hidden m-auto justify-center flex"><Carousel /></div> */}
 			<div className="justify-center grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}
 				{descriptionListItem(liItem2)}
