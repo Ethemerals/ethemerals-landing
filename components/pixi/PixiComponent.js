@@ -73,8 +73,8 @@ const PixiComponent = () => {
 		console.log('loaded running');
 
 		try {
-			app.renderer.plugins.interaction.autoPreventDefault = false;
-			app.renderer.view.style.touchAction = 'auto';
+			// app.renderer.plugins.interaction.autoPreventDefault = false;
+			// app.renderer.view.style.touchAction = 'auto';
 
 			// CONTAINERS
 			containerSidebar = new PIXI.Container();
@@ -111,7 +111,7 @@ const PixiComponent = () => {
 			app.stage.addChild(dragButton);
 
 			const char1 = new PIXI.Sprite(app.loader.resources.char1.texture);
-			containerChar.addChild(char1);
+			// containerChar.addChild(char1);
 			// char1.on('pointerdown', onDragStart).on('pointerup', onDragEnd).on('pointerupoutside', onDragEnd).on('pointermove', onDragMove);
 
 			// Move the sprite to the center of the screen
@@ -161,7 +161,7 @@ const PixiComponent = () => {
 			containerBadge.y = containerBadge.y + Oy;
 			containerChar.x = containerChar.x + Ox * 0.5;
 			containerChar.y = containerChar.y + Oy * 0.5;
-			// console.log(this.data.originalEvent);
+			console.log(this.data);
 			// console.log(this.data.originalEvent.movementX, this.data.originalEvent.movementY);
 
 			// const newPosition = this.data.getLocalPosition(this.parent);

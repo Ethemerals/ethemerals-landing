@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Title from './sections/Title';
+import Title2 from './sections/Title2';
 import Ethemerals from './sections/Ethemerals';
 import Battle from './sections/Battle';
 import Roadmap from './sections/Roadmap';
@@ -12,14 +13,15 @@ import Footer from './sections/Footer';
 const Content = () => {
 	return (
 		<>
-			{/* <Title /> */}
+			<Title />
+			<Title2 />
 			<Ethemerals />
-			{/* <Battle />
+			<Battle />
 			<Elf />
 			<Land />
 			<Community />
 			<Roadmap />
-			<Footer /> */}
+			<Footer />
 		</>
 	);
 };
