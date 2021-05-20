@@ -111,7 +111,7 @@ const PixiComponent = () => {
 			app.stage.addChild(dragButton);
 
 			const char1 = new PIXI.Sprite(app.loader.resources.char1.texture);
-			// containerChar.addChild(char1);
+			containerChar.addChild(char1);
 			// char1.on('pointerdown', onDragStart).on('pointerup', onDragEnd).on('pointerupoutside', onDragEnd).on('pointermove', onDragMove);
 
 			// Move the sprite to the center of the screen
