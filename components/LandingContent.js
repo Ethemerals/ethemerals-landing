@@ -12,14 +12,14 @@ import Footer from './sections/Footer';
 const Content = () => {
 	return (
 		<>
-			<Title />
+			{/* <Title /> */}
 			<Ethemerals />
-			<Battle />
+			{/* <Battle />
 			<Elf />
 			<Land />
 			<Community />
 			<Roadmap />
-			<Footer />
+			<Footer /> */}
 		</>
 	);
 };
