@@ -86,8 +86,10 @@ const Ethemerals = () => {
 				</div>
 			</div> */}
 			<div className="overflow-hidden m-auto justify-center flex">
-				{/* <Carousel /> */}
 				<PixiComponent />
+			</div>
+			<div className="overflow-hidden m-auto justify-center flex">
+				<Carousel />
 			</div>
 			<div className="justify-center grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}

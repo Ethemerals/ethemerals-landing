@@ -81,11 +81,11 @@ const PixiComponent = () => {
 			containerSidebar.x = 640;
 			app.stage.addChild(containerSidebar);
 
-			containerBadge = new PIXI.Container();
-			app.stage.addChild(containerBadge);
-
 			containerChar = new PIXI.Container();
 			app.stage.addChild(containerChar);
+
+			containerBadge = new PIXI.Container();
+			app.stage.addChild(containerBadge);
 
 			// GRAPHICS
 			const graphicsSidebar = new PIXI.Graphics();
@@ -101,12 +101,16 @@ const PixiComponent = () => {
 			containerBadge.addChild(graphicsBadge);
 
 			const dragButton = new PIXI.Graphics();
-			dragButton.beginFill(0x000000, 0.1);
-			dragButton.drawRect(0, 400, 800, 600);
+			dragButton.beginFill(0x000000, 1);
+			dragButton.drawRect(0, 400, 50, 50);
 			dragButton.endFill();
 			dragButton.interactive = true;
 			dragButton.buttonMode = true;
-			dragButton.on('pointerdown', onDragStart).on('pointerup', onDragEnd).on('pointerupoutside', onDragEnd).on('pointermove', onDragMove);
+			app.stage.on('pointerdown', uiOnDragStart).on('pointerup', uiOnDragEnd);
+
+			app.stage.interactive = true;
+			app.stage.buttonMode = true;
+			app.stage.on('pointerdown', onDragStart).on('pointerup', onDragEnd).on('pointerupoutside', onDragEnd).on('pointermove', onDragMove);
 
 			app.stage.addChild(dragButton);
 
@@ -130,6 +134,22 @@ const PixiComponent = () => {
 		}
 
 		console.log('loaded end');
+	}
+
+	function uiOnDragStart(event) {
+		// store a reference to the data
+		// the reason for this is because of multitouch
+		// we want to track the movement of this particular touch
+		console.log('uiDragStart');
+		this.data = event.data;
+		// this.alpha = 0.5;
+	}
+
+	function uiOnDragEnd() {
+		console.log('uiDragEnd');
+		// this.alpha = 1;
+		// // set the interaction data to null
+		this.data = null;
 	}
 
 	function onDragStart(event) {
@@ -156,12 +176,12 @@ const PixiComponent = () => {
 			const Ox = this.data.originalEvent.movementX;
 			const Oy = this.data.originalEvent.movementY;
 			containerSidebar.x = containerSidebar.x + Ox * -1;
-			containerSidebar.y = containerSidebar.y + Oy * -1;
+
 			containerBadge.x = containerBadge.x + Ox;
-			containerBadge.y = containerBadge.y + Oy;
+
 			containerChar.x = containerChar.x + Ox * 0.5;
-			containerChar.y = containerChar.y + Oy * 0.5;
-			console.log(this.data);
+
+			// console.log(this.data);
 			// console.log(this.data.originalEvent.movementX, this.data.originalEvent.movementY);
 
 			// const newPosition = this.data.getLocalPosition(this.parent);
