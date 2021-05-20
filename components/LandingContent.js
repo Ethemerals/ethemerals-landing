@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Title from './sections/Title';
 import Title2 from './sections/Title2';
+import Title3 from './sections/Title3';
 import Ethemerals from './sections/Ethemerals';
 import Battle from './sections/Battle';
 import Roadmap from './sections/Roadmap';
@@ -15,6 +16,7 @@ const Content = () => {
 		<>
 			<Title />
 			<Title2 />
+			<Title3 />
 			<Ethemerals />
 			<Battle />
 			<Elf />
