@@ -21,7 +21,7 @@ let containerBadge;
 
 function resize(width, scale) {
 	app.stage.scale.set(scale);
-	app.renderer.resize(width, width);
+	app.renderer.resize(window.innerWidth, width);
 }
 
 const PixiComponent = () => {
@@ -61,7 +61,11 @@ const PixiComponent = () => {
 		if (gameCanvas.current.childNodes.length < 1) {
 			gameCanvas.current.appendChild(app.view);
 			resize(stageWidth, scaleWidth);
-			app.loader.add('char1', './pixi/compound.png').add('sidebar', 'https://aws1.discourse-cdn.com/mcneel/original/3X/1/2/1246b4b2ae43a559be6a56557770efe1627fcd5b.jpg').load(run);
+			app.loader
+				.add('char1', './pixi/compound.png')
+				.add('char2', './pixi/luna.png')
+				.add('sidebar', 'https://aws1.discourse-cdn.com/mcneel/original/3X/1/2/1246b4b2ae43a559be6a56557770efe1627fcd5b.jpg')
+				.load(run);
 		}
 
 		resize(stageWidth, scaleWidth);
@@ -115,14 +119,12 @@ const PixiComponent = () => {
 			app.stage.addChild(dragButton);
 
 			const char1 = new PIXI.Sprite(app.loader.resources.char1.texture);
-			containerChar.addChild(char1);
-			// char1.on('pointerdown', onDragStart).on('pointerup', onDragEnd).on('pointerupoutside', onDragEnd).on('pointermove', onDragMove);
+			const char2 = new PIXI.Sprite(app.loader.resources.char2.texture);
+			char2.x = app.screen.width;
+			console.log(app.screen.width);
 
-			// Move the sprite to the center of the screen
-			// char1.x = stageWidth / 2;
-			// char1.y = stageWidth / 2;
-			// char1.scale.set(0.8);
-			// char1.skew.set(0.25, 0);
+			containerChar.addChild(char1);
+			containerChar.addChild(char2);
 
 			// Listen for animate update
 			app.ticker.add(function (delta) {
@@ -175,9 +177,9 @@ const PixiComponent = () => {
 			// console.log('dragMove');
 			const Ox = this.data.originalEvent.movementX;
 			const Oy = this.data.originalEvent.movementY;
-			containerSidebar.x = containerSidebar.x + Ox * -1;
+			containerSidebar.x = containerSidebar.x + Ox * -2;
 
-			containerBadge.x = containerBadge.x + Ox;
+			containerBadge.x = containerBadge.x + Ox * 1;
 
 			containerChar.x = containerChar.x + Ox * 0.5;
 

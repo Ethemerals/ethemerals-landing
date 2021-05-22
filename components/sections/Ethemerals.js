@@ -6,10 +6,12 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import Links from '../../constants/Links';
+// import SplideCarousel from '../SplideCarousel';
+const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
 
 // const CharStage = dynamic(import('../pixi/CharStage'), { ssr: false });
 // const PixiApp = dynamic(import('../pixi/PixiApp'), { ssr: false });
-const PixiComponent = dynamic(import('../pixi/PixiComponent'), { ssr: false });
+// const PixiComponent = dynamic(import('../pixi/PixiComponent'), { ssr: false });
 // import PixiApp from '../pixi/PixiApp';
 // import Test from '../three/test';
 // const Three = dynamic(import('../three/test'), { ssr: false });
@@ -85,11 +87,11 @@ const Ethemerals = () => {
 					<Stage />
 				</div>
 			</div> */}
-			<div className="overflow-hidden m-auto justify-center flex">
+			{/* <div className="overflow-hidden w-full justify-center flex bg-red-600">
 				<PixiComponent />
-			</div>
-			<div className="overflow-hidden m-auto justify-center flex">
-				<Carousel />
+			</div> */}
+			<div className="justify-center">
+				<SplideCarousel />
 			</div>
 			<div className="justify-center grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}
