@@ -2,11 +2,25 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Links from '../constants/Links';
+import { useTransition, animated } from '@react-spring/web';
+
+import MobileNavItems from './MobileNavItems';
 
 const webappMainURL = Links.APP;
 
-const Navbar = ({ toggle, isOpen, logo, symbol }) => {
+const Navbar = ({ logo, symbol }) => {
 	const [navbarOpac, setNavbarOpac] = useState(false);
+	const [isVisible, setIsVisible] = useState(false);
+
+	const mobileNavTransition = useTransition(isVisible, {
+		from: { y: 600, opacity: 0 },
+		enter: { x: 0, y: 50, opacity: 1 },
+		leave: { y: 50, opacity: 0 },
+	});
+
+	const toggle = () => {
+		setIsVisible(!isVisible);
+	};
 
 	const changeBackground = () => {
 		if (window.scrollY >= 20) {
@@ -25,7 +39,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 	return (
 		// <!-- navbar goes here -->
 		<>
-			<header className={`top-0 left-0 right-0 z-20 fixed bg-customblue-dark md:bg-opacity-0 ${navbarOpac ? 'animate-navbarOn' : ''}`}>
+			<header className={`top-0 left-0 right-0 z-50 fixed bg-customblue-dark md:bg-opacity-0 ${navbarOpac ? 'animate-navbarOn' : ''}`}>
 				<div className="hidden md:flex">
 					<nav className="container mx-auto md:px-10 py-2">
 						<div className="flex justify-between">
@@ -65,7 +79,7 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 					</nav>
 				</div>
 			</header>
-			<header className={`top-0 left-0 right-0 z-20 fixed bg-customblue-dark mx-auto w-full bg-opacity-0 md:hidden ${navbarOpac ? 'animate-navbarOn' : ''}`}>
+			<header className={`top-0 left-0 right-0 z-50 fixed bg-customblue-dark mx-auto w-full bg-opacity-0 md:hidden ${navbarOpac ? 'animate-navbarOn' : ''}`}>
 				<nav>
 					{/* <!-- mobile menu --> */}
 					{/* <!-- mobile button goes here --> */}
@@ -84,38 +98,16 @@ const Navbar = ({ toggle, isOpen, logo, symbol }) => {
 							</svg>
 						</button>
 					</div>
-					<div className={isOpen ? 'w-full flex justify-center animate-mobileMenuOn' : 'hidden'}>
-						<div onClick={toggle} className="fixed w-full h-screen"></div>
-						<div className="fixed top-20 w-3/4 justify-center font-bold rounded-2xl text-gray-300 text-center shadow-2xl bg-opacity-100 py-4 mx-auto border-4 border-gray-800 bg-customblue-dark">
-							<a onClick={toggle} href="#" className="block pt-0 pb-4 border-b border-gray-800">
-								Home
-							</a>
-							<a onClick={toggle} href="#ethemerals" className="block py-4 border-b border-gray-800">
-								Ethemerals
-							</a>
-							<a onClick={toggle} href="#battle" className="block py-4 border-b border-gray-800">
-								Battle
-							</a>
-							<a onClick={toggle} href="#elf" className="block py-4 border-b border-gray-800">
-								$ELF Token
-							</a>
-							<a onClick={toggle} href="#land" className="block py-4 border-b border-gray-800">
-								Land
-							</a>
-							<a onClick={toggle} href="#community" className="block py-4 border-b border-gray-800">
-								Community
-							</a>
-							<a onClick={toggle} href="#roadmap" className="block py-4 border-b border-gray-800">
-								Roadmap
-							</a>
-							<div>
-								<a onClick={toggle} href={webappMainURL} className="block pt-4 pb-0 text-pink-600">
-									Open App
-								</a>
-							</div>
-						</div>
-					</div>
 				</nav>
+				{mobileNavTransition(
+					(style, item) =>
+						item && (
+							<animated.div style={style} className="flex justify-center">
+								<div onClick={toggle} className="fixed w-full h-screen"></div>
+								<MobileNavItems toggle={toggle} webappMainURL={webappMainURL} />
+							</animated.div>
+						)
+				)}
 			</header>
 		</>
 	);

@@ -22,14 +22,17 @@ export default function Home() {
 	};
 
 	return (
-		<div className={bodyClassName}>
+		<>
 			<Head>
 				<title>Ethemerals</title>
 			</Head>
-			<div className="text-white bg-black">
-				<NavBar toggle={toggle} isOpen={isOpen} logo={imgEthemavator} symbol={imgElfsymbol} />
-				<LandingContent />
+			{/* <div className={bodyClassName}> */}
+			<div className="overflow-hidden">
+				<div className="text-white bg-black">
+					{/* <NavBar toggle={toggle} isOpen={isOpen} logo={imgEthemavator} symbol={imgElfsymbol} /> */}
+					<LandingContent />
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }

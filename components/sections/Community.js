@@ -11,35 +11,35 @@ const Community = () => {
 			<section className="bg-gray-200 mx-auto px-6 lg:px-8 pb-10">
 				<div className="max-w-4xl mx-auto text-center">
 					<a id="community">
-						<h2 className="text-center text-4xl md:text-7xl pt-16 md:pt-20 text-gray-700">Community</h2>
+						<h2 className="text-center text-4xl md:text-7xl pt-16 md:pt-20 text-indigo-900">Community</h2>
 					</a>
 					<p className="mt-3 text-base leading-7 sm:mt-8 text-black mb-8 md:mb-16">
 						Join our rapidly growing community of players, chat with the devs and artists, interact with others players and have your say in shaping the future of the Kingdom of the Ethemerals.
 					</p>
 				</div>
-				<div className="text-center md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-x-8 sm:grid lg:max-w-7xl m-auto text-gray-600">
-					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
+				<div className="text-center sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 md:max-w-3xl lg:max-w-7xl m-auto text-gray-600">
+					<div className="bg-gray-100 mx-auto text-center items-center justify-center w-64 h-64 py-10 px-4 mb-5 shadow rounded font-light text-sm">
 						<a href={Links.DISCORD} className="cursor-pointer">
 							<Image src="/icon_big_discord.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Discord</h3>
 						Chat live with the Ethemeral community, artist and developers
 					</div>
-					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
+					<div className="bg-gray-100 mx-auto text-center items-center justify-center w-64 h-64 py-10 px-4 mb-5 shadow rounded font-light text-sm">
 						<a href={Links.TWITTER} className="cursor-pointer">
 							<Image src="/icon_big_twitter.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Twitter</h3>
 						Follow @Ethemerals for the latest news and announcements
 					</div>
-					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
+					<div className="bg-gray-100 mx-auto text-center items-center justify-center w-64 h-64 py-10 px-4 mb-5 shadow rounded font-light text-sm">
 						<a href={Links.INSTAGRAM} className="cursor-pointer">
 							<Image src="/icon_big_instagram.png" alt="icon" width="100" height="100" />
 						</a>
 						<h3 className="font-bold text-2xl">Instagram</h3>
 						Get the latest art and design updates
 					</div>
-					<div className="mx-auto text-center items-center justify-center w-64 h-64 bg-white py-10 px-4 mb-5 shadow-lg rounded font-light text-sm">
+					<div className="bg-gray-100 mx-auto text-center items-center justify-center w-64 h-64 py-10 px-4 mb-5 shadow rounded font-light text-sm">
 						<a href={Links.GITHUB} className="cursor-pointer">
 							<Image src="/icon_big_github.png" alt="icon" width="100" height="100" />
 						</a>
@@ -49,7 +49,7 @@ const Community = () => {
 				</div>
 
 				<div className="max-w-4xl mx-auto text-center pt-10 md:pt-20 text-black">
-					<h3 className="xs:text-xl sm:text-2xl font-extrabold leading-10">About the Team</h3>
+					<h3 className="xs:text-xl sm:text-2xl font-extrabold leading-10 text-indigo-900">About the Team</h3>
 					<p className="mt-3 text-base leading-7 sm:mt-4">
 						Kingdom of the Ethemerals was created by a small team of Developers and Artists. We are crypto enthusiasts, grew up on anime and consume too many memes.
 						<br></br>

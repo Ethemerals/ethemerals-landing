@@ -4,6 +4,7 @@ import Title from './sections/Title';
 import Title2 from './sections/Title2';
 import Title3 from './sections/Title3';
 import Ethemerals from './sections/Ethemerals';
+import SpringCarousel from './spring/SpringCarousel';
 import Battle from './sections/Battle';
 import Roadmap from './sections/Roadmap';
 import Elf from './sections/Elf';
@@ -14,16 +15,17 @@ import Footer from './sections/Footer';
 const Content = () => {
 	return (
 		<>
-			<Title />
-			<Title2 />
-			<Title3 />
-			<Ethemerals />
-			<Battle />
-			<Elf />
-			<Land />
-			<Community />
-			<Roadmap />
-			<Footer />
+			{/* <Title /> */}
+			{/* <Title2 /> */}
+			{/* <Title3 /> */}
+			{/* <Ethemerals /> */}
+			<SpringCarousel />
+			{/* <Battle /> */}
+			{/* <Elf /> */}
+			{/* <Land /> */}
+			{/* <Community /> */}
+			{/* <Roadmap /> */}
+			{/* <Footer /> */}
 		</>
 	);
 };

@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-import Carousel from '../Carousel';
+// import Carousel from '../Carousel';
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 import Links from '../../constants/Links';
 // import SplideCarousel from '../SplideCarousel';
-const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
+// const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
+const SpringCarousel = dynamic(import('../spring/SpringCarousel'), { ssr: false });
 
 // const CharStage = dynamic(import('../pixi/CharStage'), { ssr: false });
 // const PixiApp = dynamic(import('../pixi/PixiApp'), { ssr: false });
@@ -16,7 +17,7 @@ const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false 
 // import Test from '../three/test';
 // const Three = dynamic(import('../three/test'), { ssr: false });
 
-const Stage = dynamic(import('../three/Stage'), { ssr: false });
+// const Stage = dynamic(import('../three/Stage'), { ssr: false });
 
 const Ethemerals = () => {
 	const descriptionListItem = (props) => (
@@ -73,7 +74,7 @@ const Ethemerals = () => {
 				<h2 className="text-center text-4xl md:text-7xl pt-16 md:pt-20">Meet the Ethemerals</h2>
 			</a>
 			<div className="text-center my-5">
-				<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 pb-3 leading-loose text-white xs:text-base md:text-2xl sm:font-normal">
+				<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 pb-14 sm:pb-20 leading-loose text-white xs:text-base md:text-xl sm:font-normal">
 					Ethemerals are beautifully handcrafted limited edition collectibles. Each Ethemeral is backed by a unique NFT minted on the Ethereum Blockchain. Owning one gives you exclusive access to the
 					Kingdom of The Ethemerals Universe.
 				</p>
@@ -91,9 +92,9 @@ const Ethemerals = () => {
 				<PixiComponent />
 			</div> */}
 			<div className="justify-center">
-				<SplideCarousel />
+				<SpringCarousel />
 			</div>
-			<div className="justify-center grid md:grid-cols-2 max-w-5xl mx-auto">
+			<div className="justify-center py-20 grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}
 				{descriptionListItem(liItem2)}
 				{descriptionListItem(liItem3)}
@@ -101,7 +102,7 @@ const Ethemerals = () => {
 				{descriptionListItem(liItem5)}
 				{descriptionListItem(liItem6)}
 			</div>
-			<div className="flex justify-center py-10 md:py-14">
+			<div className="flex justify-center py-20 md:py-14">
 				<a href={Links.ETHEMERALS} className="uppercase py-4 px-6 text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-300 ">
 					All Minted Ethemerals
 				</a>

@@ -10,7 +10,7 @@ const Elf = () => {
 			<div className="max-w-4xl mx-auto text-center">
 				<a id="elf">
 					<h2 className="text-center text-black text-5xl md:text-7xl pt-16 sm:pt-16 md:pt-24">
-						<span className="flex text-center items-center mx-auto justify-center">
+						<span className="flex text-center items-center mx-auto justify-center text-indigo-900">
 							<img src={imgElfsymbol} className="w-14 h-14"></img>
 							<span>ELF</span>
 						</span>
@@ -84,7 +84,7 @@ const Elf = () => {
 			</div>
 
 			<div className="m-auto text-center max-w-5xl pb-30">
-				<h2 className="my-8 md:text-6xl text-gray-600 text-4xl leading-10 uppercase pt-20">Metrics</h2>
+				<h2 className="my-8 md:text-6xl text-4xl leading-10 uppercase pt-20 text-purple-900">Metrics</h2>
 				<div className="text-center md:grid md:grid-cols-2">
 					<div className="flex mx-auto text-center items-center justify-center">
 						<Image src="/piechart.png" alt="icon" width="400" height="400" />

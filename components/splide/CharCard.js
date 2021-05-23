@@ -1,16 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, forwardRef, createRef } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import LeftBar from './LeftBar';
 
-const CharCard = ({ charName }) => {
-	console.log(charName);
+const CharCard = ({ charName, visible }) => {
+	const ref = createRef();
+
+	useEffect(() => {
+		console.log(charName, visible);
+	}, [visible]);
+
 	return (
 		<SplideSlide>
 			<div className="container flex justify-center mx-auto">
 				<div className="outer flex justify-center mx-auto">
 					<div className="inner bg-pink-500 flex justify-center mx-auto">
-						<div className="left-side z-50 absolute animate-bounce">
-							<img src={`./splide/${charName}_left.png`} className="" alt={`${charName} left bar`} />
-						</div>
+						<LeftBar charName={charName} ref={ref} />
 						<div className="z-40">
 							<img src={`./splide/${charName}.png`} className="" alt={`${charName} image`} />
 						</div>
