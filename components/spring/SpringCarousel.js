@@ -52,42 +52,6 @@ const data = [
 		css: 'linear-gradient(135deg, #ebc0fd 0%, #d9ded8 100%)',
 		height: 400,
 	},
-	{
-		name: 'Sunny Morning',
-		description: '#f6d365 → #fda085',
-		css: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
-		height: 200,
-	},
-	{
-		name: 'Lemon Gate',
-		description: '#96fbc4 → #f9f586',
-		css: 'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)',
-		height: 400,
-	},
-	{
-		name: 'Salt Mountain',
-		description: ' #FFFEFF → #D7FFFE',
-		css: 'linear-gradient(135deg, #FFFEFF 0%, #D7FFFE 100%)',
-		height: 200,
-	},
-	{
-		name: 'New York',
-		description: ' #fff1eb → #ace0f9',
-		css: 'linear-gradient(135deg, #fff1eb 0%, #ace0f9 100%)',
-		height: 400,
-	},
-	{
-		name: 'Soft Grass',
-		description: ' #c1dfc4 → #deecdd',
-		css: 'linear-gradient(135deg, #c1dfc4 0%, #deecdd 100%)',
-		height: 400,
-	},
-	{
-		name: 'Japan Blush',
-		description: ' #ddd6f3 → #faaca8',
-		css: 'linear-gradient(135deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)',
-		height: 200,
-	},
 ];
 
 const colors = ['red', 'black', 'hotpink', 'white', 'green'];
@@ -111,46 +75,48 @@ const chars = [
 	},
 ];
 
+const charPages = [
+	({ style }) => (
+		<animated.div style={{ ...style }}>
+			<CharCard charName={chars[0].name} />
+		</animated.div>
+	),
+	({ style }) => (
+		<animated.div style={{ ...style }}>
+			<CharCard charName={chars[1].name} />
+		</animated.div>
+	),
+	({ style }) => (
+		<animated.div style={{ ...style }}>
+			<CharCard charName={chars[2].name} />
+		</animated.div>
+	),
+	({ style }) => (
+		<animated.div style={{ ...style }}>
+			<CharCard charName={chars[3].name} />
+		</animated.div>
+	),
+];
+
+const pages = [
+	({ style }) => <animated.div style={{ ...style, background: 'lightpink' }}>A</animated.div>,
+	({ style }) => <animated.div style={{ ...style, background: 'lightblue' }}>B</animated.div>,
+	({ style }) => <animated.div style={{ ...style, background: 'lightgreen' }}>C</animated.div>,
+];
+
 export default function SpringCarousel() {
 	const [open, set] = useState(false);
-	const [cardIndex, setCardIndex] = useState(0);
-	const [oldIndex, setOldIndex] = useState(0);
-
-	// const CurrentCharCard = () => <CharCard charName={chars[cardIndex].name} />;
-	useEffect(() => {
-		console.log('new', cardIndex);
-	}, [cardIndex, oldIndex]);
-
-	const handleNext = () => {
-		const index = cardIndex;
-		setCardIndex(index + 1);
-		setOldIndex(index);
-	};
-
-	const handlePrevious = () => {
-		const index = cardIndex;
-		setCardIndex(index - 1);
-		setOldIndex(index);
-	};
-
-	const bgColor = useSpring({
-		to: { background: chars[cardIndex].bgColor },
-		from: { background: chars[oldIndex].bgColor },
-	});
-
-	const cardTransitions = useTransition(cardIndex, {
-		from: { opacity: 0 },
-		enter: { opacity: 1 },
-		leave: { opacity: 0 },
-	});
 
 	const springApi = useSpringRef();
 	const { size, ...rest } = useSpring({
 		ref: springApi,
 		config: config.stiff,
-		from: { size: '20%', background: 'hotpink' },
+		from: {
+			size: '0%',
+			background: 'hotpink',
+		},
 		to: {
-			size: open ? '100%' : '20%',
+			size: open ? '80%' : '0%',
 			background: open ? 'white' : 'hotpink',
 		},
 	});
@@ -165,48 +131,19 @@ export default function SpringCarousel() {
 	});
 
 	// This will orchestrate the two animations above, comment the last arg and it creates a sequence
-	// useChain(open ? [springApi, transApi] : [transApi, springApi]);
 	useChain(open ? [springApi, transApi] : [transApi, springApi], [0, open ? 0.1 : 0.6]);
 
 	return (
-		<animated.div style={bgColor} className="caro-wrapper mt-8 overflow-visible">
-			{/* <animated.div style={{ ...rest, width: size, height: size }} className="caro-container">
+		<div className="block w-full caro-wrapper justify-center bg-blue-300">
+			<button className="bg-black top-0" onClick={() => set((open) => !open)}>
+				CLICK ME
+			</button>
+			<CharCard charName="compound" />
+			<animated.div style={{ ...rest, width: size, height: size }} className="z-50 w-full h-full grid grid-cols-2 cursor-pointer" onClick={() => set((open) => !open)}>
 				{transition((style, item) => (
 					<animated.div className="caro-item" style={{ ...style, background: item.css }} />
 				))}
-			</animated.div> */}
-
-			{cardTransitions((styles, item) => {
-				return item === 0 ? (
-					<animated.div className="w-full h-full absolute" style={styles}>
-						<CharCard charName={chars[0].name} />
-					</animated.div>
-				) : (
-					''
-				);
-			})}
-			{cardTransitions((styles, item) => {
-				return item === 1 ? (
-					<animated.div className="w-full h-full absolute" style={styles}>
-						<CharCard charName={chars[1].name} />
-					</animated.div>
-				) : (
-					''
-				);
-			})}
-			{/* <animated.div>
-        <CharCard charName={chars[0].name} />
-      </animated.div>
-
-      <CharCard charName={chars[1].name} />
-      <CharCard charName={chars[2].name} /> */}
-
-			<button className="absolute left-4" onClick={() => handlePrevious()}>
-				Prev
-			</button>
-			<button className="absolute right-4" onClick={() => handleNext()}>
-				Next
-			</button>
-		</animated.div>
+			</animated.div>
+		</div>
 	);
 }

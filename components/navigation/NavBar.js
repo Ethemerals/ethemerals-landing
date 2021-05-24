@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import Links from '../constants/Links';
-import { useTransition, animated } from '@react-spring/web';
+import Links from '../../constants/Links';
+import { useTransition, useSpring, animated, config } from '@react-spring/web';
+import useMeasure from 'react-use-measure';
 
-import MobileNavItems from './MobileNavItems';
+import MobileNavItems from './MobileMenuItems';
+import MenuItems from './MenuItems';
 
-const webappMainURL = Links.APP;
+const logo = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fethemavator?alt=media&token=bf7c5413-970a-4705-afca-cd71a46b4ba0';
 
-const Navbar = ({ logo, symbol }) => {
-	const [navbarOpac, setNavbarOpac] = useState(false);
+const Navbar = () => {
 	const [isVisible, setIsVisible] = useState(false);
+	const [isTop, setIsTop] = useState(true);
 
 	const mobileNavTransition = useTransition(isVisible, {
 		from: { y: 600, opacity: 0 },
@@ -18,28 +19,32 @@ const Navbar = ({ logo, symbol }) => {
 		leave: { y: 50, opacity: 0 },
 	});
 
+	const navbarTopStyles = useSpring({
+		backgroundColor: isTop ? 'rgba(14,21,28,0)' : 'rgba(14,21,28,1)',
+	});
+
 	const toggle = () => {
 		setIsVisible(!isVisible);
 	};
 
-	const changeBackground = () => {
-		if (window.scrollY >= 20) {
-			setNavbarOpac(true);
+	const changeIsTop = () => {
+		if (window.scrollY < 20) {
+			setIsTop(true);
 		} else {
-			setNavbarOpac(false);
+			setIsTop(false);
 		}
 	};
 
 	useEffect(() => {
 		if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-			window.addEventListener('scroll', changeBackground);
+			window.addEventListener('scroll', changeIsTop);
 		}
 	}, []);
 
 	return (
 		// <!-- navbar goes here -->
 		<>
-			<header className={`top-0 left-0 right-0 z-50 fixed bg-customblue-dark md:bg-opacity-0 ${navbarOpac ? 'animate-navbarOn' : ''}`}>
+			<animated.header style={navbarTopStyles} className="top-0 left-0 right-0 z-50 fixed">
 				<div className="hidden md:flex">
 					<nav className="container mx-auto md:px-10 py-2">
 						<div className="flex justify-between">
@@ -50,36 +55,14 @@ const Navbar = ({ logo, symbol }) => {
 								</a>
 							</div>
 
-							{/* <!-- primary nav --> */}
-							<div className="flex items-center space-x-1"></div>
-
 							{/* <!-- secondary nav --> */}
-							<div className="flex items-center space-x-1">
-								<a href="#ethemerals" className="px-3 text-white hover:text-gray-300">
-									Ethemerals
-								</a>
-								<a href="#battle" className="px-3 text-white hover:text-gray-300">
-									Battle
-								</a>
-								<a href="#elf" className="px-3 text-white hover:text-gray-300 flex items-center">
-									<img src={symbol} className="w-6 h-6"></img>
-									<span className="pl-1">ELF</span>
-								</a>
-								<a href="#land" className="px-3 text-white hover:text-gray-300">
-									Land
-								</a>
-								<a href="#community" className="px-3 text-white hover:text-gray-300">
-									Community
-								</a>
-								<a href={webappMainURL} className="py-2 px-3 bg-pink-600 hover:bg-yellow-300 text-white hover:text-blue-900 shadow-lg rounded transition duration-300">
-									Open App
-								</a>
-							</div>
+							<MenuItems />
 						</div>
 					</nav>
 				</div>
-			</header>
-			<header className={`top-0 left-0 right-0 z-50 fixed bg-customblue-dark mx-auto w-full bg-opacity-0 md:hidden ${navbarOpac ? 'animate-navbarOn' : ''}`}>
+			</animated.header>
+
+			<animated.header style={navbarTopStyles} className="top-0 left-0 right-0 z-50 fixed mx-auto w-full md:hidden">
 				<nav>
 					{/* <!-- mobile menu --> */}
 					{/* <!-- mobile button goes here --> */}
@@ -104,11 +87,11 @@ const Navbar = ({ logo, symbol }) => {
 						item && (
 							<animated.div style={style} className="flex justify-center">
 								<div onClick={toggle} className="fixed w-full h-screen"></div>
-								<MobileNavItems toggle={toggle} webappMainURL={webappMainURL} />
+								<MobileNavItems toggle={toggle} />
 							</animated.div>
 						)
 				)}
-			</header>
+			</animated.header>
 		</>
 	);
 };

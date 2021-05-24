@@ -19,7 +19,7 @@ const LeftBar = ({ charName }) => {
 	return transitions(
 		(styles, item) =>
 			item && (
-				<animated.div style={styles} className="left-side z-50 absolute">
+				<animated.div style={styles} className="left-side z-40 absolute">
 					<img src={`./splide/${charName}_left.png`} className="" alt={`${charName} left bar`} />
 				</animated.div>
 			)

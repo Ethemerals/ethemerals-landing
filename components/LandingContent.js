@@ -15,17 +15,17 @@ import Footer from './sections/Footer';
 const Content = () => {
 	return (
 		<>
-			{/* <Title /> */}
+			<Title />
 			{/* <Title2 /> */}
 			{/* <Title3 /> */}
 			{/* <Ethemerals /> */}
 			<SpringCarousel />
-			{/* <Battle /> */}
-			{/* <Elf /> */}
-			{/* <Land /> */}
-			{/* <Community /> */}
-			{/* <Roadmap /> */}
-			{/* <Footer /> */}
+			<Battle />
+			<Elf />
+			<Land />
+			<Community />
+			<Roadmap />
+			<Footer />
 		</>
 	);
 };

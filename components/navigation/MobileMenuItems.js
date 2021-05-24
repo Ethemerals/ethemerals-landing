@@ -1,4 +1,7 @@
-const MobileNavItems = ({ toggle, webappMainURL }) => {
+import Links from '../../constants/Links';
+const webappMainURL = Links.APP;
+
+const MobileNavItems = ({ toggle }) => {
 	return (
 		<div className="fixed w-3/4 justify-center font-bold rounded-2xl text-gray-300 text-center shadow-2xl bg-opacity-100 py-4 mx-auto border-4 border-gray-800 bg-customblue-dark">
 			<a onClick={toggle} href="#" className="block pt-0 pb-4 border-b border-gray-800">
