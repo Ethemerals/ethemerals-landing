@@ -16,8 +16,8 @@ const Content = () => {
 	return (
 		<>
 			<Title />
-			{/* <Title2 /> */}
-			{/* <Title3 /> */}
+			<Title2 />
+			<Title3 />
 			{/* <Ethemerals /> */}
 			<SpringCarousel />
 			<Battle />
