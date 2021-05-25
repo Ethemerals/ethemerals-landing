@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component, useEffect, useState, useRef } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { isMobile } from 'react-device-detect';
 
@@ -10,7 +10,13 @@ const SplideCarousel = () => {
 	const [newIndex, setNewIndex] = useState(0);
 	const [oldIndex, setOldIndex] = useState(0);
 
-	// bg: 'linear-gradient(160deg, #00D09E 0%, #E8FFF8 100%)',
+	const primaryRef = useRef();
+	const secondaryRef = useRef();
+
+	useEffect(() => {
+		primaryRef.current.sync(secondaryRef.current.splide);
+	}, []);
+
 	const chars = [
 		{
 			visible: false,
@@ -115,7 +121,7 @@ const SplideCarousel = () => {
 		// }
 	};
 
-	const options = {
+	const primaryOptions = {
 		type: 'slide',
 		perPage: 1,
 		speed: 800,
@@ -136,28 +142,60 @@ const SplideCarousel = () => {
 		perMove: 1,
 		waitForTransition: false,
 		pagination: false,
+		arrows: false,
+	};
+	const secondaryOptions = {
+		type: 'slide',
+		width: '100vw',
+		gap: '1rem',
+		pagination: false,
+		fixedWidth: 120,
+		fixedHeight: 60,
+		breakpoints: {
+			576: {
+				fixedWidth: 60,
+				fixedHeight: 60,
+			},
+			898: {
+				fixedWidth: 80,
+				fixedHeight: 60,
+			},
+		},
+		focus: 'center',
+		isNavigation: true,
+		updateOnMove: true,
+		arrows: false,
+		waitForTransition: false,
 	};
 
 	return (
-		<animated.div style={bgColor}>
-			<Splide
-				options={options}
-				onMove={(s, newIndex, oldIndex, destIndex) => move({ newIndex, oldIndex, destIndex })}
-				onMoved={(s, newIndex, oldIndex, destIndex) => moved({ newIndex, oldIndex, destIndex })}
-				onVisible={(s, Slide) => visible(Slide)}
-				onHidden={(s, Slide) => hidden(Slide)}
-			>
-				{chars.map((charObj, index) => {
-					const char = charObj.name;
-
-					return (
+		<>
+			<animated.div style={bgColor}>
+				<Splide
+					options={primaryOptions}
+					onMove={(s, newIndex, oldIndex, destIndex) => move({ newIndex, oldIndex, destIndex })}
+					onMoved={(s, newIndex, oldIndex, destIndex) => moved({ newIndex, oldIndex, destIndex })}
+					onVisible={(s, Slide) => visible(Slide)}
+					onHidden={(s, Slide) => hidden(Slide)}
+					ref={primaryRef}
+				>
+					{chars.map((charObj, index) => (
 						<SplideSlide key={index}>
 							<CharCard charName={charObj.name} />
 						</SplideSlide>
-					);
-				})}
-			</Splide>
-		</animated.div>
+					))}
+				</Splide>
+			</animated.div>
+			<div className="flex justify-center overflow-hidden">
+				<Splide options={secondaryOptions} ref={secondaryRef} className="bg-white">
+					{chars.map((charObj, index) => (
+						<SplideSlide key={index}>
+							<img src={`./splide/${charObj.name}.png`} alt={`${charObj.name} image`} />
+						</SplideSlide>
+					))}
+				</Splide>
+			</div>
+		</>
 	);
 };
 
