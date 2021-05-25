@@ -27,13 +27,13 @@ const Ethemerals = () => {
 					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path
 							d="M9.76953 7.8079L7.31215 5.76008C6.79109 5.32586 6 5.69639 6 6.37466V9.62526C6 10.3035 6.79109 10.6741 7.31215 10.2398L9.76953 8.19201C9.88947 8.09207 9.88947 7.90785 9.76953 7.8079Z"
-							fill="white"
+							fill="black"
 						/>
 					</svg>
 					{props.title}
 				</span>
 			</h3>
-			<p className="text-white leading-loose">{props.body}</p>
+			<p className="leading-loose">{props.body}</p>
 		</div>
 	);
 
@@ -69,12 +69,12 @@ const Ethemerals = () => {
 
 	return (
 		// bake in
-		<section className="ethemeralsBg bg-opacity-80 pb-20">
+		<section className="ethemeralsBg bg-opacity-80 pb-20 text-white">
 			<a id="ethemerals">
 				<h2 className="text-center text-4xl md:text-7xl pt-16 md:pt-20">Meet the Ethemerals</h2>
 			</a>
 			<div className="text-center my-5">
-				<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 pb-14 sm:pb-20 leading-loose text-white xs:text-base md:text-xl sm:font-normal">
+				<p className="lg:w-3/4 md:w-full m-auto xs:px-4 sm:px-4 pb-14 sm:pb-20 leading-loose xs:text-base md:text-xl sm:font-normal">
 					Ethemerals are beautifully handcrafted limited edition collectibles. Each Ethemeral is backed by a unique NFT minted on the Ethereum Blockchain. Owning one gives you exclusive access to the
 					Kingdom of The Ethemerals Universe.
 				</p>

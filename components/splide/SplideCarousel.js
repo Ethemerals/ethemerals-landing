@@ -10,63 +10,47 @@ const SplideCarousel = () => {
 	const [newIndex, setNewIndex] = useState(0);
 	const [oldIndex, setOldIndex] = useState(0);
 
+	// bg: 'linear-gradient(160deg, #00D09E 0%, #E8FFF8 100%)',
 	const chars = [
 		{
 			visible: false,
 			name: 'compound',
-
-			bg: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #00D09E 0%, #E8FFF8 ${isMobile ? '100%' : '80%'})`,
 		},
 		{
 			visible: false,
 			name: 'luna',
-			bg: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #0061BA 0%, #D4EEFF ${isMobile ? '100%' : '80%'})`,
 		},
 		{
 			visible: false,
 			name: 'binance',
-			bg: 'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #FFFBF0 0%, #FFC700 ${isMobile ? '100%' : '80%'})`,
+		},
+		{
+			visible: false,
+			name: 'filecoin',
+			bg: `linear-gradient(160deg, #75F7FF 0%, #E9FEFF ${isMobile ? '100%' : '80%'})`,
 		},
 		{
 			visible: false,
 			name: 'monero',
-			bg: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #FF6E01 0%, #FFD5B5 ${isMobile ? '100%' : '80%'})`,
 		},
 		{
 			visible: false,
 			name: 'polkadot',
-			bg: 'linear-gradient(135deg, #E3FDF5 0%, #FFE6FA 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #FECEFF 0%, #543FD4 ${isMobile ? '100%' : '100%'})`,
 		},
 		{
 			visible: false,
 			name: 'xlm',
-			bg: 'linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #D4E9FF 0%, #90C5FF ${isMobile ? '100%' : '80%'})`,
 		},
 		{
 			visible: false,
 			name: 'hashgraph',
-			bg: 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)',
-			charRef: React.createRef(),
-			leftbarRef: React.createRef(),
-			rightbarRef: React.createRef(),
+			bg: `linear-gradient(160deg, #F2F2F2 0%, #003459 ${isMobile ? '100%' : '100%'})`,
 		},
 	];
 
