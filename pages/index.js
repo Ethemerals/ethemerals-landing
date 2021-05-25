@@ -6,6 +6,7 @@ import NavBar from '../components/navigation/NavBar';
 import LandingContent from '../components/LandingContent';
 
 export default function Home() {
+	console.log('isMobile', isMobile);
 	return (
 		<>
 			<Head>

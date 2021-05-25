@@ -1,32 +1,48 @@
-import { useEffect, useState, forwardRef, createRef } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import LeftBar from './LeftBar';
+import { useEffect, useState, useRef } from 'react';
+import { useTransition, useSpring, useChain, config, animated, useSpringRef } from '@react-spring/web';
+import { usePWVSpring } from '@play-when-visible/react-spring';
+import { isMobile } from 'react-device-detect';
 
-const CharCard = ({ charName, visible }) => {
-	const ref = createRef();
+const CharCard = ({ charName }) => {
+	const [leftRef, leftBarAnim] = usePWVSpring({
+		animation: {
+			from: { opacity: 0, x: '8vw' },
+			to: { opacity: 1, x: '0vw' },
+			config: config.molasses,
+		},
+	});
 
-	useEffect(() => {
-		console.log(charName, visible);
-	}, [visible]);
+	const [rightRef, rightBarAnim] = usePWVSpring({
+		animation: {
+			from: { opacity: 0, x: '-12vw' },
+			to: { opacity: 1, x: '0vw' },
+			config: config.molasses,
+		},
+	});
+
+	const [charRef, charAnim] = usePWVSpring({
+		animation: {
+			from: { opacity: 0, x: '2vw' },
+			to: { opacity: 1, x: '0vw' },
+		},
+	});
 
 	return (
-		<SplideSlide>
-			<div className="container flex justify-center mx-auto">
-				<div className="outer flex justify-center mx-auto">
-					<div className="inner bg-pink-500 flex justify-center mx-auto">
-						<LeftBar charName={charName} ref={ref} />
-						<div className="z-40">
-							<img src={`./splide/${charName}.png`} className="" alt={`${charName} image`} />
-						</div>
-						<div className="right-side z-30 absolute ">
-							<div className="animate-wiggle">
-								<img src={`./splide/${charName}_right.png`} className="" alt={`${charName} right bar`} />
-							</div>
-						</div>
-					</div>
-				</div>
+		<div ref={rightRef} className="inner flex justify-center mx-auto">
+			<div ref={leftRef} className="left-side z-40 md:w-100 absolute">
+				<animated.div style={leftBarAnim}>
+					<img src={`./splide/${charName}_left.png`} className="" alt={`${charName} left bar`} />
+				</animated.div>
 			</div>
-		</SplideSlide>
+			<div ref={charRef} className="z-30">
+				<animated.div style={charAnim}>
+					<img src={`./splide/${charName}.png`} alt={`${charName} image`} />
+				</animated.div>
+			</div>
+			<animated.div style={rightBarAnim} className="right-side z-20 absolute ">
+				<img src={`./splide/${charName}_right.png`} alt={`${charName} right bar`} />
+			</animated.div>
+		</div>
 	);
 };
 

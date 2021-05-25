@@ -7,8 +7,8 @@ import Image from 'next/image';
 
 import Links from '../../constants/Links';
 // import SplideCarousel from '../SplideCarousel';
-// const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
-const SpringCarousel = dynamic(import('../spring/SpringCarousel'), { ssr: false });
+const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
+// const SpringCarousel = dynamic(import('../spring/SpringCarousel'), { ssr: false });
 
 // const CharStage = dynamic(import('../pixi/CharStage'), { ssr: false });
 // const PixiApp = dynamic(import('../pixi/PixiApp'), { ssr: false });
@@ -91,8 +91,9 @@ const Ethemerals = () => {
 			{/* <div className="overflow-hidden w-full justify-center flex bg-red-600">
 				<PixiComponent />
 			</div> */}
-			<div className="justify-center">
-				<SpringCarousel />
+			<div className="">
+				{/* <SpringCarousel /> */}
+				<SplideCarousel />
 			</div>
 			<div className="justify-center py-20 grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem1)}

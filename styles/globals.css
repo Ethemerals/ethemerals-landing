@@ -18,7 +18,7 @@ FiraSans
 
 /* @import '@splidejs/splide/dist/css/themes/splide-default.min.css'; */
 /* @import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css'; */
-/* @import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css'; */
+@import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
 @tailwind base;
 @tailwind components;
@@ -44,12 +44,16 @@ FiraSans
 		will-change: transform, opacity;
 	}
 
+	.splide-wrapper {
+		height: 600px;
+		max-height: 600px;
+	}
+
 	.caro-wrapper {
 		height: 800px;
 		max-height: 800px;
 	}
 
-	/* container defines margins and width */
 	.caro-container {
 		position: relative;
 		display: grid;
