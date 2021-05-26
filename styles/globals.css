@@ -145,12 +145,13 @@ FiraSans
 	.galleryBar {
 		background: #2a536a;
 	}
-	.splide-thumb .splide__slide {
-		opacity: 0.5;
-		border: none;
-	}
-	.splide-thumb .splide__slide.is-active {
-		opacity: 1;
-		background: #486677;
-	}
+}
+
+.splide-thumb .splide__slide {
+	opacity: 0.3;
+	border: none;
+}
+.splide-thumb .splide__slide.is-active {
+	opacity: 1;
+	background: #486677;
 }
