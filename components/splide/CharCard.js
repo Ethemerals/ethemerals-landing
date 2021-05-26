@@ -36,7 +36,7 @@ const CharCard = ({ charName }) => {
 			</div>
 			<div ref={charRef} className="z-30">
 				<animated.div style={charAnim}>
-					<img src={`./splide/${charName}.png`} alt={`${charName} image`} />
+					<img src={`./splide/${charName}.png`} alt={`${charName} ethemeral character`} />
 				</animated.div>
 			</div>
 			<animated.div style={rightBarAnim} className="right-side z-20 absolute ">
