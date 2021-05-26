@@ -141,4 +141,14 @@ FiraSans
 	.ethemeralsBg {
 		background: #486677; /* fallback for old browsers */
 	}
+	.galleryBar {
+		background: #1a394b;
+	}
+	.galleryBarActive {
+		background: #0e1c24;
+	}
+	.splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
+		background: #0e1c24;
+		border: none;
+	}
 }
