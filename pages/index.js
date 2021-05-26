@@ -12,7 +12,7 @@ export default function Home() {
 			<Head>
 				<title>Ethemerals</title>
 			</Head>
-			<div className={isMobile ? 'overflow-hidden text-white bg-black' : 'text-white bg-black'}>
+			<div className={isMobile ? 'overflow-hidden text-white bg-black font-sans' : 'text-white bg-black font-sans'}>
 				<NavBar />
 				<LandingContent />
 			</div>

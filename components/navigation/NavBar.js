@@ -46,7 +46,7 @@ const Navbar = () => {
 		<>
 			<animated.header style={navbarTopStyles} className="top-0 left-0 right-0 z-50 fixed">
 				<div className="hidden md:flex">
-					<nav className="container mx-auto md:px-10 py-2">
+					<nav className="container mx-auto md:px-10 py-2 font-ubuntu">
 						<div className="flex justify-between">
 							{/* <!-- logo --> */}
 							<div>
@@ -73,7 +73,7 @@ const Navbar = () => {
 							</a>
 						</div>
 
-						<span className="text-yellow-400 uppercase font-bold text-sm">Kingdom of the Ethemerals</span>
+						<span className="text-yellow-400 uppercase font-bold text-sm font-ubuntu sm:text-xl">Kingdom of the Ethemerals</span>
 
 						<button className="pr-2" onClick={toggle}>
 							<svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -1,27 +1,22 @@
 import Links from '../../constants/Links';
 
 const urlMain = 'https://d1b1rc939omrh2.cloudfront.net/';
-const imgTitlebg = '/bg_title.jpg';
+const imgTitlebg = '/bg_title2.jpg';
 
 const Title = ({ data }) => {
 	return (
-		<div className="titleBgColor h-screen">
+		<div className="titleBgColor h-screen text-gray-100">
 			<img src={imgTitlebg} className="absolute h-full w-full object-cover" />
 
-			{/* to bake in */}
-
-			<div className="homeContainer md:items-center container mx-auto px-4 md:px-8 relative z-10 flex h-full">
+			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full pt-10">
 				<div className="flex flex-col items-start relative z-10 md:w-3/4 xl:w-4/5 lg:w-3/5 md:-mt-20">
-					<span className="font-bold uppercase text-2xl xl:text-4xl text-yellow-400">
-						<span className="hidden md:flex">Kingdom of the Ethemerals</span>
-					</span>
-					<h1 className="font-medium md:font-bold text-6xl md:text-7xl xl:text-8xl text-gray-100 leading-tight">
+					<span className="hidden md:flex font-bold uppercase text-2xl xl:text-4xl text-yellow-400 pb-4 font-ubuntu">Kingdom of the Ethemerals</span>
+					<h1 className="font-bold text-6xl md:text-7xl xl:text-8xl leading-none sm:leading-tight font-ubuntu">
 						Join the Battle
 						<br />
 						of a lifetime
 					</h1>
-					<span className="pt-6 text-xl sm:text-2xl">Unique and Verifiably Rare NFT Collectables</span>
-					<span className="pt-2 text-sm sm:text-base">Each playable token unlocks an ecosystem of onchain games. Are you ready to take on the challenge?</span>
+					<span className="pt-6 text-xl sm:text-2xl font-medium">Unique and Verifiably Rare NFT Collectables</span>
 					<div className="flex items-center space-x-5 py-4 lg:mb-8">
 						<a href={Links.TWITTER}>
 							<svg fill="white" className="text-xl w-7 h-7 hover:text-white transition-colors duration-200" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">

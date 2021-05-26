@@ -14,6 +14,7 @@ FiraSans
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;900&display=swap"); */
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
 /* @import 'react-alice-carousel/lib/alice-carousel.css'; */
 
 /* @import '@splidejs/splide/dist/css/themes/splide-default.min.css'; */
@@ -102,9 +103,6 @@ FiraSans
 		/* max-height: 333px; */
 	}
 
-	.titleBgColor {
-		background: #003973; /* fallback for old browsers */
-	}
 	.homeContainer {
 		top: 10%;
 	}
@@ -139,11 +137,14 @@ FiraSans
 	.elfBg {
 		background: #e6dada; /* fallback for old browsers */
 	}
+	.titleBgColor {
+		background: #1a2732; /* fallback for old browsers */
+	}
 	.ethemeralsBg {
-		background: #486677; /* fallback for old browsers */
+		background: #1a2732; /* fallback for old browsers */
 	}
 	.galleryBar {
-		background: #2a536a;
+		background: #0e151b;
 	}
 }
 
@@ -153,5 +154,5 @@ FiraSans
 }
 .splide-thumb .splide__slide.is-active {
 	opacity: 1;
-	background: #486677;
+	background: #1a2732;
 }

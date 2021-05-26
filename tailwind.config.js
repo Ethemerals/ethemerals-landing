@@ -39,9 +39,16 @@ module.exports = {
 					DEFAULT: '#2F2D3C',
 					dark: '#0E151C',
 				},
+				customRed: {
+					DEFAULT: '#FC43BD',
+				},
+				customLightBlue: {
+					DEFAULT: '#77D9E2',
+				},
 			},
 			fontFamily: {
-				sans: ['Ubuntu', ...defaultTheme.fontFamily.sans],
+				ubuntu: ['Ubuntu', ...defaultTheme.fontFamily.sans],
+				sans: ['Noto Sans SC', ...defaultTheme.fontFamily.sans],
 			},
 			backgroundImage: (theme) => ({
 				land: "url('/bg_landsales.jpg')",

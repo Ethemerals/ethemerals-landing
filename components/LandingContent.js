@@ -15,8 +15,8 @@ import Footer from './sections/Footer';
 const Content = () => {
 	return (
 		<>
-			{/* <Title /> */}
-			<Title2 />
+			<Title />
+			{/* <Title2 /> */}
 			{/* <Title3 /> */}
 			<Ethemerals />
 
