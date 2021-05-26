@@ -16,7 +16,8 @@ FiraSans
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 /* @import 'react-alice-carousel/lib/alice-carousel.css'; */
 
-@import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+/* @import '@splidejs/splide/dist/css/themes/splide-default.min.css'; */
+@import '@splidejs/splide/dist/css/splide-core.min.css';
 /* @import '@splidejs/splide/dist/css/themes/splide-sea-green.min.css'; */
 /* @import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css'; */
 
@@ -142,13 +143,14 @@ FiraSans
 		background: #486677; /* fallback for old browsers */
 	}
 	.galleryBar {
-		background: #1a394b;
+		background: #2a536a;
 	}
-	.galleryBarActive {
-		background: #0e1c24;
-	}
-	.splide--nav > .splide__track > .splide__list > .splide__slide.is-active {
-		background: #0e1c24;
+	.splide-thumb .splide__slide {
+		opacity: 0.5;
 		border: none;
+	}
+	.splide-thumb .splide__slide.is-active {
+		opacity: 1;
+		background: #486677;
 	}
 }

@@ -149,17 +149,12 @@ const SplideCarousel = () => {
 		width: '100vw',
 		gap: '1rem',
 		pagination: false,
-		fixedWidth: 120,
+		fixedWidth: 80,
 		fixedHeight: 60,
+		lazyLoad: false,
 		breakpoints: {
-			576: {
-				fixedWidth: 120,
-				fixedHeight: 60,
-				gap: '0rem',
-			},
 			898: {
-				fixedWidth: 120,
-				fixedHeight: 60,
+				gap: '0rem',
 			},
 		},
 		isNavigation: true,
@@ -186,7 +181,7 @@ const SplideCarousel = () => {
 				</Splide>
 			</animated.div>
 			<div className="flex justify-center overflow-hidden galleryBar">
-				<Splide options={secondaryOptions} ref={secondaryRef}>
+				<Splide className="splide-thumb" options={secondaryOptions} ref={secondaryRef}>
 					{chars.map((charObj, index) => (
 						<SplideSlide key={index}>
 							<img src={`./splide/${charObj.name}_t.png`} alt={`${charObj.name} thumbnail`} />
