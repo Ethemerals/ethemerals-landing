@@ -1,7 +1,7 @@
 import Links from '../../constants/Links';
 const webappMainURL = Links.APP;
 
-const symbol = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Felflogo?alt=media&token=0f925aa3-0f38-4ce2-8713-0d767f82d3dd';
+const symbol = '/elflogo.png';
 
 const MenuItems = () => {
 	return (

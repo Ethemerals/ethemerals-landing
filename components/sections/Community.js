@@ -1,14 +1,56 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Links from '../../constants/Links';
 
-const imgTeam = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fcommunity?alt=media&token=646ab889-f210-4086-ae26-95f3bd7775d9';
-// const imgTeam = '/community.png';
+import { usePWVSpring } from '@play-when-visible/react-spring';
+import { config, animated } from '@react-spring/web';
+
 const imgS = './community/community_s.png';
 const imgM = './community/community_m.png';
 const imgL = './community/community_l.png';
 
+{
+	/* <div className=" bg-gray-100 font-light mx-auto text-center items-center justify-center w-64 h-64 py-8 px-4 mb-6 shadow rounded ">
+<a href={Links.TWITTER} className="cursor-pointer">
+  <img src="/icon_big_twitter.png" alt="icon" width="100" height="100" />
+</a>
+<h3 className="font-bold text-2xl">Twitter</h3>
+Follow @Ethemerals for the latest news and announcements
+</div> */
+}
+
+const SocialCard = ({ props }) => (
+	<div className="shadow-lg rounded-lg p-4 bg-gray-100 relative mx-auto my-4 md:my-10 w-60 h-60">
+		<a ref={props.ref} className="flex m-auto items-center w-24 h-24 justify-center cursor-pointer" href={props.href} target="_blank">
+			<animated.img style={props.anim} src={`/${props.icon}.png`} alt="icon" width="80" height="80" />
+		</a>
+		<p className="text-gray-900 font-bold text-2xl mt-3">{props.title}</p>
+		<p className="text-gray-500 text-sm">{props.description}</p>
+	</div>
+);
+
 const Community = () => {
+	const animation = {
+		from: { scale: 0 },
+		to: { scale: 1 },
+		config: config.wobbly,
+	};
+
+	const [iconRef, iconAnim] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [iconRef2, iconAnim2] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [iconRef3, iconAnim3] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [iconRef4, iconAnim4] = usePWVSpring({
+		animation: animation,
+	});
+
 	return (
 		<>
 			<section className="bg-gray-200 text-gray-800 px-4 pb-24 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 leading-normal">
@@ -20,35 +62,47 @@ const Community = () => {
 						Join our rapidly growing community of players, chat with the devs and artists, interact with others players and have your say in shaping the future of the Kingdom of the Ethemerals.
 					</p>
 				</div>
-				<div className="text-center sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 md:max-w-3xl lg:max-w-7xl m-auto text-gray-700">
-					<div className="bg-gray-100 font-light mx-auto text-center items-center justify-center w-64 h-64 py-8 px-4 mb-6 shadow rounded ">
-						<a href={Links.DISCORD} className="cursor-pointer">
-							<Image src="/icon_big_discord.png" alt="icon" width="100" height="100" />
-						</a>
-						<h3 className="font-bold text-2xl">Discord</h3>
-						Chat live with the community, artist and developers
-					</div>
-					<div className=" bg-gray-100 font-light mx-auto text-center items-center justify-center w-64 h-64 py-8 px-4 mb-6 shadow rounded ">
-						<a href={Links.TWITTER} className="cursor-pointer">
-							<Image src="/icon_big_twitter.png" alt="icon" width="100" height="100" />
-						</a>
-						<h3 className="font-bold text-2xl">Twitter</h3>
-						Follow @Ethemerals for the latest news and announcements
-					</div>
-					<div className=" bg-gray-100 font-light mx-auto text-center items-center justify-center w-64 h-64 py-8 px-4 mb-6 shadow rounded ">
-						<a href={Links.INSTAGRAM} className="cursor-pointer">
-							<Image src="/icon_big_instagram.png" alt="icon" width="100" height="100" />
-						</a>
-						<h3 className="font-bold text-2xl">Instagram</h3>
-						Get the latest art and design updates
-					</div>
-					<div className=" bg-gray-100 font-light mx-auto text-center items-center justify-center w-64 h-64 py-8 px-4 mb-6 shadow rounded ">
-						<a href={Links.GITHUB} className="cursor-pointer">
-							<Image src="/icon_big_github.png" alt="icon" width="100" height="100" />
-						</a>
-						<h3 className="font-bold text-2xl">Github</h3>
-						Contribute and develop the future of the Kingdom of the Ethemerals
-					</div>
+				<div className="text-center sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 md:max-w-3xl lg:max-w-5xl m-auto text-gray-700">
+					<SocialCard
+						props={{
+							icon: 'icon_big_discord',
+							title: 'Discord',
+							description: 'Chat live with the Ethemeral community, artist and developers',
+							ref: iconRef,
+							anim: iconAnim,
+							href: Links.DISCORD,
+						}}
+					/>
+					<SocialCard
+						props={{
+							icon: 'icon_big_twitter',
+							title: 'Twitter',
+							description: 'Follow @Ethemerals for the latest news and announcements',
+							ref: iconRef2,
+							anim: iconAnim2,
+							href: Links.TWITTER,
+						}}
+					/>
+					<SocialCard
+						props={{
+							icon: 'icon_big_instagram',
+							title: 'Instagram',
+							description: 'Get the latest art and design updates',
+							ref: iconRef3,
+							anim: iconAnim3,
+							href: Links.INSTAGRAM,
+						}}
+					/>
+					<SocialCard
+						props={{
+							icon: 'icon_big_github',
+							title: 'Github',
+							description: 'Contribute and develop the future of the Kingdom of the Ethemerals',
+							ref: iconRef4,
+							anim: iconAnim4,
+							href: Links.GITHUB,
+						}}
+					/>
 				</div>
 				<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>

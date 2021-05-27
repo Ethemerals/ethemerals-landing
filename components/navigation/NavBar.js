@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import Image from 'next/image';
 import Links from '../../constants/Links';
 import { useTransition, useSpring, animated, config } from '@react-spring/web';
 import useMeasure from 'react-use-measure';
@@ -69,7 +68,7 @@ const Navbar = () => {
 					<div className="flex items-center w-screen justify-between sm:px-10">
 						<div className="mt-2 pl-2">
 							<a href="#">
-								<Image src="/icon_xs.png" alt="icon" width="30" height="30" />
+								<img src="/icon_xs.png" alt="icon" width="30" height="30" />
 							</a>
 						</div>
 

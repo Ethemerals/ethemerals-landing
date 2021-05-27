@@ -2,9 +2,9 @@ const Roadmap = () => {
 	const cssLine = (
 		<div className="col-start-5 col-end-6 md:mx-auto relative mr-10">
 			<div className="h-full w-6 flex items-center justify-center">
-				<div className="h-full w-1 bg-gray-500 pointer-events-none"></div>
+				<div className="h-full w-1 bg-gray-400 pointer-events-none"></div>
 			</div>
-			<div className="w-6 h-6 absolute top-1/2 rounded-full bg-gray-500"></div>
+			<div className="w-6 h-6 absolute top-1/2 rounded-full bg-gray-400"></div>
 		</div>
 	);
 
@@ -24,12 +24,12 @@ const Roadmap = () => {
 
 	const card1body = (
 		<>
-			- ELF Token mainnet launch
+			- ELF mainnet launch
 			<br></br>- Core NFT mainnet launch
 			<br></br>- Eternal Battle contract mainnet launch
-			<br></br>- Website update and intergration
-			<br></br>- Marketing and social media
-			<br></br>- 60 Mintable Ethemeral classes available
+			<br></br>- App update and intergration
+			<br></br>- Marketing and social media push
+			<br></br>- 100 Mintable Ethemeral classes available
 		</>
 	);
 
@@ -41,11 +41,11 @@ const Roadmap = () => {
 	const card2body = (
 		<>
 			- Explore layer 2 posibilities
-			<br></br>- ELF Token staking implementation
-			<br></br>- Group Battle contract testnet launch
-			<br></br>- Design and create new Ethemeral coin classes
-			<br></br>- Design and create set bonus NFT artwork
-			<br></br>- Explore Land and world development
+			<br></br>- ELF staking implementation
+			<br></br>- PVP Battle contract testnet launch
+			<br></br>- Continue Ethemeral coin designs
+			<br></br>- Design and contract NFT set artwork
+			<br></br>- Continue land and world development
 		</>
 	);
 
@@ -57,10 +57,9 @@ const Roadmap = () => {
 	const card3body = (
 		<>
 			- IFPS Integration
-			<br></br>- Group Battle launch
+			<br></br>- PVP Battle launch
 			<br></br>- Layer 2 scaling testnet launch
 			<br></br>- Boss Battle testnet launch
-			<br></br>- PvP Battle testnet launch
 			<br></br>- Release redeemable set bonus NFT artwork
 		</>
 	);
@@ -74,7 +73,6 @@ const Roadmap = () => {
 		<>
 			- Layer 2 mainnet launch
 			<br></br>- Boss Battle mainnet launch
-			<br></br>- PvP Battle mainnet launch
 			<br></br>- Additional NFT Mining Features
 			<br></br>- Release new mintable Ethemeral classes
 		</>
@@ -90,7 +88,7 @@ const Roadmap = () => {
 			- Governance research and development
 			<br></br>- Integrate decentralized services
 			<br></br>- Explore further gameplay mechanics
-			<br></br>- Begin integrating Land and Items into gameplay
+			<br></br>- Begin integrating Land and Items
 		</>
 	);
 
@@ -99,25 +97,11 @@ const Roadmap = () => {
 		body: card5body,
 	};
 
-	const card6body = (
-		<>
-			- Chainlink VRF Integration
-			<br></br>- Continued development of NFT PoS mining platform
-			<br></br>- Character balancing, rewards and content scaling for RPG Beta
-			<br></br>- Onboard additional NFT Mining Partners
-		</>
-	);
-
-	const card6 = {
-		heading: 'Q4 2021',
-		body: card6body,
-	};
-
 	return (
 		<section className="bg-roadmap bg-center bg-cover">
 			<a id="roadmap"></a>
-			<div className="m-auto py-24">
-				<h2 className="text-7xl text-center font-medium pt-10 pb-10 md:pt-30 md:pb-30 font-ubuntu text-gray-400">Roadmap</h2>
+			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl">
+				<h2 className="text-center text-7xl font-medium pt-20 md:pt-40 font-ubuntu overflow-hidden pb-8 text-gray-200">Roadmap</h2>
 				<div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
 					<div className="flex flex-row-reverse md:contents">
 						{cssLCard(card1)}

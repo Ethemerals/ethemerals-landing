@@ -8,7 +8,7 @@ const Title = ({ data }) => {
 		<div className="titleBgColor h-screen text-gray-100">
 			<img src={imgTitlebg} className="absolute h-full w-full object-cover" />
 
-			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full pt-10">
+			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full">
 				<div className="flex flex-col items-start relative z-10 md:w-3/4 xl:w-4/5 lg:w-3/5 md:-mt-20">
 					<span className="hidden md:flex font-bold uppercase text-2xl xl:text-4xl text-yellow-400 pb-4 font-ubuntu">Kingdom of the Ethemerals</span>
 					<h1 className="font-bold text-6xl md:text-7xl xl:text-8xl leading-none sm:leading-tight font-ubuntu">

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import Image from 'next/image';
-
 import Links from '../../constants/Links';
 
 const imgBattle1 = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fpvpbattle?alt=media&token=bc25debd-9313-4845-842b-8968434036f5';
@@ -45,7 +43,7 @@ const Battle = () => {
 				</div>
 			</div>
 			<div className="flex mx-auto text-center items-center justify-center xs:pt-20 sm:pt-0">
-				<Image src="/icon_playtoearn.png" alt="icon" width="256" height="256" />
+				<img src="/icon_playtoearn.png" alt="icon" width="256" height="256" />
 			</div>
 			<div className="max-w-4xl mx-auto text-center xs:pt-0 pt-6 md:max-w-lg">
 				<p className="text-2xl font-bold">Play to Earn</p>
