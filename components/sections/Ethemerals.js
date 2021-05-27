@@ -1,13 +1,32 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import { usePWVSpring } from '@play-when-visible/react-spring';
+import { config, animated } from '@react-spring/web';
 
 import Links from '../../constants/Links';
 
 const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
 
 const Ethemerals = () => {
+	const animation = {
+		from: { scale: 0 },
+		to: { scale: 1 },
+		config: config.wobbly,
+	};
+
+	const [supplyRef, supplyAnim] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [supplyRef1, supplyAnim1] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [supplyRef2, supplyAnim2] = usePWVSpring({
+		animation: animation,
+	});
+
 	const descriptionListItem = (props) => (
 		<div className="p-4">
 			<h3 className="text-xl font-medium">
@@ -26,18 +45,18 @@ const Ethemerals = () => {
 	);
 
 	const liItem1 = {
-		title: 'Enter the Metaverse',
+		title: 'Crypto Sweat and Tears',
 		body: <span>When a cryptocurrency hits the top 100 market cap rankings they become mintable as an Ethemeral</span>,
 	};
 
 	const liItem2 = {
-		title: 'For glory and Honor!',
+		title: 'Enter the Metaverse',
 		body: <span>Owning an Ethemeral unlocks a suite of games and interactive worlds</span>,
 	};
 
 	const liItem3 = {
-		title: 'Crypto Sweat and Tears',
-		body: <span>Ethemerals are born equal but only the skilled and perseverance gain ranks and earn rewards</span>,
+		title: 'For glory and Honor!',
+		body: <span>Ethemerals are born equal but only the skilled and resolute gain ranks and earn rewards</span>,
 	};
 
 	const liItem4 = {
@@ -47,12 +66,12 @@ const Ethemerals = () => {
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless, Proceed with caution or be reaped by other Ethemerals</span>,
+		body: <span>Ethemerals are ruthless, Proceed with caution or be reaped by others</span>,
 	};
 
 	const liItem6 = {
 		title: 'Collectable Sets',
-		body: <span>Holding certain Ethemerals receive gameplay bonuses and the ability to mint one of a kind art NFTs. 100s of combinations to be discovered</span>,
+		body: <span>Hold certain Ethemerals and receive gameplay bonuses and the ability to mint one of a kind art NFTs. 100s of combinations to be discovered</span>,
 	};
 
 	return (
@@ -60,10 +79,10 @@ const Ethemerals = () => {
 		<section className="ethemeralsBg bg-opacity-80 pb-40 text-gray-200 leading-normal">
 			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 				<a id="ethemerals">
-					<h2 className="text-3xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
+					<h2 className="text-3xl sm:text-4xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
 				</a>
 				<p className="md:text-xl md:py-4">
-					Each warrior, birthed from the souls of top ranking cryptocurrencies. Given life and ready for battle. Own one to unlock the Kingdom of The Ethemerals Universe!
+					Each warrior, birthed from the souls of top ranking cryptocurrencies. Given life and ready for battle. Own one and enter the Kingdom of The Ethemerals Universe!
 				</p>
 			</div>
 			<SplideCarousel />
@@ -83,31 +102,31 @@ const Ethemerals = () => {
 			</div>
 			<div className="mx-auto justify-center items-start text-center grid md:grid-cols-3 justify-items-center md:max-w-5xl text-gray-900">
 				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
-					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<img src="/icon_ini_supply.png" alt="icon" width="34" height="34" />
+					<div ref={supplyRef} className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
+						<animated.img style={supplyAnim} src="/icon_ini_supply.png" alt="icon" width="34" height="34" />
 					</div>
 					<h3 className="text-xl font-bold py-2">Initial Supply</h3>
 					<p className="py-2">
 						100 unique Ethemeral Classes released at launch, with a maximum of <span className="font-bold">10 editions</span> each. Total 1000 Initial Supply
 					</p>
 				</div>
-				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
+				<div ref={supplyRef1} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
 					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<img src="/icon_inflation.png" alt="icon" width="34" height="34" />
+						<animated.img style={supplyAnim1} src="/icon_inflation.png" alt="icon" width="34" height="34" />
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
-						When new coins enter the <span className="font-bold">top 100</span> CoinMarketcap rankings, they will be given the honor of becoming an Ethemeral and become mintable. On average a single
-						mintable Ethemeral class will be released each week
+						When new coins enter the <span className="font-bold">top 100</span> CoinMarketcap rankings, they will become an Ethemeral and be mintable. On average a single mintable Ethemeral class will
+						be released each week
 					</p>
 				</div>
-				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
+				<div ref={supplyRef2} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
 					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<img src="/icon_totalsupply.png" alt="icon" width="34" height="34" />
+						<animated.img style={supplyAnim2} src="/icon_totalsupply.png" alt="icon" width="34" height="34" />
 					</div>
 					<h3 className="text-xl font-bold py-2">Total Supply</h3>
 					<p className="py-2">
-						Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be mintable. At the inflation rate, the last coin will be minted in 6
+						Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be minted. At the inflation rate, the last one will be minted in 6
 						years.
 					</p>
 				</div>

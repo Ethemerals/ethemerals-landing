@@ -1,66 +1,106 @@
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+
 import Links from '../../constants/Links';
+
+import { usePWVSpring } from '@play-when-visible/react-spring';
+import { config, animated } from '@react-spring/web';
 
 const imgElfsymbol = './logo_elf.png';
 
+const ElfCard = ({ props }) => (
+	<div className="shadow-lg rounded p-4 bg-gray-50 relative mx-auto my-4 md:my-10 max-w-xs">
+		<div ref={props.ref} className="flex m-auto items-center w-12 h-12 justify-center">
+			<animated.img style={props.anim} src={`/${props.icon}.png`} alt="icon" width="60" height="60" />
+		</div>
+		<p className="text-gray-900 font-bold mb-2">{props.title}</p>
+		<p className="text-gray-500 text-sm mb-2">{props.description}</p>
+	</div>
+);
+
 const Elf = () => {
+	const animation = {
+		from: { scale: 0 },
+		to: { scale: 1 },
+		config: config.wobbly,
+	};
+
+	const [iconRef, iconAnim] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [iconRef2, iconAnim2] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [iconRef3, iconAnim3] = usePWVSpring({
+		animation: animation,
+	});
+
+	const [iconRef4, iconAnim4] = usePWVSpring({
+		animation: animation,
+	});
+
 	return (
-		<section className="px-4 pb-12 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 bg-gray-200">
-			<div className="max-w-4xl mx-auto text-center">
+		<section className="px-4 pb-24 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 leading-normal bg-gray-200 text-gray-800">
+			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 				<a id="elf">
-					<h2 className="text-center text-black text-5xl md:text-7xl pt-16 sm:pt-16 md:pt-24">
-						<span className="flex text-center items-center mx-auto justify-center text-indigo-900">
-							<img src={imgElfsymbol} className="w-14 h-14"></img>
-							<span>ELF</span>
-						</span>
+					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu flex items-center text-pink-600">
+						<img src={imgElfsymbol} className="w-14 h-14"></img>
+						<span>ELF</span>
 					</h2>
 				</a>
-				<h3 className="text-lg sm:text-2xl font-extrabold leading-9 text-indigo-900 sm:leading-10 pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>
-				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
-					The Ethemeral Life Force <span className="font-bold">(ELF token)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able revive damaged
-					Ethemerals, to mint at a discount, purchase land and items, participate in community building and direction. ELF tokens do not have monetary value and are used to incentivize player
-					participation.
+				<h3 className="text-lg sm:text-2xl font-extrabold pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>
+				<p className="mt-3 sm:mt-4">
+					The Ethemeral Life Force <span className="font-bold">(ELF)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able revive damaged Ethemerals, to
+					mint at a discount, purchase land and items and participate in community building and direction. ELF tokens do not have monetary value and are used to incentivize player participation.
 				</p>
-				<p className="mt-3 text-base leading-7 sm:mt-4 text-black mb-4">
-					When an Ethemeral is born they contain a certain number of ELF. More ELF can be gained by joining in battles. To promote and reward dedicated players, more ELF is distributed to the most
-					skilled Ethemerals. Players are then able to redeem the locked ELF from their Ethemerals.
+				<p className="mt-3 sm:mt-4">When an Ethemeral is born they hold an amount of ELF. Earning more ELF when engaging in battle. Players are able to redeem the locked ELF from their Ethemerals.</p>
+				<p className="mt-3 sm:mt-4 font-bold">
+					ELF is deflationary, on each transaction a tax of 1% is sent to the core NFT contract, to be used as rewards for active players and reducing circulating supply
 				</p>
 			</div>
-			<div className="text-center justify-center grid md:grid-cols-2 lg:grid-cols-4 md:gap-2 lg:gap-x-8 lg:max-w-7xl m-auto">
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
-					<div className="flex m-auto items-center w-16 h-16 justify-center">
-						<Image src="/icon_gift.png" alt="icon" width="60" height="60" />
-					</div>
-					<p className="text-gray-800 text-xl font-medium mb-2">Rewards</p>
-					<p className="text-gray-400 text-sm mb-4">
-						Participate in battles and earn ELF. Climb the rankings for a chance to redeem the Highest Honor reward reserved for the top ranking Ethemeral holder.
-					</p>
-				</div>
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
-					<div className="flex m-auto items-center w-16 h-16 justify-center">
-						<Image src="/icon_heart.png" alt="icon" width="60" height="60" />
-					</div>
-					<p className="text-gray-800 text-xl font-medium mb-2">Staking</p>
-					<p className="text-gray-400 text-sm mb-4">ELF holders and liquidity providers can lock up their tokens to earn ELF.</p>
-				</div>
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
-					<div className="flex m-auto items-center w-16 h-16 justify-center">
-						<Image src="/icon_gov.png" alt="icon" width="60" height="60" />
-					</div>
-					<p className="text-gray-800 text-xl font-medium mb-2">Governance</p>
-					<p className="text-gray-400 text-sm mb-4">Bonus Ethemeral coin classes, art and design upgrades and ecosystem changes can be voted on by ELF holders.</p>
-				</div>
-				<div className="shadow-lg rounded-xl max-w-sm p-4 bg-white relative mx-auto my-4 md:my-10">
-					<div className="flex m-auto items-center w-16 h-16 justify-center">
-						<Image src="/icon_payment.png" alt="icon" width="60" height="60" />
-					</div>
-					<p className="text-gray-800 text-xl font-medium mb-2">Payment</p>
-					<p className="text-gray-400 text-sm mb-4">ELF will be accepted as payment within the Kingdom of the Ethemerals. Future land sales and items can be purchased with ELF</p>
-				</div>
+			<div className="text-center justify-center grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:max-w-5xl m-auto">
+				<ElfCard
+					props={{
+						icon: 'icon_gift',
+						title: 'Rewards',
+						description: 'Participate in battles and earn ELF. Climb the rankings for a chance to redeem the Highest Honor reward',
+						ref: iconRef,
+						anim: iconAnim,
+					}}
+				/>
+				<ElfCard
+					props={{
+						icon: 'icon_heart',
+						title: 'Staking',
+						description: 'ELF holders and liquidity providers can lock up their tokens to earn ELF',
+						ref: iconRef2,
+						anim: iconAnim2,
+					}}
+				/>
+				<ElfCard
+					props={{
+						icon: 'icon_gov',
+						title: 'Governance',
+						description: 'Bonus Ethemeral coin classes, art and design upgrades and ecosystem changes can be voted on by ELF holders',
+						ref: iconRef3,
+						anim: iconAnim3,
+					}}
+				/>
+				<ElfCard
+					props={{
+						icon: 'icon_payment',
+						title: 'Payment',
+						description: 'ELF will be accepted as payment within the Kingdom of the Ethemerals. Future land sales and items can be purchased with ELF',
+						ref: iconRef4,
+						anim: iconAnim4,
+					}}
+				/>
 			</div>
+
 			<div className="justify-center mx-auto text-center mt-10 md:mt-20">
-				<div className="max-w-sm mx-auto bg-white p-4 mb-4 rounded-lg shadow-lg">
+				<p className="mb-2 text-pink-700">Trade $ELF on Uniswap Exchange</p>
+				<div className="max-w-xs mx-auto bg-gray-50 p-4 mb-16 rounded-lg shadow-lg hover:bg-white">
 					<a href={Links.UNISWAP}>
 						<svg viewBox="0 0 961 240" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path
@@ -72,35 +112,36 @@ const Elf = () => {
 						</svg>
 					</a>
 				</div>
-				<p className="mb-12 sm:mb-16 text-pink-700">Trade $ELF on Uniswap Exchange</p>
 			</div>
-			<div className="grid sm:grid-cols-2 text-center justify-center max-w-lg justify-items-center mx-auto gap-6">
-				<a href={Links.ELF} className="uppercase py-2 px-2 mr-2 shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
+			<div className="grid sm:grid-cols-2 text-center justify-center max-w-lg mx-auto uppercase gap-x-8 gap-y-4">
+				<a href={Links.ELF} className="p-2 shadow-lg rounded-lg bg-pink-500 text-white hover:bg-yellow-300">
 					Provide Liquidity
 				</a>
-				<a href={Links.ELF} className="uppercase py-2 px-2 mr-2 shadow-lg rounded-lg bg-pink-500 border-2 border-transparent text-white text-md hover:bg-yellow-300">
+				<a href={Links.ELF} className="p-2 shadow-lg rounded-lg bg-pink-500 text-white hover:bg-yellow-300">
 					Stake and Earn $ELF
 				</a>
 			</div>
 
-			<div className="m-auto text-center max-w-5xl pb-30">
-				<h2 className="my-8 md:text-6xl text-4xl leading-10 uppercase pt-20 text-purple-900">Metrics</h2>
+			<div className="m-auto text-center max-w-5xl pb-40 textMetric">
+				<h2 className="text-7xl font-medium pt-40 md:pt-40 pb-5 md:pb-10 font-ubuntu items-center textMetric">
+					<span>METRICS</span>
+				</h2>
 				<div className="text-center md:grid md:grid-cols-2">
-					<div className="flex mx-auto text-center items-center justify-center">
-						<Image src="/piechart.png" alt="icon" width="400" height="400" />
+					<div className="flex mx-auto text-center items-center justify-center mb-8">
+						<img src="/piechart.png" alt="icon" width="400" height="400" />
 					</div>
 					<div className="text-left md:px-10 xs:px-4">
-						<div className="metricsA p-4 my-4 shadow-md text-gray-600">
-							<h3 className="textMetric font-semibold text-lg mb-1">40% Gameplay Rewards</h3>
-							<p className="leading-tight">Majority of the ELF tokens will be locked within the core contract and can only be redeemed as rewards to active players.</p>
+						<div className="metricsA p-4 my-4 shadow-md">
+							<h3 className="textMetric font-bold text-lg my-1">40% Gameplay Rewards</h3>
+							<p>Majority of the ELF tokens will be locked within the core contract and can only be redeemed as rewards to active players.</p>
 						</div>
-						<div className="metricsB p-4 my-4 shadow-md text-gray-600">
-							<h3 className="textMetric font-semibold text-lg mb-1">30% - Liquidity</h3>
-							<p className="leading-tight">Locked for liquidity on Uniswap and other exchanges. Staking and farming bonuses</p>
+						<div className="metricsB p-4 my-4 shadow-md">
+							<h3 className="textMetric font-semibold text-lg my-1">30% - Liquidity</h3>
+							<p>Locked for liquidity on Uniswap and other exchanges. Staking and farming bonuses</p>
 						</div>
-						<div className="metricsC p-4 my-4 shadow-md text-gray-600">
-							<h3 className="textMetric font-semibold text-lg mb-1">30% - Community</h3>
-							<p className="leading-tight">
+						<div className="metricsC p-4 my-4 shadow-md">
+							<h3 className="textMetric font-semibold text-lg my-1">30% - Community</h3>
+							<p>
 								To promote community involvement, an ELF fund is reserved for bug bounties, artists, designers, community managers and community developers extending the NFT gameplay contracts and
 								ecosystem.
 							</p>
