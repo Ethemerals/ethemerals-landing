@@ -64,7 +64,7 @@ const Navbar = () => {
 					{/* <!-- mobile menu --> */}
 					{/* <!-- mobile button goes here --> */}
 					<div className="flex items-center w-screen justify-between sm:px-10">
-						<div className="mt-2 pl-2">
+						<div className="pl-2 my-2">
 							<a href="#">
 								<img src="/icon_xs.png" alt="icon" width="30" height="30" />
 							</a>

@@ -19,7 +19,7 @@ const Battle = () => {
 				<div className="hidden sm:block">
 					<img src={imgBattle2} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
-					<p className="mt-2 xs:mb-20">Settle those scores! Send your team of Ethemerals into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.</p>
+					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.</p>
 				</div>
 
 				<div className="">
@@ -31,7 +31,7 @@ const Battle = () => {
 				<div className="visible sm:hidden">
 					<img src={imgBattle2} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
-					<p className="mt-2 mb-20">Settle those scores! Send your team of Ethemerals into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.</p>
+					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.</p>
 				</div>
 
 				<div className="">
@@ -47,7 +47,7 @@ const Battle = () => {
 				<p className="text-2xl font-bold">Play to Earn</p>
 
 				<p className="mt-3">
-					Ethemerals earn $ELF (Ethemeral Life Force) every time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards gets allocated to the{' '}
+					Ethemerals earn $ELF (Ethemeral Life Force) each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards gets allocated to the{' '}
 					<span className="font-bold">Highest Honor fund.</span> Redeemable by the top ranking Ethemeral
 				</p>
 			</div>

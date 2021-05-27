@@ -113,35 +113,41 @@ FiraSans
 		top: 24%;
 	}
 	.metricsA {
-		background: #def2ff; /* fallback for old browsers */
+		background: #def2ff;
+		color: #00568e;
 	}
+
 	.metricsB {
-		background: #fed8ff; /* fallback for old browsers */
+		background: #fed8ff;
+		color: #760879;
 	}
+
 	.metricsC {
-		background: #d4cfec; /* fallback for old browsers */
+		background: #d4cfec;
+		color: #5241a5;
 	}
+
 	.textMetric {
 		color: #004371;
 	}
 	.navBg {
-		background: #030029; /* fallback for old browsers */
+		background: #030029;
 	}
 	.titleBg {
-		background: #0e151c; /* fallback for old browsers */
+		background: #0e151c;
 	}
 	.battleBg {
 		background: rgb(122, 43, 113);
 		background: radial-gradient(circle, rgba(122, 43, 113, 1) 0%, rgba(87, 17, 47, 1) 100%);
 	}
 	.elfBg {
-		background: #e6dada; /* fallback for old browsers */
+		background: #e6dada;
 	}
 	.titleBgColor {
-		background: #1a2732; /* fallback for old browsers */
+		background: #1a2732;
 	}
 	.ethemeralsBg {
-		background: #1a2732; /* fallback for old browsers */
+		background: #1a2732;
 	}
 	.galleryBar {
 		background: #0e151b;

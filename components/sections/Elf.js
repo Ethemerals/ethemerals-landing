@@ -132,19 +132,16 @@ const Elf = () => {
 					</div>
 					<div className="text-left md:px-10 xs:px-4">
 						<div className="metricsA p-4 my-4 shadow-md">
-							<h3 className="textMetric font-bold text-lg my-1">40% Gameplay Rewards</h3>
+							<h3 className="font-bold text-lg my-1">40% Gameplay Rewards</h3>
 							<p>Majority of the ELF tokens will be locked within the core contract and can only be redeemed as rewards to active players.</p>
 						</div>
 						<div className="metricsB p-4 my-4 shadow-md">
-							<h3 className="textMetric font-semibold text-lg my-1">30% - Liquidity</h3>
+							<h3 className="font-bold text-lg my-1">30% - Liquidity</h3>
 							<p>Locked for liquidity on Uniswap and other exchanges. Staking and farming bonuses</p>
 						</div>
 						<div className="metricsC p-4 my-4 shadow-md">
-							<h3 className="textMetric font-semibold text-lg my-1">30% - Community</h3>
-							<p>
-								To promote community involvement, an ELF fund is reserved for bug bounties, artists, designers, community managers and community developers extending the NFT gameplay contracts and
-								ecosystem.
-							</p>
+							<h3 className="font-bold text-lg my-1">30% - Community</h3>
+							<p>To promote community involvement, an ELF fund is reserved for bug bounties, artists, community managers and community developers extending NFT gameplay contracts and ecosystem.</p>
 						</div>
 					</div>
 				</div>

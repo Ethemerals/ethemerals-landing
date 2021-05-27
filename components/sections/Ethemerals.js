@@ -49,12 +49,12 @@ const Ethemerals = () => {
 
 	const liItem2 = {
 		title: 'Enter the Metaverse',
-		body: <span>Owning an Ethemeral unlocks a suite of games and interactive worlds</span>,
+		body: <span>Owning an Ethemeral unlocks a suite of games and an interactive world</span>,
 	};
 
 	const liItem3 = {
-		title: 'For glory and Honor!',
-		body: <span>Ethemerals are born equal but only the skilled and resolute gain ranks and earn rewards</span>,
+		title: 'For Honor and Glory!',
+		body: <span>Test your might. Only the skilled and resolute gain ranks and earn rewards</span>,
 	};
 
 	const liItem4 = {
@@ -64,12 +64,12 @@ const Ethemerals = () => {
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless, Proceed with caution or be reaped by others</span>,
+		body: <span>Ethemerals are ruthless. Play for keeps, there is no mercy, no second chances.</span>,
 	};
 
 	const liItem6 = {
 		title: 'Collectable Sets',
-		body: <span>Hold certain Ethemerals and receive gameplay bonuses and the ability to mint one of a kind art NFTs. 100s of combinations to be discovered</span>,
+		body: <span>Hold certain Ethemerals and receive gameplay bonuses and redeem one of a kind art NFTs. 100s of combinations to be discovered</span>,
 	};
 
 	return (
@@ -79,9 +79,7 @@ const Ethemerals = () => {
 				<a id="ethemerals">
 					<h2 className="text-5xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
 				</a>
-				<p className="md:text-xl py-4">
-					Warrior maidens, birthed from the souls of top ranking cryptocurrencies. Given life and ready for battle. Adopt one and enter the Kingdom of The Ethemerals Universe!
-				</p>
+				<p className="md:text-xl py-4">Warrior maidens, rebirthed from the souls of the top ranking cryptocurrencies. Adopt one now and enter the Kingdom of The Ethemerals!</p>
 			</div>
 			<SplideCarousel />
 
@@ -89,8 +87,8 @@ const Ethemerals = () => {
 				{descriptionListItem(liItem1)}
 				{descriptionListItem(liItem2)}
 				{descriptionListItem(liItem3)}
-				{descriptionListItem(liItem4)}
 				{descriptionListItem(liItem5)}
+				{descriptionListItem(liItem4)}
 				{descriptionListItem(liItem6)}
 			</div>
 			<div className="flex justify-center pb-20">
@@ -114,8 +112,8 @@ const Ethemerals = () => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
-						When new coins enter the <span className="font-bold">top 100</span> CoinMarketcap rankings, they will become an Ethemeral and be mintable. On average a single mintable Ethemeral class will
-						be released each week
+						When new coins enter the <span className="font-bold">top 100</span> CoinMarketcap rankings, they will become an Ethemeral and be mintable. On average a single Ethemeral class will be
+						released each week
 					</p>
 				</div>
 				<div ref={supplyRef2} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
@@ -124,8 +122,7 @@ const Ethemerals = () => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Total Supply</h3>
 					<p className="py-2">
-						Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be minted. At the inflation rate, the last one will be minted in 6
-						years.
+						Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be minted. Claim your piece of the kingdom now!
 					</p>
 				</div>
 			</div>
