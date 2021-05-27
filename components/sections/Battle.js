@@ -15,7 +15,7 @@ const Battle = () => {
 				<a id="battle">
 					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Battle</h2>
 				</a>
-				<p className="md:text-xl md:py-4">
+				<p className="md:text-xl py-4">
 					The Kingdom of the Ethemerals needs you! Send your Ethemerals to battle to gain ranks, earn rewards and honor. Only the skilled and degenerates will rise to greatness.
 				</p>
 			</div>

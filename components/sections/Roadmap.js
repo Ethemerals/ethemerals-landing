@@ -117,7 +117,7 @@ const Roadmap = () => {
 		<section className="bg-roadmap bg-center bg-cover">
 			<a id="roadmap"></a>
 			<div className="m-auto py-24">
-				<h2 className="text-center text-5xl md:text-7xl p-8 text-gray-200">Roadmap</h2>
+				<h2 className="text-7xl text-center font-medium pt-10 pb-10 md:pt-30 md:pb-30 font-ubuntu text-gray-400">Roadmap</h2>
 				<div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
 					<div className="flex flex-row-reverse md:contents">
 						{cssLCard(card1)}

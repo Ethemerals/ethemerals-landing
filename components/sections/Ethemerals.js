@@ -81,8 +81,8 @@ const Ethemerals = () => {
 				<a id="ethemerals">
 					<h2 className="text-3xl sm:text-4xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
 				</a>
-				<p className="md:text-xl md:py-4">
-					Each warrior, birthed from the souls of top ranking cryptocurrencies. Given life and ready for battle. Own one and enter the Kingdom of The Ethemerals Universe!
+				<p className="md:text-xl py-4">
+					Warrior maidens, birthed from the souls of top ranking cryptocurrencies. Given life and ready for battle. Adopt one and enter the Kingdom of The Ethemerals Universe!
 				</p>
 			</div>
 			<SplideCarousel />

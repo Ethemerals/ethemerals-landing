@@ -51,12 +51,12 @@ const Elf = () => {
 				</a>
 				<h3 className="text-lg sm:text-2xl font-extrabold pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>
 				<p className="mt-3 sm:mt-4">
-					The Ethemeral Life Force <span className="font-bold">(ELF)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able revive damaged Ethemerals, to
-					mint at a discount, purchase land and items and participate in community building and direction. ELF tokens do not have monetary value and are used to incentivize player participation.
+					The Ethemeral Life Force <span className="font-bold">(ELF)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able to revive damaged Ethemerals,
+					mint at a discount, purchase land and items. ELF tokens do not have monetary value and are used to incentivize player participation.
 				</p>
-				<p className="mt-3 sm:mt-4">When an Ethemeral is born they hold an amount of ELF. Earning more ELF when engaging in battle. Players are able to redeem the locked ELF from their Ethemerals.</p>
+				<p className="mt-3 sm:mt-4">Ethemerals are born with a fixed amount of ELF and gain more by engaging in battle. Players are able to redeem the locked ELF from their Ethemerals.</p>
 				<p className="mt-3 sm:mt-4 font-bold">
-					ELF is deflationary, on each transaction a tax of 1% is sent to the core NFT contract, to be used as rewards for active players and reducing circulating supply
+					ELF is deflationary, on each transaction a fee of 2% is sent to the core NFT contract, to be used as rewards for active players and reducing circulating supply
 				</p>
 			</div>
 			<div className="text-center justify-center grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:max-w-5xl m-auto">
