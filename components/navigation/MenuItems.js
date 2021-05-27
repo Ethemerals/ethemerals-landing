@@ -1,6 +1,6 @@
 import Links from '../../constants/Links';
-const webappMainURL = Links.APP;
 
+const webappMainURL = Links.APP;
 const symbol = '/elflogo.png';
 
 const MenuItems = () => {

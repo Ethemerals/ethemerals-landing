@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Links from '../../constants/Links';
 
 import { usePWVSpring } from '@play-when-visible/react-spring';
@@ -7,16 +6,6 @@ import { config, animated } from '@react-spring/web';
 const imgS = './community/community_s.png';
 const imgM = './community/community_m.png';
 const imgL = './community/community_l.png';
-
-{
-	/* <div className=" bg-gray-100 font-light mx-auto text-center items-center justify-center w-64 h-64 py-8 px-4 mb-6 shadow rounded ">
-<a href={Links.TWITTER} className="cursor-pointer">
-  <img src="/icon_big_twitter.png" alt="icon" width="100" height="100" />
-</a>
-<h3 className="font-bold text-2xl">Twitter</h3>
-Follow @Ethemerals for the latest news and announcements
-</div> */
-}
 
 const SocialCard = ({ props }) => (
 	<div className="shadow-lg rounded-lg p-4 bg-gray-100 relative mx-auto my-4 md:my-10 w-60 h-60">
@@ -106,9 +95,9 @@ const Community = () => {
 				</div>
 				<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
-					<p className="md:text-xl py-4">Kingdom of the Ethemerals was created by a small team of Developers and Artists. We are crypto enthusiasts, grew up on anime and too many memes.</p>
+					<p className="md:text-xl py-4">Kingdom of the Ethemerals was created by a small team of Developers and Artists.</p>
 					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists, and collectors.</p>
-					<p className="md:text-xl py-4">To get in touch, please email ethemerals@gmail.com</p>
+					<p className="md:text-xl py-4">To get in touch, send email to contact@ethemerals.com</p>
 				</div>
 			</section>
 			<div className="bg-gray-200 hidden lg:block">

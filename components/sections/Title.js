@@ -1,9 +1,8 @@
 import Links from '../../constants/Links';
 
-const urlMain = 'https://d1b1rc939omrh2.cloudfront.net/';
 const imgTitlebg = '/bg_title2.jpg';
 
-const Title = ({ data }) => {
+const Title = () => {
 	return (
 		<div className="titleBgColor h-screen text-gray-100">
 			<img src={imgTitlebg} className="absolute h-full w-full object-cover" />

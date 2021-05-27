@@ -1,12 +1,10 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
-import Links from '../../constants/Links';
-import { useTransition, useSpring, animated, config } from '@react-spring/web';
-import useMeasure from 'react-use-measure';
+import React, { useState, useEffect } from 'react';
+import { useTransition, useSpring, animated } from '@react-spring/web';
 
 import MobileNavItems from './MobileMenuItems';
 import MenuItems from './MenuItems';
 
-const logo = 'https://firebasestorage.googleapis.com/v0/b/cbae-f9c77.appspot.com/o/images%2Flanding%2Fethemavator?alt=media&token=bf7c5413-970a-4705-afca-cd71a46b4ba0';
+const logo = '/ethemavator.png';
 
 const Navbar = () => {
 	const [isVisible, setIsVisible] = useState(false);

@@ -1,5 +1,3 @@
-import React, { useEffect, useState, useRef } from 'react';
-
 import dynamic from 'next/dynamic';
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
@@ -79,7 +77,7 @@ const Ethemerals = () => {
 		<section className="ethemeralsBg bg-opacity-80 pb-40 text-gray-200 leading-normal">
 			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 				<a id="ethemerals">
-					<h2 className="text-3xl sm:text-4xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
+					<h2 className="text-5xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
 				</a>
 				<p className="md:text-xl py-4">
 					Warrior maidens, birthed from the souls of top ranking cryptocurrencies. Given life and ready for battle. Adopt one and enter the Kingdom of The Ethemerals Universe!

@@ -1,8 +1,8 @@
-import React, { Component, useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { isMobile } from 'react-device-detect';
 
-import { useTransition, useSpring, useChain, config, animated, useSpringRef } from '@react-spring/web';
+import { useSpring, config, animated } from '@react-spring/web';
 
 import CharCard from './CharCard';
 
@@ -66,60 +66,20 @@ const SplideCarousel = () => {
 		config: config.molasses,
 	});
 
-	const move = (data) => {
-		// Fired right before a slider moves.
-		console.log('move');
-
-		// console.log(data);
-		// const chars = this.state.chars;
-		// chars[data.newIndex].visible = true;
-		// chars[data.oldIndex].visible = false;
-		// this.setState(({ chars }) => ({ chars }));
-		// console.log(this.state.chars[data.newIndex]);
-		// console.log(this.state.chars[data.oldIndex]);
-	};
+	const move = (data) => {};
 
 	const moved = (data) => {
-		// Fired right after a slider moves.
-
-		console.log('moved');
-		console.log(data);
 		setNewIndex(data.newIndex);
 		setOldIndex(data.oldIndex);
-		// const chars = this.state.chars;
-		// chars[data.newIndex].visible = true;
-		// chars[data.oldIndex].visible = false;
-		// this.setState(({ chars }) => ({ chars }));
-		// console.log(this.state.chars[data.newIndex]);
-		// console.log(this.state.chars[data.oldIndex]);
 	};
 
-	const drag = (data) => {
-		// Fired when dragging/swiping is started.
-		console.log('drag');
-	};
+	const drag = (data) => {};
 
-	const dragged = (data) => {
-		// Fired right after dragging/swiping is finished.
-		console.log('dragged');
-	};
+	const dragged = (data) => {};
 
-	const visible = (data) => {
-		// Fired when a slide is made visible on a view port.
-		// console.log('visible');
-		// const slide = this.state.chars[data.index];
-		// console.log(slide);
-		// console.log(slide.name, slide.leftbarRef.current);
-	};
+	const visible = (data) => {};
 
-	const hidden = (data) => {
-		// Fired when a slide is made hidden from a view port.
-		// console.log('hidden');
-		// console.log(data.index);
-		// if (data.index != 0) {
-		// 	console.log(this.state.chars[0].leftbarRef.current);
-		// }
-	};
+	const hidden = (data) => {};
 
 	const primaryOptions = {
 		type: 'slide',
@@ -167,10 +127,10 @@ const SplideCarousel = () => {
 			<animated.div style={bgColor}>
 				<Splide
 					options={primaryOptions}
-					onMove={(s, newIndex, oldIndex, destIndex) => move({ newIndex, oldIndex, destIndex })}
+					// onMove={(s, newIndex, oldIndex, destIndex) => move({ newIndex, oldIndex, destIndex })}
 					onMoved={(s, newIndex, oldIndex, destIndex) => moved({ newIndex, oldIndex, destIndex })}
-					onVisible={(s, Slide) => visible(Slide)}
-					onHidden={(s, Slide) => hidden(Slide)}
+					// onVisible={(s, Slide) => visible(Slide)}
+					// onHidden={(s, Slide) => hidden(Slide)}
 					ref={primaryRef}
 				>
 					{chars.map((charObj, index) => (

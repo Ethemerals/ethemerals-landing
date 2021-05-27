@@ -1,7 +1,5 @@
-import { useEffect, useState, useRef } from 'react';
-import { useTransition, useSpring, useChain, config, animated, useSpringRef } from '@react-spring/web';
+import { config, animated } from '@react-spring/web';
 import { usePWVSpring } from '@play-when-visible/react-spring';
-import { isMobile } from 'react-device-detect';
 
 const CharCard = ({ charName }) => {
 	const [leftRef, leftBarAnim] = usePWVSpring({

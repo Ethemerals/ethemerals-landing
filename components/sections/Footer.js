@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Links from '../../constants/Links';
 
 const Footer = () => {
