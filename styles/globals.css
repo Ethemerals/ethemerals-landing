@@ -152,6 +152,9 @@ FiraSans
 	.galleryBar {
 		background: #0e151b;
 	}
+	.brandColor {
+		color: #cc007a;
+	}
 }
 
 .splide-thumb .splide__slide {
