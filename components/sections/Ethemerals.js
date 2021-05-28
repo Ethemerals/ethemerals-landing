@@ -92,7 +92,7 @@ const Ethemerals = () => {
 				{descriptionListItem(liItem6)}
 			</div>
 			<div className="flex justify-center pb-20">
-				<a href={Links.ETHEMERALS} className="uppercase py-4 px-6 md:text-lg rounded bg-pink-600 shadow-lg text-white text-md hover:bg-yellow-300 ">
+				<a href={Links.ETHEMERALS} className="uppercase font-bold py-4 px-6 md:text-lg rounded bg-brandColor shadow-lg text-white text-md hover:bg-yellow-400 ">
 					All Minted Ethemerals
 				</a>
 			</div>

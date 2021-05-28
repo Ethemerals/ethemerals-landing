@@ -20,8 +20,8 @@ const CharCard = ({ charName }) => {
 
 	const [charRef, charAnim] = usePWVSpring({
 		animation: {
-			from: { opacity: 0, x: '2vw' },
-			to: { opacity: 1, x: '0vw' },
+			from: { x: '2vw' },
+			to: { x: '0vw' },
 		},
 	});
 

@@ -46,7 +46,10 @@ module.exports = {
 					DEFAULT: '#77D9E2',
 				},
 				brandColor: {
-					DEFAULT: '#FF007A',
+					DEFAULT: '#FF00B8',
+					purple: '#9C00D3',
+					dark: '#934E9E',
+					pale: '#FF66D4',
 				},
 			},
 			fontFamily: {

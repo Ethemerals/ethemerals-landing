@@ -66,7 +66,7 @@ const Navbar = () => {
 					<div className="flex items-center w-screen justify-between sm:px-10">
 						<div className="pl-2 my-2">
 							<a href="#">
-								<img src="/icon_xs.png" alt="icon" width="30" height="30" />
+								<img src={logo} alt="icon" width="30" height="30" />
 							</a>
 						</div>
 

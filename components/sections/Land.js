@@ -1,6 +1,6 @@
 const Land = () => {
 	return (
-		<section className="bg-land bg-cover bg-center text-center h-screen text-gray-200 relative">
+		<section className="bg-land bg-cover bg-center text-center h-screen text-gray-100 relative">
 			<a id="land">
 				<div className="h-full font-ubuntu">
 					<div className="absolute m-0 top-2/4 w-full">

@@ -79,11 +79,11 @@ const Title = () => {
 							</svg>
 						</a>
 					</div>
-					<a href={Links.APP} className="block bg-pink-600 shadow-lg bg-opacity-100 hover:bg-yellow-300 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16  transition duration-300">
+					<a href={Links.APP} className="block bg-brandColor shadow-lg bg-opacity-100 hover:bg-yellow-400 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16 transition duration-300">
 						Open a Capsule
 					</a>
-					<div className="block bg-indigo-900 shadow-lg bg-opacity-100 hover:bg-yellow-300 p-3 py-2 mt-6 text-sm font-bold cursor-pointer transition duration-300">
-						<a href={Links.UNISWAP}>$ELF launched! 🚀 Trade on Uniswap</a>
+					<div className="block bg-brandColor-purple shadow-lg bg-opacity-100 hover:bg-yellow-400 p-3 py-2 mt-6 text-sm font-bold cursor-pointer transition duration-300">
+						<a href={Links.UNISWAP}>$ELF is launching! 🚀 Trade on Uniswap</a>
 					</div>
 				</div>
 			</div>

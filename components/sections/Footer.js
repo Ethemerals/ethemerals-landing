@@ -7,7 +7,7 @@ const Footer = () => {
 				<ul className="text-lg font-light pb-8 flex flex-wrap justify-center">
 					<li className="w-1/2 md:w-1/3 lg:w-1/3">
 						<div className="text-center">
-							<h2 className=" text-gray-200 text-md uppercase mb-4 mt-8">Quick Links</h2>
+							<h2 className=" text-gray-200 text-bold uppercase mb-4 mt-8">Quick Links</h2>
 							<ul>
 								<li className="mb-4  hover:text-white transition-colors duration-200">
 									<a href="#">Top of Page</a>
@@ -62,7 +62,7 @@ const Footer = () => {
 						</svg>
 					</a>
 				</div>
-				<div className="text-center pt-10 sm:pt-12 flex items-center justify-center">ETHEMERALS.COM ©2021</div>
+				<div className="text-center pt-10 sm:pt-12 flex items-center justify-center text-brandColor">ETHEMERALS.COM ©2021</div>
 			</div>
 		</footer>
 	);

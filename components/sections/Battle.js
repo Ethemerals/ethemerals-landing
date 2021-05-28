@@ -52,8 +52,8 @@ const Battle = () => {
 				</p>
 			</div>
 			<div className="flex justify-center py-20">
-				<a href={Links.Battle} className="uppercase py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-300 ">
-					Onto Battle!
+				<a href={Links.Battle} className="uppercase font-bold py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
+					TO Battle!
 				</a>
 			</div>
 		</section>
