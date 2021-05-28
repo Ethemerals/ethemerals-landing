@@ -4,6 +4,10 @@ import { config, animated } from '@react-spring/web';
 
 import Links from '../../constants/Links';
 
+const imgIniSupply = '/icon_ini_supply.png';
+const imgInflation = '/icon_inflation.png';
+const imgTotalSupply = '/icon_totalsupply.png';
+
 const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
 
 const Ethemerals = () => {
@@ -64,12 +68,12 @@ const Ethemerals = () => {
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless. There is no mercy, no second chances.</span>,
+		body: <span>Ethemerals are ruthless. There is no mercy, no second chances. Proceed with caution!</span>,
 	};
 
 	const liItem6 = {
 		title: 'Collectable Sets',
-		body: <span>Holding certain Ethemeral unlocks set bonuses and redeemable one of a kind art NFTs. 100s of combinations to be discovered</span>,
+		body: <span>Holding certain Ethemerals unlocks set bonuses and redeemable one of a kind art NFTs. 100s of combinations to be discovered</span>,
 	};
 
 	return (
@@ -84,8 +88,8 @@ const Ethemerals = () => {
 			<SplideCarousel />
 
 			<div className="justify-center py-20 md:py-40 grid md:grid-cols-2 max-w-5xl mx-auto">
-				{descriptionListItem(liItem1)}
 				{descriptionListItem(liItem2)}
+				{descriptionListItem(liItem1)}
 				{descriptionListItem(liItem3)}
 				{descriptionListItem(liItem5)}
 				{descriptionListItem(liItem4)}
@@ -99,7 +103,7 @@ const Ethemerals = () => {
 			<div className="mx-auto justify-center items-start text-center grid md:grid-cols-3 justify-items-center md:max-w-5xl text-gray-900">
 				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
 					<div ref={supplyRef} className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<animated.img style={supplyAnim} src="/icon_ini_supply.png" alt="icon" width="34" height="34" />
+						<animated.img style={supplyAnim} src={imgIniSupply} alt="icon initial supply" width="34" height="34" />
 					</div>
 					<h3 className="text-xl font-bold py-2">Initial Supply</h3>
 					<p className="py-2">
@@ -108,7 +112,7 @@ const Ethemerals = () => {
 				</div>
 				<div ref={supplyRef1} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
 					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<animated.img style={supplyAnim1} src="/icon_inflation.png" alt="icon" width="34" height="34" />
+						<animated.img style={supplyAnim1} src={imgInflation} alt="icon inflation" width="34" height="34" />
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
@@ -118,7 +122,7 @@ const Ethemerals = () => {
 				</div>
 				<div ref={supplyRef2} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
 					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<animated.img style={supplyAnim2} src="/icon_totalsupply.png" alt="icon" width="34" height="34" />
+						<animated.img style={supplyAnim2} src={imgTotalSupply} alt="icon total supply" width="34" height="34" />
 					</div>
 					<h3 className="text-xl font-bold py-2">Total Supply</h3>
 					<p className="py-2">

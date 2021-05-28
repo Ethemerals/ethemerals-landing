@@ -10,7 +10,7 @@ const imgL = './community/community_l.png';
 const SocialCard = ({ props }) => (
 	<div className="shadow-lg rounded-lg p-4 bg-gray-100 relative mx-auto my-4 md:my-10 w-60 h-60">
 		<a ref={props.ref} className="flex m-auto items-center w-24 h-24 justify-center cursor-pointer" href={props.href} target="_blank">
-			<animated.img style={props.anim} src={`/${props.icon}.png`} alt="icon" width="80" height="80" />
+			<animated.img style={props.anim} src={`/${props.icon}.png`} alt={`${props.icon} icon`} width="80" height="80" />
 		</a>
 		<p className="text-gray-900 font-bold text-2xl mt-3">{props.title}</p>
 		<p className="text-gray-500 text-sm">{props.description}</p>
@@ -76,7 +76,7 @@ const Community = () => {
 						props={{
 							icon: 'icon_big_instagram',
 							title: 'Instagram',
-							description: 'Get the latest art and design updates',
+							description: 'Check out work in progress character designs and art submissions',
 							ref: iconRef3,
 							anim: iconAnim3,
 							href: Links.INSTAGRAM,
@@ -96,18 +96,18 @@ const Community = () => {
 				<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
 					<p className="md:text-xl py-4">Kingdom of the Ethemerals was created by a small team of Developers and Artists.</p>
-					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists, and collectors.</p>
-					<p className="md:text-xl py-4">Get in touch, send an email to contact@ethemerals.com</p>
+					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists and collectors.</p>
+					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>
 				</div>
 			</section>
 			<div className="bg-gray-200 hidden lg:block">
-				<img src={imgL} className="" alt="icon" width="2048" height="604" />
+				<img src={imgL} className="" alt="four artist and developers" width="2048" height="604" />
 			</div>
 			<div className="bg-gray-200 hidden sm:block lg:hidden">
-				<img src={imgM} className="" alt="icon" width="1719" height="606" />
+				<img src={imgM} className="" alt="four artist and developers" width="1719" height="606" />
 			</div>
 			<div className="bg-gray-200 block sm:hidden">
-				<img src={imgS} className="" alt="icon" width="1196" height="608" />
+				<img src={imgS} className="" alt="four artist and developers" width="1196" height="608" />
 			</div>
 		</>
 	);

@@ -3,6 +3,7 @@ import Links from '../../constants/Links';
 const imgBattle1 = '/pvpbattle.png';
 const imgBattle2 = '/eternalbattle.png';
 const imgBattle3 = '/raidbattle.png';
+const imgPlayToEarn = '/icon_playtoearn.png';
 
 const Battle = () => {
 	return (
@@ -12,14 +13,14 @@ const Battle = () => {
 					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Battle</h2>
 				</a>
 				<p className="md:text-xl py-4">
-					The Kingdom of the Ethemerals needs you! Send your Ethemerals to battle to gain ranks, earn rewards and honor. Only the skilled and degenerates will rise to greatness.
+					The Kingdom of the Ethemerals needs you! Send your Ethemerals into battle to gain ranks, earn rewards and honor. Only the skilled and degenerates will rise to greatness.
 				</p>
 			</div>
 			<div className="mt-16 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 lg:gap-x-20 lg:max-w-4xl">
 				<div className="hidden sm:block">
 					<img src={imgBattle2} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
-					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.</p>
+					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes are determined by the coins real price action and group stat bonuses.</p>
 				</div>
 
 				<div className="">
@@ -31,7 +32,7 @@ const Battle = () => {
 				<div className="visible sm:hidden">
 					<img src={imgBattle2} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
-					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes determined by the Ethemerals coins real price data and group stat bonuses.</p>
+					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes are determined by the coins real price action and group stat bonuses.</p>
 				</div>
 
 				<div className="">
@@ -41,14 +42,14 @@ const Battle = () => {
 				</div>
 			</div>
 			<div className="flex mx-auto text-center items-center justify-center xs:pt-20 sm:pt-0">
-				<img src="/icon_playtoearn.png" alt="icon" width="256" height="256" />
+				<img src={imgPlayToEarn} alt="icon" width="256" height="256" />
 			</div>
 			<div className="max-w-4xl mx-auto text-center xs:pt-0 pt-6 md:max-w-lg">
 				<p className="text-2xl font-bold">Play to Earn</p>
 
 				<p className="mt-3">
-					Ethemerals earn $ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards gets allocated to the{' '}
-					<span className="font-bold">Highest Honor fund.</span> Redeemable by the top ranking Ethemeral
+					Ethemerals earn $ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards are allocated to the{' '}
+					<span className="font-bold">Highest Honor fund.</span> Redeemable by top ranking Ethemerals
 				</p>
 			</div>
 			<div className="flex justify-center py-20">

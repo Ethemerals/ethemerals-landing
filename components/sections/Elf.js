@@ -12,7 +12,7 @@ const imgPiechart = './piechart.svg';
 const ElfCard = ({ props }) => (
 	<div className="shadow-lg rounded p-4 bg-gray-50 relative mx-auto my-4 md:my-10 max-w-xs">
 		<div ref={props.ref} className="flex m-auto items-center w-12 h-12 justify-center">
-			<animated.img style={props.anim} src={`/${props.icon}.png`} alt="icon" width="60" height="60" />
+			<animated.img style={props.anim} src={`/${props.icon}.png`} alt={`${props.icon} icon`} width="60" height="60" />
 		</div>
 		<p className="text-gray-900 font-bold mb-2">{props.title}</p>
 		<p className="text-gray-500 text-sm mb-2">{props.description}</p>
@@ -58,7 +58,7 @@ const Elf = () => {
 				</p>
 				<p className="mt-3 sm:mt-4">Ethemerals are born with a fixed amount of ELF and gain more by engaging in battle. Players are able to redeem the locked ELF from their Ethemerals.</p>
 				<p className="mt-3 sm:mt-4 font-bold">
-					ELF is deflationary, on each transaction a fee of 2% is sent to the core NFT contract, to be used as rewards for active players and to reduce circulating supply
+					ELF is deflationary, on each transaction a fee of 2% is sent to the core NFT contract, to be used as rewards for active players and to reduce circulating supply.
 				</p>
 			</div>
 			<div className="text-center justify-center grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:max-w-5xl m-auto">
@@ -66,7 +66,7 @@ const Elf = () => {
 					props={{
 						icon: 'icon_gift',
 						title: 'Rewards',
-						description: 'Participate in battles and earn ELF. Climb the rankings for a chance to redeem the Highest Honor reward',
+						description: 'Participate in battles to earn ELF. Climb the rankings for a chance to redeem the Highest Honor reward',
 						ref: iconRef,
 						anim: iconAnim,
 					}}
@@ -128,7 +128,7 @@ const Elf = () => {
 					<div className="text-left md:px-10 xs:px-4">
 						<div className="metricsA p-4 my-4 shadow-md">
 							<h3 className="font-bold text-lg my-1">40% Gameplay Rewards</h3>
-							<p>Majority of the ELF tokens will be locked within the core contract and can only be redeemed as rewards to active players.</p>
+							<p>The majority of ELF tokens will be locked within the core contract and can only be redeemed as rewards to active players.</p>
 						</div>
 						<div className="metricsB p-4 my-4 shadow-md">
 							<h3 className="font-bold text-lg my-1">30% - Liquidity</h3>
