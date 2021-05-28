@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { config, animated } from '@react-spring/web';
 import { usePWVSpring } from '@play-when-visible/react-spring';
 
@@ -29,16 +30,16 @@ const CharCard = ({ charName }) => {
 		<div ref={rightRef} className="inner flex justify-center mx-auto">
 			<div ref={leftRef} className="left-side z-40 md:w-100 absolute">
 				<animated.div style={leftBarAnim}>
-					<img src={`./splide/${charName}_left.png`} className="" alt={`${charName} left bar`} />
+					<Image src={`/splide/${charName}_left.png`} className="" alt={`${charName} left infomation graphic`} width="160" height="400" />
 				</animated.div>
 			</div>
 			<div ref={charRef} className="z-30">
 				<animated.div style={charAnim}>
-					<img src={`./splide/${charName}.png`} alt={`${charName} ethemeral character`} />
+					<Image src={`/splide/${charName}.png`} alt={`${charName} ethemeral character`} width="800" height="800" />
 				</animated.div>
 			</div>
 			<animated.div style={rightBarAnim} className="right-side z-20 absolute ">
-				<img src={`./splide/${charName}_right.png`} alt={`${charName} right bar`} />
+				<Image src={`/splide/${charName}_right.png`} alt={`${charName} right information graphic`} width="250" height="800" />
 			</animated.div>
 		</div>
 	);

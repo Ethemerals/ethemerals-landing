@@ -1,16 +1,19 @@
+import Image from 'next/image';
 import Links from '../../constants/Links';
 
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
 
-const imgS = './community/community_s.png';
-const imgM = './community/community_m.png';
-const imgL = './community/community_l.png';
+const imgS = '/community/community_s.png';
+const imgM = '/community/community_m.png';
+const imgL = '/community/community_l.png';
 
 const SocialCard = ({ props }) => (
 	<div className="shadow-lg rounded-lg p-4 bg-gray-100 relative mx-auto my-4 md:my-10 w-60 h-60">
 		<a ref={props.ref} className="flex m-auto items-center w-24 h-24 justify-center cursor-pointer" href={props.href} target="_blank">
-			<animated.img style={props.anim} src={`/${props.icon}.png`} alt={`${props.icon} icon`} width="80" height="80" />
+			<animated.div style={props.anim}>
+				<Image src={`/${props.icon}.png`} alt={`${props.icon} icon`} width="80" height="80" />
+			</animated.div>
 		</a>
 		<p className="text-gray-900 font-bold text-2xl mt-3">{props.title}</p>
 		<p className="text-gray-500 text-sm">{props.description}</p>
@@ -101,13 +104,13 @@ const Community = () => {
 				</div>
 			</section>
 			<div className="bg-gray-200 hidden lg:block">
-				<img src={imgL} className="" alt="four artist and developers" width="2048" height="604" />
+				<Image src={imgL} className="" alt="four artist and developers" width="2048" height="604" />
 			</div>
 			<div className="bg-gray-200 hidden sm:block lg:hidden">
-				<img src={imgM} className="" alt="four artist and developers" width="1719" height="606" />
+				<Image src={imgM} className="" alt="four artist and developers" width="1719" height="606" />
 			</div>
 			<div className="bg-gray-200 block sm:hidden">
-				<img src={imgS} className="" alt="four artist and developers" width="1196" height="608" />
+				<Image src={imgS} className="" alt="four artist and developers" width="1196" height="608" />
 			</div>
 		</>
 	);

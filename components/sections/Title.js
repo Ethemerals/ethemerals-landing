@@ -1,11 +1,12 @@
+import Image from 'next/image';
 import Links from '../../constants/Links';
 
-const imgTitlebg = '/bg_title2.jpg';
+const imgTitlebg = '/bg_title.jpg';
 
 const Title = () => {
 	return (
 		<div className="titleBgColor h-screen text-gray-100">
-			<img src={imgTitlebg} className="absolute h-full w-full object-cover" />
+			<Image src={imgTitlebg} className="absolute h-full w-full object-cover" layout="fill" />
 
 			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full">
 				<div className="flex flex-col items-start relative z-10 md:w-3/4 xl:w-4/5 lg:w-3/5 md:-mt-20">

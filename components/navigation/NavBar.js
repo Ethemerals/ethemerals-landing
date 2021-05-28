@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTransition, useSpring, animated } from '@react-spring/web';
+import Image from 'next/image';
 
 import MobileNavItems from './MobileMenuItems';
 import MenuItems from './MenuItems';
@@ -48,7 +49,7 @@ const Navbar = () => {
 							{/* <!-- logo --> */}
 							<div>
 								<a href="#">
-									<img src={logo} alt="brand icon" width="40" height="40" className="hidden md:flex" />
+									<Image src={logo} alt="brand icon" width="40" height="40" className="hidden md:flex" />
 								</a>
 							</div>
 
@@ -66,7 +67,7 @@ const Navbar = () => {
 					<div className="flex items-center w-screen justify-between sm:px-10">
 						<div className="pl-2 my-2">
 							<a href="#">
-								<img src={logo} alt="icon" width="30" height="30" />
+								<Image src={logo} alt="icon" width="30" height="30" />
 							</a>
 						</div>
 

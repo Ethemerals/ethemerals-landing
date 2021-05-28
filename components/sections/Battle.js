@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import Links from '../../constants/Links';
 
-const imgBattle1 = '/pvpbattle.png';
-const imgBattle2 = '/eternalbattle.png';
-const imgBattle3 = '/raidbattle.png';
+const imgBattle1 = '/battle_pvp.webp';
+const imgBattle2 = '/battle_eternal.webp';
+const imgBattle3 = '/battle_boss.webp';
 const imgPlayToEarn = '/icon_playtoearn.png';
 
 const Battle = () => {
@@ -18,31 +19,31 @@ const Battle = () => {
 			</div>
 			<div className="mt-16 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 lg:gap-x-20 lg:max-w-4xl">
 				<div className="hidden sm:block">
-					<img src={imgBattle2} className="rounded-lg mx-auto justify-center" />
+					<Image src={imgBattle2} className="rounded-lg mx-auto justify-center" alt="Two fighters attacking" width="313" height="270" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
 					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes are determined by the coins real price action and group stat bonuses.</p>
 				</div>
 
 				<div className="">
-					<img src={imgBattle1} className="rounded-lg mx-auto justify-center" />
+					<Image src={imgBattle1} className="rounded-lg mx-auto justify-center" alt="Two fighters close up" width="313" height="270" />
 					<p className="text-2xl font-bold pt-4">Eternal Battle</p>
 					<p className="mt-2 mb-20">Stake your Ethemerals Honor Points and join the eternal battle between cryptocurrencies. But be warned, Reapers are waiting on the sidelines.</p>
 				</div>
 
 				<div className="visible sm:hidden">
-					<img src={imgBattle2} className="rounded-lg mx-auto justify-center" />
+					<Image src={imgBattle2} className="rounded-lg mx-auto justify-center" alt="Two fighters attacking" width="313" height="270" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
 					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes are determined by the coins real price action and group stat bonuses.</p>
 				</div>
 
 				<div className="">
-					<img src={imgBattle3} className="rounded-lg mx-auto justify-center" />
+					<Image src={imgBattle3} className="rounded-lg mx-auto justify-center" alt="Big boss infront of a team of fighters" width="313" height="270" />
 					<p className="text-2xl font-bold pt-4">Boss Raids</p>
 					<p className="mt-2 mb-10">Invaders are approaching the Kingdom! Gather your Ethemerals, stand beside your allies and defend this sacred land.</p>
 				</div>
 			</div>
 			<div className="flex mx-auto text-center items-center justify-center xs:pt-20 sm:pt-0">
-				<img src={imgPlayToEarn} alt="icon" width="320" height="256" />
+				<Image src={imgPlayToEarn} alt="icon" width="320" height="256" alt="ethemeral logo fully rendered with wings" />
 			</div>
 			<div className="max-w-4xl mx-auto text-center xs:pt-0 pt-6 md:max-w-lg">
 				<p className="text-2xl font-bold">Play to Earn</p>

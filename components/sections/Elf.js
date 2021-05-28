@@ -1,18 +1,19 @@
-import { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 import Links from '../../constants/Links';
 
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
 
-const imgLogoElf = './logo_elf.svg';
-const imgLogoUniswap = './logo_uniswap.svg';
-const imgPiechart = './piechart.svg';
+const imgLogoElf = '/logo_elf.svg';
+const imgLogoUniswap = '/logo_uniswap.svg';
+const imgPiechart = '/piechart.svg';
 
 const ElfCard = ({ props }) => (
 	<div className="shadow-lg rounded p-4 bg-gray-50 relative mx-auto my-4 md:my-10 max-w-xs">
 		<div ref={props.ref} className="flex m-auto items-center w-12 h-12 justify-center">
-			<animated.img style={props.anim} src={`/${props.icon}.png`} alt={`${props.icon} icon`} width="60" height="60" />
+			<animated.div style={props.anim}>
+				<Image src={`/${props.icon}.png`} alt={`${props.icon} icon`} width="60" height="60" />
+			</animated.div>
 		</div>
 		<p className="text-gray-900 font-bold mb-2">{props.title}</p>
 		<p className="text-gray-500 text-sm mb-2">{props.description}</p>
@@ -47,7 +48,7 @@ const Elf = () => {
 			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 				<a id="elf">
 					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu flex items-center text-brandColor">
-						<img src={imgLogoElf} width="50" height="50"></img>
+						<Image src={imgLogoElf} width="50" height="50" />
 						<span className="ml-2">ELF</span>
 					</h2>
 				</a>
@@ -104,7 +105,7 @@ const Elf = () => {
 				<p className="mb-2 text-pink-700">Trade $ELF on Uniswap Exchange</p>
 				<div className="max-w-xs mx-auto bg-gray-50 p-4 mb-16 rounded-lg shadow-lg hover:bg-white">
 					<a href={Links.UNISWAP}>
-						<img src={imgLogoUniswap} alt="elf metric piechart" width="640" height="160" />
+						<Image src={imgLogoUniswap} alt="uniswap logo" width="640" height="160" />
 					</a>
 				</div>
 			</div>
@@ -123,7 +124,7 @@ const Elf = () => {
 				</h2>
 				<div className="text-center md:grid md:grid-cols-2">
 					<div className="flex mx-auto text-center items-center justify-center mb-8">
-						<img src={imgPiechart} alt="elf metric piechart" width="400" height="400" />
+						<Image src={imgPiechart} alt="elf metric piechart" width="400" height="400" />
 					</div>
 					<div className="text-left md:px-10 xs:px-4">
 						<div className="metricsA p-4 my-4 shadow-md">

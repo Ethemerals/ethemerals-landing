@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import Image from 'next/image';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { isMobile } from 'react-device-detect';
 
@@ -87,7 +88,7 @@ const SplideCarousel = () => {
 		speed: 800,
 		gap: '30vw',
 		padding: '20vw',
-		lazyLoad: false,
+		lazyLoad: true,
 		breakpoints: {
 			640: {
 				speed: 400,
@@ -111,7 +112,7 @@ const SplideCarousel = () => {
 		pagination: false,
 		fixedWidth: 80,
 		fixedHeight: 60,
-		lazyLoad: false,
+		lazyLoad: true,
 		breakpoints: {
 			898: {
 				gap: '0rem',
@@ -144,7 +145,7 @@ const SplideCarousel = () => {
 				<Splide className="splide-thumb" options={secondaryOptions} ref={secondaryRef}>
 					{chars.map((charObj, index) => (
 						<SplideSlide key={index}>
-							<img src={`./splide/${charObj.name}_t.png`} alt={`${charObj.name} thumbnail`} />
+							<Image src={`/splide/${charObj.name}_t.png`} alt={`${charObj.name} thumbnail of ethemeral`} width="160" height="120" />
 						</SplideSlide>
 					))}
 				</Splide>

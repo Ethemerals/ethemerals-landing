@@ -1,4 +1,5 @@
 import Links from '../../constants/Links';
+import Image from 'next/image';
 
 const symbol = '/logo_elf.svg';
 
@@ -12,7 +13,7 @@ const MenuItems = () => {
 				Battle
 			</a>
 			<a href="#elf" className="px-3 flex items-center hover:text-gray-100">
-				<img src={symbol} className="w-6 h-6"></img>
+				<Image src={symbol} width="24" height="24" />
 				<span className="pl-2">ELF</span>
 			</a>
 			<a href="#land" className="px-3 hover:text-gray-100">

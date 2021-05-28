@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
 
@@ -103,16 +104,20 @@ const Ethemerals = () => {
 			<div className="mx-auto justify-center items-start text-center grid md:grid-cols-3 justify-items-center md:max-w-5xl text-gray-900">
 				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
 					<div ref={supplyRef} className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<animated.img style={supplyAnim} src={imgIniSupply} alt="icon initial supply" width="34" height="34" />
+						<animated.div style={supplyAnim}>
+							<Image src={imgIniSupply} alt="icon initial supply" width="34" height="34" />
+						</animated.div>
 					</div>
 					<h3 className="text-xl font-bold py-2">Initial Supply</h3>
 					<p className="py-2">
 						100 unique Ethemeral Classes released at launch, with a maximum of <span className="font-bold">10 editions</span> each. Total 1000 Initial Supply
 					</p>
 				</div>
-				<div ref={supplyRef1} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
-					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<animated.img style={supplyAnim1} src={imgInflation} alt="icon inflation" width="34" height="34" />
+				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
+					<div ref={supplyRef1} className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
+						<animated.div style={supplyAnim1}>
+							<Image src={imgInflation} alt="icon inflation" width="34" height="34" />
+						</animated.div>
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
@@ -120,9 +125,11 @@ const Ethemerals = () => {
 						released each week
 					</p>
 				</div>
-				<div ref={supplyRef2} className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
-					<div className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
-						<animated.img style={supplyAnim2} src={imgTotalSupply} alt="icon total supply" width="34" height="34" />
+				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
+					<div ref={supplyRef2} className="ethemeralsBg flex rounded m-auto items-center justify-center w-12 h-12">
+						<animated.div style={supplyAnim2}>
+							<Image src={imgTotalSupply} alt="icon total supply" width="34" height="34" />
+						</animated.div>
 					</div>
 					<h3 className="text-xl font-bold py-2">Total Supply</h3>
 					<p className="py-2">
