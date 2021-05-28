@@ -88,7 +88,7 @@ const SplideCarousel = () => {
 		speed: 800,
 		gap: '30vw',
 		padding: '20vw',
-		lazyLoad: true,
+		lazyLoad: false,
 		breakpoints: {
 			640: {
 				speed: 400,
@@ -112,7 +112,7 @@ const SplideCarousel = () => {
 		pagination: false,
 		fixedWidth: 80,
 		fixedHeight: 60,
-		lazyLoad: true,
+		lazyLoad: false,
 		breakpoints: {
 			898: {
 				gap: '0rem',

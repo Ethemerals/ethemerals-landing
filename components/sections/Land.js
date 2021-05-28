@@ -1,6 +1,11 @@
+import Image from 'next/image';
+
+const imgLandBG = '/bg_landsales.jpg';
+
 const Land = () => {
 	return (
-		<section className="bg-land bg-cover bg-center text-center h-screen text-gray-100 relative">
+		<section className="text-center h-screen text-gray-100 relative">
+			<Image src={imgLandBG} className="absolute h-full w-full object-cover" layout="fill" />
 			<a id="land">
 				<div className="h-full font-ubuntu">
 					<div className="absolute m-0 top-2/4 w-full">
