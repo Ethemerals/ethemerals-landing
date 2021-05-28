@@ -59,17 +59,17 @@ const Ethemerals = () => {
 
 	const liItem4 = {
 		title: 'Dynamic Stats',
-		body: <span>Each Ethemerals stats are modified by their real world cryptocurrency price action</span>,
+		body: <span>Ethemerals stats are modified by their real world cryptocurrency price action</span>,
 	};
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless. Play for keeps, there is no mercy, no second chances.</span>,
+		body: <span>Ethemerals are ruthless. There is no mercy, no second chances.</span>,
 	};
 
 	const liItem6 = {
 		title: 'Collectable Sets',
-		body: <span>Hold certain Ethemerals and receive gameplay bonuses and redeem one of a kind art NFTs. 100s of combinations to be discovered</span>,
+		body: <span>Holding certain Ethemeral unlocks set bonuses and redeemable one of a kind art NFTs. 100s of combinations to be discovered</span>,
 	};
 
 	return (
@@ -112,7 +112,7 @@ const Ethemerals = () => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
-						When new coins enter the <span className="font-bold">top 100</span> CoinMarketcap rankings, they will become an Ethemeral and be mintable. On average a single Ethemeral class will be
+						A new Ethemeral class will become mintable once a cryptocurrency enter the <span className="font-bold">top 100</span> CoinMarketcap rankings. On average a single Ethemeral class will be
 						released each week
 					</p>
 				</div>

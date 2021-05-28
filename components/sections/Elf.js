@@ -44,9 +44,9 @@ const Elf = () => {
 		<section className="px-4 pb-24 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 leading-normal bg-gray-200 text-gray-800">
 			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 				<a id="elf">
-					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu flex items-center text-pink-600">
-						<img src={imgElfsymbol} className="w-14 h-14"></img>
-						<span>ELF</span>
+					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu flex items-center text-brandColor">
+						<img src={imgElfsymbol} className="w-12 h-12"></img>
+						<span className="ml-2">ELF</span>
 					</h2>
 				</a>
 				<h3 className="text-lg sm:text-2xl font-extrabold pt-4 md:pt-8">Introducing the Ethemerals Life Force Token</h3>

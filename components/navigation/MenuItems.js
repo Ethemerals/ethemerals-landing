@@ -1,7 +1,7 @@
 import Links from '../../constants/Links';
 
 const webappMainURL = Links.APP;
-const symbol = '/elflogo.png';
+const symbol = '/logo_elf.png';
 
 const MenuItems = () => {
 	return (
@@ -14,7 +14,7 @@ const MenuItems = () => {
 			</a>
 			<a href="#elf" className="px-3 flex items-center hover:text-gray-300">
 				<img src={symbol} className="w-6 h-6"></img>
-				<span className="pl-1">ELF</span>
+				<span className="pl-2">ELF</span>
 			</a>
 			<a href="#land" className="px-3 hover:text-gray-300">
 				Land

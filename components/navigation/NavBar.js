@@ -70,7 +70,7 @@ const Navbar = () => {
 							</a>
 						</div>
 
-						<span className="brandColor uppercase font-bold text-sm font-ubuntu sm:text-xl">Kingdom of the Ethemerals</span>
+						<span className="text-yellow-400 uppercase font-bold text-sm font-ubuntu sm:text-xl">Kingdom of the Ethemerals</span>
 
 						<button className="pr-2" onClick={toggle}>
 							<svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

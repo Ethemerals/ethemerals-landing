@@ -45,6 +45,9 @@ module.exports = {
 				customLightBlue: {
 					DEFAULT: '#77D9E2',
 				},
+				brandColor: {
+					DEFAULT: '#FF007A',
+				},
 			},
 			fontFamily: {
 				ubuntu: ['Ubuntu', ...defaultTheme.fontFamily.sans],

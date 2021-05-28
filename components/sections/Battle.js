@@ -25,7 +25,7 @@ const Battle = () => {
 				<div className="">
 					<img src={imgBattle1} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-bold pt-4">Eternal Battle</p>
-					<p className="mt-2 mb-20">Join the eternal battle between cryptocurrencies. Stake your Ethemerals Honor Points and have real price action determine the outcome. Just dont get Reaped!</p>
+					<p className="mt-2 mb-20">Stake your Ethemerals Honor Points and join the eternal battle between cryptocurrencies. But be warned, Reapers are waiting on the sidelines.</p>
 				</div>
 
 				<div className="visible sm:hidden">
@@ -37,7 +37,7 @@ const Battle = () => {
 				<div className="">
 					<img src={imgBattle3} className="rounded-lg mx-auto justify-center" />
 					<p className="text-2xl font-bold pt-4">Boss Raids</p>
-					<p className="mt-2 mb-10">Invaders are approaching the Kingdom! Gather your Ethemerals, Stand beside your allies and defend this sacred land.</p>
+					<p className="mt-2 mb-10">Invaders are approaching the Kingdom! Gather your Ethemerals, stand beside your allies and defend this sacred land.</p>
 				</div>
 			</div>
 			<div className="flex mx-auto text-center items-center justify-center xs:pt-20 sm:pt-0">
@@ -47,7 +47,7 @@ const Battle = () => {
 				<p className="text-2xl font-bold">Play to Earn</p>
 
 				<p className="mt-3">
-					Ethemerals earn $ELF (Ethemeral Life Force) each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards gets allocated to the{' '}
+					Ethemerals earn $ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards gets allocated to the{' '}
 					<span className="font-bold">Highest Honor fund.</span> Redeemable by the top ranking Ethemeral
 				</p>
 			</div>

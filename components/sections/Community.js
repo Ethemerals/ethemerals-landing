@@ -97,7 +97,7 @@ const Community = () => {
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
 					<p className="md:text-xl py-4">Kingdom of the Ethemerals was created by a small team of Developers and Artists.</p>
 					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists, and collectors.</p>
-					<p className="md:text-xl py-4">To get in touch, send email to contact@ethemerals.com</p>
+					<p className="md:text-xl py-4">Get in touch, send an email to contact@ethemerals.com</p>
 				</div>
 			</section>
 			<div className="bg-gray-200 hidden lg:block">
