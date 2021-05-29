@@ -103,14 +103,14 @@ const Community = () => {
 					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>
 				</div>
 			</section>
-			<div className="bg-gray-200 hidden lg:block">
-				<Image src={imgL} className="" alt="four artist and developers" width="2048" height="604" />
+			<div className="bg-gray-200 hidden lg:flex">
+				<Image src={imgL} alt="four artist and developers" width="2048" height="604" />
 			</div>
-			<div className="bg-gray-200 hidden sm:block lg:hidden">
-				<Image src={imgM} className="" alt="four artist and developers" width="1719" height="606" />
+			<div className="bg-gray-200 hidden sm:flex lg:hidden">
+				<Image src={imgM} alt="four artist and developers" width="1719" height="606" />
 			</div>
-			<div className="bg-gray-200 block sm:hidden">
-				<Image src={imgS} className="" alt="four artist and developers" width="1196" height="608" />
+			<div className="bg-gray-200 flex sm:hidden">
+				<Image src={imgS} alt="four artist and developers" width="1196" height="608" />
 			</div>
 		</>
 	);

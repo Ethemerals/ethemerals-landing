@@ -17,7 +17,6 @@ const Content = () => {
 			<Land />
 			<Community />
 			<Roadmap />
-			<Footer />
 		</>
 	);
 };

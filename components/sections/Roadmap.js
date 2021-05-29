@@ -100,7 +100,7 @@ const Roadmap = () => {
 	return (
 		<section className="bg-roadmap bg-center bg-cover">
 			<a id="roadmap"></a>
-			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl">
+			<div className="mx-auto p-4 z-10 pb-10 md:pb-40 max-w-5xl">
 				<h2 className="text-center text-7xl font-medium pt-20 md:pt-40 font-ubuntu overflow-hidden pb-8 text-gray-200">Roadmap</h2>
 				<div className="flex flex-col md:grid grid-cols-9 mx-auto p-2">
 					<div className="flex flex-row-reverse md:contents">

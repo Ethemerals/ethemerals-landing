@@ -1,29 +1,23 @@
-import Head from 'next/head';
+import Title from '../components/sections/Title';
+import Ethemerals from '../components/sections/Ethemerals';
+import Battle from '../components/sections/Battle';
+import Roadmap from '../components/sections/Roadmap';
+import Elf from '../components/sections/Elf';
+import Land from '../components/sections/Land';
+import Community from '../components/sections/Community';
 
-import { isMobile } from 'react-device-detect';
-import NavBar from '../components/navigation/NavBar';
-import LandingContent from '../components/LandingContent';
-
-export default function Home() {
+const Content = () => {
 	return (
 		<>
-			<Head>
-				<title>Ethemerals</title>
-				<link rel="preconnect" href="https://fonts.gstatic.com" />
-				<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
-				<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
-				<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-				<link rel="manifest" href="/manifest.json" />
-				<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-				<meta name="msapplication-TileColor" content="#603cba" />
-				<meta name="theme-color" content="#1a2732" />
-			</Head>
-			<div className={isMobile ? 'overflow-hidden text-white bg-black font-sans' : 'text-white bg-black font-sans'}>
-				<NavBar />
-				<LandingContent />
-			</div>
+			<Title />
+			<Ethemerals />
+			<Battle />
+			<Elf />
+			<Land />
+			<Community />
+			<Roadmap />
 		</>
 	);
-}
+};
+
+export default Content;
