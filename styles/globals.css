@@ -36,37 +36,6 @@ FiraSans
 }
 
 @layer components {
-	.community-bg {
-	}
-	.caro-item {
-		width: 100%;
-		height: 100%;
-		background: white;
-		border-radius: 5px;
-		will-change: transform, opacity;
-	}
-
-	.splide-wrapper {
-		height: 600px;
-		max-height: 600px;
-	}
-
-	.caro-wrapper {
-		height: 800px;
-		max-height: 800px;
-	}
-
-	.caro-container {
-		position: relative;
-		display: grid;
-		grid-template-columns: repeat(2, minmax(100px, 1fr));
-		grid-gap: 25px;
-		padding: 25px;
-		background: white;
-		cursor: pointer;
-		will-change: width, height;
-	}
-
 	/* outer container will define aspect ratio */
 	.outer {
 		position: relative;
@@ -74,7 +43,6 @@ FiraSans
 		padding-top: 100%;
 		/* "height" will be 3/4 of width */
 	}
-
 	/* inner container positioned absolutely and holds content */
 	.outer .inner {
 		position: absolute;
@@ -85,7 +53,6 @@ FiraSans
 		max-height: 600px;
 		max-width: 600px;
 	}
-
 	/* example content */
 	.left-side {
 		padding-right: 80%;
@@ -93,7 +60,6 @@ FiraSans
 		/* max-width: 143px; */
 		/* max-height: 333px; */
 	}
-
 	/* example content */
 	.right-side {
 		/* width: 31.25%; */
@@ -102,36 +68,20 @@ FiraSans
 		/* max-width: 143px; */
 		/* max-height: 333px; */
 	}
-
-	.homeContainer {
-		top: 10%;
-	}
-	.homeContainerMD {
-		top: 16%;
-	}
-	.homeContainerLG {
-		top: 24%;
-	}
 	.metricsA {
 		background: #def2ff;
 		color: #00568e;
 	}
-
 	.metricsB {
 		background: #fed8ff;
 		color: #00568e;
 	}
-
 	.metricsC {
 		background: #d4cfec;
 		color: #00568e;
 	}
-
 	.textMetric {
 		color: #00568e;
-	}
-	.navBg {
-		background: #030029;
 	}
 	.titleBg {
 		background: #0e151c;
@@ -139,9 +89,6 @@ FiraSans
 	.battleBg {
 		background: rgb(122, 43, 113);
 		background: radial-gradient(circle, rgba(122, 43, 113, 1) 0%, rgba(87, 17, 47, 1) 100%);
-	}
-	.elfBg {
-		background: #e6dada;
 	}
 	.titleBgColor {
 		background: #1a2732;
@@ -151,6 +98,9 @@ FiraSans
 	}
 	.galleryBar {
 		background: #0e151b;
+	}
+	.customblue {
+		background: #0e151c;
 	}
 }
 

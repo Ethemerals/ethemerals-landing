@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useTransition, useSpring, animated } from '@react-spring/web';
+import Link from 'next/link';
 import Image from 'next/image';
+import { useTransition, useSpring, animated } from '@react-spring/web';
 
 import MobileNavItems from './MobileMenuItems';
 import MenuItems from './MenuItems';
@@ -48,9 +49,11 @@ const Navbar = () => {
 						<div className="flex justify-between">
 							{/* <!-- logo --> */}
 							<div>
-								<a href="#">
-									<Image src={logo} alt="brand icon" width="40" height="40" className="hidden md:flex" />
-								</a>
+								<Link href="/">
+									<a>
+										<Image src={logo} alt="brand icon" width="40" height="40" className="hidden md:flex" />
+									</a>
+								</Link>
 							</div>
 
 							{/* <!-- secondary nav --> */}
@@ -66,9 +69,11 @@ const Navbar = () => {
 					{/* <!-- mobile button goes here --> */}
 					<div className="flex items-center w-screen justify-between sm:px-10">
 						<div className="pl-2 my-2">
-							<a href="#">
-								<Image src={logo} alt="icon" width="30" height="30" />
-							</a>
+							<Link href="/">
+								<a>
+									<Image src={logo} alt="icon" width="30" height="30" />
+								</a>
+							</Link>
 						</div>
 
 						<span className="text-yellow-400 uppercase font-bold text-sm font-ubuntu sm:text-xl">Kingdom of the Ethemerals</span>
