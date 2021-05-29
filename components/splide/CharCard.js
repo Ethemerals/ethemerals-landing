@@ -19,12 +19,12 @@ const CharCard = ({ charName }) => {
 		},
 	});
 
-	const [charRef, charAnim] = usePWVSpring({
-		animation: {
-			from: { x: '2vw' },
-			to: { x: '0vw' },
-		},
-	});
+	// const [charRef, charAnim] = usePWVSpring({
+	// 	animation: {
+	// 		from: { x: '2vw' },
+	// 		to: { x: '0vw' },
+	// 	},
+	// });
 
 	return (
 		<div ref={rightRef} className="inner flex justify-center mx-auto">
@@ -33,10 +33,10 @@ const CharCard = ({ charName }) => {
 					<Image src={`/splide/${charName}_left.png`} className="" alt={`${charName} left infomation graphic`} width="160" height="400" />
 				</animated.div>
 			</div>
-			<div ref={charRef} className="z-30">
-				<animated.div style={charAnim}>
-					<img src={`/splide/${charName}.png`} alt={`${charName} ethemeral character`} width="800" height="800" />
-				</animated.div>
+			<div className="z-30">
+				{/* <animated.div style={charAnim}> */}
+				<img src={`/splide/${charName}.png`} alt={`${charName} ethemeral character`} width="800" height="800" />
+				{/* </animated.div> */}
 			</div>
 			<animated.div style={rightBarAnim} className="right-side z-20 absolute ">
 				<Image src={`/splide/${charName}_right.png`} alt={`${charName} right information graphic`} width="250" height="800" />

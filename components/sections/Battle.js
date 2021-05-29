@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Links from '../../constants/Links';
 
 const imgBattle1 = '/battle_pvp.webp';
-const imgBattle2 = '/battle_pvp.jpg';
+const imgBattle2 = '/battle_pvp.png';
 const imgBattle3 = '/battle_boss.webp';
 const imgPlayToEarn = '/icon_playtoearn.png';
 
