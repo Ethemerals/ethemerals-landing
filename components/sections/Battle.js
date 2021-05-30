@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Links from '../../constants/Links';
 
-const imgBattle1 = '/battle_pvp.webp';
+const imgBattle1 = '/battle_eternal.png';
 const imgBattle2 = '/battle_pvp.png';
-const imgBattle3 = '/battle_boss.webp';
+const imgBattle3 = '/battle_boss.png';
 const imgPlayToEarn = '/icon_playtoearn.png';
 
 const Battle = () => {

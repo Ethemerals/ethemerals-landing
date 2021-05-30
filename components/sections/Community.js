@@ -4,9 +4,11 @@ import Links from '../../constants/Links';
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
 
-const imgS = '/community/community_s.png';
-const imgM = '/community/community_m.png';
-const imgL = '/community/community_l.png';
+// import CommunityGraphic from '../splide/CommunityGraphic';
+
+const imgS = '/community_sm.jpg';
+const imgM = '/community_md.jpg';
+const imgL = '/community_lg.jpg';
 
 const SocialCard = ({ props }) => (
 	<div className="shadow-lg rounded-lg p-4 bg-gray-100 relative mx-auto my-4 md:my-10 w-60 h-60">
@@ -45,7 +47,7 @@ const Community = () => {
 
 	return (
 		<>
-			<section className="bg-gray-200 text-gray-800 px-4 pb-24 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 leading-normal">
+			<section className="bg-gray-200 text-gray-800 px-4 pb-4 mx-auto sm:pb-8 sm:px-6 lg:px-8 xl:pb-24 leading-normal">
 				<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 					<a id="community">
 						<h2 className="textMetric text-5xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu overflow-hidden pb-4">Community</h2>
@@ -96,7 +98,7 @@ const Community = () => {
 						}}
 					/>
 				</div>
-				<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
+				<div className="mx-auto p-4 z-10 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
 					<p className="md:text-xl py-4">Kingdom of the Ethemerals was created by a small team of Developers and Artists.</p>
 					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists and collectors.</p>
@@ -104,13 +106,13 @@ const Community = () => {
 				</div>
 			</section>
 			<div className="bg-gray-200 hidden lg:flex">
-				<Image src={imgL} alt="four artist and developers" width="2048" height="604" />
+				<Image src={imgL} alt="four artist and developers" width="1920" height="555" />
 			</div>
 			<div className="bg-gray-200 hidden sm:flex lg:hidden">
-				<Image src={imgM} alt="four artist and developers" width="1719" height="606" />
+				<Image src={imgM} alt="four artist and developers" width="1707" height="555" />
 			</div>
 			<div className="bg-gray-200 flex sm:hidden">
-				<Image src={imgS} alt="four artist and developers" width="1196" height="608" />
+				<Image src={imgS} alt="four artist and developers" width="1080" height="407" />
 			</div>
 		</>
 	);
