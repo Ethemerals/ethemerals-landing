@@ -43,7 +43,7 @@ const Battle = () => {
 				</div>
 			</div>
 			<div className="flex mx-auto text-center items-center justify-center xs:pt-20 sm:pt-0">
-				<Image src={imgPlayToEarn} alt="icon" width="320" height="256" alt="ethemeral logo fully rendered with wings" />
+				<Image src={imgPlayToEarn} alt="icon" width="320" height="309" alt="ethemeral logo with wings" />
 			</div>
 			<div className="max-w-4xl mx-auto text-center xs:pt-0 pt-6 md:max-w-lg">
 				<p className="text-2xl font-bold">Play to Earn</p>
