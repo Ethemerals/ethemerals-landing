@@ -105,6 +105,10 @@ FiraSans
 	.svgTwitter {
 		background: #0e151c;
 	}
+	.privacyPolicy p {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
 }
 
 .splide-thumb .splide__slide {

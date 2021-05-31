@@ -2,17 +2,19 @@ import Image from 'next/image';
 import Links from '../../constants/Links';
 
 const imgTitlebg = '/bg_title.jpg';
-
-const imgTwitter = '/logo_twitter.svg';
-const imgDiscord = '/logo_discord.svg';
-const imgGithub = '/logo_github.svg';
-const imgInstagram = '/logo_instragram.svg';
+const imgTitlebgMob = '/bg_title_mob.jpg';
 
 const Title = () => {
 	return (
 		<div className="titleBgColor h-screen text-gray-100">
-			<Image src={imgTitlebg} className="absolute h-full w-full object-cover" layout="fill" />
+			<div className="hidden md:flex">
+				<Image src={imgTitlebg} className="absolute h-full w-full object-cover" alt="three characters looking into the sunset ready for battle" layout="fill" />
+			</div>
+			<div className="flex md:hidden">
+				<Image src={imgTitlebgMob} className="absolute h-full w-full object-cover" alt="three characters looking into the sunset ready for battle" layout="fill" />
+			</div>
 
+			{/* <Image src={imgTitlebg} className="absolute h-full w-full object-cover" layout="fill" /> */}
 			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full">
 				<div className="flex flex-col items-start relative z-10 md:w-3/4 xl:w-4/5 lg:w-3/5 md:-mt-20">
 					<span className="hidden md:flex font-bold uppercase text-2xl xl:text-4xl text-yellow-400 pb-4 font-ubuntu">Kingdom of the Ethemerals</span>
