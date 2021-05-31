@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Links from '../../constants/Links';
 
+import { isMobile } from 'react-device-detect';
+
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
 
@@ -105,15 +107,20 @@ const Community = () => {
 					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>
 				</div>
 			</section>
-			<div className="bg-gray-200 hidden lg:flex">
-				<Image src={imgL} alt="four artist and developers" width="1920" height="555" />
-			</div>
-			<div className="bg-gray-200 hidden sm:flex lg:hidden">
-				<Image src={imgM} alt="four artist and developers" width="1707" height="555" />
-			</div>
-			<div className="bg-gray-200 flex sm:hidden">
-				<Image src={imgS} alt="four artist and developers" width="1080" height="407" />
-			</div>
+			{isMobile ? (
+				<div className="bg-gray-200 flex">
+					<Image src={imgS} alt="four artist and developers" width="1080" height="407" />
+				</div>
+			) : (
+				<>
+					<div className="bg-gray-200 hidden lg:flex">
+						<Image src={imgL} alt="four artist and developers" width="1920" height="555" />
+					</div>
+					<div className="bg-gray-200 hidden sm:flex lg:hidden">
+						<Image src={imgM} alt="four artist and developers" width="1707" height="555" />
+					</div>
+				</>
+			)}
 		</>
 	);
 };

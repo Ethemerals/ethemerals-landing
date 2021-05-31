@@ -50,7 +50,7 @@ const Navbar = () => {
 							{/* <!-- logo --> */}
 							<div>
 								<Link href="/">
-									<a>
+									<a className="flex">
 										<Image src={logo} alt="brand icon" width="40" height="40" className="hidden md:flex" />
 									</a>
 								</Link>
@@ -68,9 +68,9 @@ const Navbar = () => {
 					{/* <!-- mobile menu --> */}
 					{/* <!-- mobile button goes here --> */}
 					<div className="flex items-center w-screen justify-between sm:px-10">
-						<div className="pl-2 my-2">
+						<div className="pl-2 py-1">
 							<Link href="/">
-								<a>
+								<a className="flex">
 									<Image src={logo} alt="icon" width="30" height="30" />
 								</a>
 							</Link>
