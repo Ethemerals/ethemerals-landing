@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					{/* <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+					<script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
 					<script
 						dangerouslySetInnerHTML={{
 							__html: `
@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
             });
           `,
 						}}
-					/> */}
+					/>
 				</Head>
 				<body>
 					<Main />
