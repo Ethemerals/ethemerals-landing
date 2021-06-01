@@ -1,7 +1,16 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Links from '../../constants/Links';
 
+import LinkModal from '../Modals/LinkModal';
+
 const Footer = () => {
+	const [showModal, setShowModal] = useState(false);
+
+	const toggle = () => {
+		setShowModal(!showModal);
+	};
+
 	return (
 		<footer className="titleBg pb-8 pt-8 md:pt-12 xl:pt-16 border-gray-600 border-t-2">
 			<div className="max-w-screen-lg mx-auto px-4 sm:px-6 md:px-8 text-gray-400 ">
@@ -13,11 +22,11 @@ const Footer = () => {
 								<li className="mb-4  hover:text-white transition-colors duration-200">
 									<Link href="/">Home</Link>
 								</li>
-								<li className="mb-4  hover:text-white transition-colors duration-200">
-									<Link href={Links.APP}>Open App</Link>
+								<li className="mb-4  hover:text-white transition-colors duration-200 cursor-pointer">
+									<a onClick={toggle}>Open App</a>
 								</li>
 								<li className="mb-4  hover:text-white transition-colors duration-200">
-									<Link href={Links.HELP}> Docs / Help</Link>
+									<a onClick={toggle}>Docs / Help</a>
 								</li>
 								<li className="mb-4  hover:text-white transition-colors duration-200">
 									<Link href={Links.PRIVACY}>Privacy Policy</Link>
@@ -53,6 +62,7 @@ const Footer = () => {
 				</div>
 				<div className="text-center pt-10 sm:pt-12 flex items-center justify-center text-brandColor">ETHEMERALS.COM ©2021</div>
 			</div>
+			{showModal && <LinkModal toggle={toggle} />}
 		</footer>
 	);
 };
