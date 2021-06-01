@@ -66,8 +66,8 @@ const Ethemerals = ({ toggle }) => {
 	};
 
 	const liItem4 = {
-		title: 'Dynamic Stats',
-		body: <span>Ethemerals stats are modified by their real world cryptocurrency price action</span>,
+		title: 'Own, Verify and Trade',
+		body: <span>Verifiable native assets on the Etheruem blockchain. Available to trade on Opensea.io </span>,
 	};
 
 	const liItem5 = {
@@ -94,9 +94,9 @@ const Ethemerals = ({ toggle }) => {
 			<div className="justify-center py-20 md:py-40 grid md:grid-cols-2 max-w-5xl mx-auto">
 				{descriptionListItem(liItem2)}
 				{descriptionListItem(liItem1)}
+				{descriptionListItem(liItem4)}
 				{descriptionListItem(liItem3)}
 				{descriptionListItem(liItem5)}
-				{descriptionListItem(liItem4)}
 				{descriptionListItem(liItem6)}
 			</div>
 			<div className="flex justify-center pb-20">

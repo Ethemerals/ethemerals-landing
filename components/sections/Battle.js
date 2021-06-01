@@ -49,12 +49,12 @@ const Battle = ({ toggle }) => {
 				<p className="text-2xl font-bold">Play to Earn</p>
 
 				<p className="mt-3">
-					Ethemerals earn $ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards are allocated to the{' '}
+					Ethemerals earn ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards are allocated to the{' '}
 					<span className="font-bold">Highest Honor fund.</span> Redeemable by top ranking Ethemerals
 				</p>
 			</div>
 			<div className="flex justify-center py-20">
-				<a onClick={toggle} className="uppercase cursor-pointer font-bold py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
+				<a onClick={toggle} className="uppercase font-bold py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
 					TO Battle!
 				</a>
 			</div>
