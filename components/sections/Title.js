@@ -4,7 +4,7 @@ import Links from '../../constants/Links';
 const imgTitlebg = '/bg_title.jpg';
 const imgTitlebgMob = '/bg_title_mob.jpg';
 
-const Title = () => {
+const Title = ({ toggle }) => {
 	return (
 		<div className="titleBgColor h-screen text-gray-100">
 			<div className="hidden md:flex">
@@ -41,11 +41,14 @@ const Title = () => {
 						</a>
 					</div>
 
-					<a href={Links.APP} className="block bg-brandColor shadow-lg bg-opacity-100 hover:bg-yellow-400 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16 transition duration-300">
+					<a
+						onClick={toggle}
+						className="block cursor-pointer bg-brandColor shadow-lg bg-opacity-100 hover:bg-yellow-400 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16 transition duration-300"
+					>
 						Open a Capsule
 					</a>
-					<div className="block bg-brandColor-purple shadow-lg bg-opacity-100 hover:bg-yellow-400 p-3 py-2 mt-6 text-sm font-bold cursor-pointer transition duration-300">
-						<a href={Links.UNISWAP}>$ELF is launching! 🚀 Trade on Uniswap</a>
+					<div onClick={toggle} className="block cursor-pointer bg-brandColor-purple shadow-lg bg-opacity-100 hover:bg-yellow-400 p-3 py-2 mt-6 text-sm font-bold transition duration-300">
+						<a>$ELF is launching! 🚀 Trade on Uniswap</a>
 					</div>
 				</div>
 			</div>

@@ -102,18 +102,17 @@ const Community = () => {
 				</div>
 				<div className="mx-auto p-4 z-10 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
-					<p className="md:text-xl py-4">Kingdom of the Ethemerals was created by a small team of Developers and Artists.</p>
+					<p className="md:text-xl py-4">
+						Kingdom of the Ethemerals was created by a small team of Developers and Artists who strive to create beautiful and unique NFT assets for individuals to collect and enjoy!
+					</p>
 					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists and collectors.</p>
 					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>
 				</div>
 			</section>
-			<div className="bg-gray-200 hidden lg:flex">
+			<div className="bg-gray-200 hidden md:flex justify-center">
 				<Image src={imgL} alt="four artist and developers" width="1920" height="555" />
 			</div>
-			<div className="bg-gray-200 hidden sm:flex lg:hidden">
-				<Image src={imgM} alt="four artist and developers" width="1707" height="555" />
-			</div>
-			<div className="bg-gray-200 flex sm:hidden">
+			<div className="bg-gray-200 flex md:hidden justify-center">
 				<Image src={imgS} alt="four artist and developers" width="1080" height="407" />
 			</div>
 		</>

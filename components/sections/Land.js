@@ -4,8 +4,8 @@ const imgLandBG = '/bg_landsales.jpg';
 
 const Land = () => {
 	return (
-		<section className="text-center h-screen text-gray-100 relative">
-			<Image src={imgLandBG} className="absolute h-full w-full object-cover" layout="fill" />
+		<section className="text-center h-screen text-gray-100 relative landBg">
+			<Image src={imgLandBG} className="object-cover xl:object-scale-down h-screen" layout="fill" />
 			<a id="land">
 				<div className="h-full font-ubuntu">
 					<div className="absolute m-0 top-2/4 w-full">

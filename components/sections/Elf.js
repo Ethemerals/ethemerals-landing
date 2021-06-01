@@ -20,7 +20,7 @@ const ElfCard = ({ props }) => (
 	</div>
 );
 
-const Elf = () => {
+const Elf = ({ toggle }) => {
 	const animation = {
 		from: { scale: 0 },
 		to: { scale: 1 },
@@ -103,17 +103,17 @@ const Elf = () => {
 
 			<div className="justify-center mx-auto text-center mt-10 md:mt-20">
 				<p className="mb-2 text-pink-700">Trade $ELF on Uniswap Exchange</p>
-				<div className="max-w-xs mx-auto bg-gray-50 p-4 mb-16 rounded-lg shadow-lg hover:bg-white">
-					<a href={Links.UNISWAP}>
+				<div className="max-w-xs mx-auto bg-gray-50 p-4 mb-16 rounded-lg shadow-lg hover:bg-white cursor-pointer">
+					<a onClick={toggle}>
 						<Image src={imgLogoUniswap} alt="uniswap logo" width="640" height="160" />
 					</a>
 				</div>
 			</div>
 			<div className="grid sm:grid-cols-2 text-center justify-center max-w-lg mx-auto uppercase gap-x-8 gap-y-4">
-				<a href={Links.ELF} className="p-2 font-bold shadow-lg rounded-lg bg-brandColor-pale text-white hover:bg-yellow-400">
+				<a onClick={toggle} className="p-2 cursor-pointer font-bold shadow-lg rounded-lg bg-brandColor-pale text-white hover:bg-yellow-400">
 					Provide Liquidity
 				</a>
-				<a href={Links.ELF} className="p-2 font-bold shadow-lg rounded-lg bg-brandColor-pale text-white hover:bg-yellow-400">
+				<a onClick={toggle} className="p-2 cursor-pointer font-bold shadow-lg rounded-lg bg-brandColor-pale text-white hover:bg-yellow-400">
 					Stake and Earn ELF
 				</a>
 			</div>

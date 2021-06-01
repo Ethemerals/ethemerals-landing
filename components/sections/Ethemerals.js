@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { usePWVSpring } from '@play-when-visible/react-spring';
 import { config, animated } from '@react-spring/web';
+
+import LinkModal from '../Modals/LinkModal';
 
 import Links from '../../constants/Links';
 
@@ -11,7 +14,7 @@ const imgTotalSupply = '/icon_totalsupply.png';
 
 const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
 
-const Ethemerals = () => {
+const Ethemerals = ({ toggle }) => {
 	const animation = {
 		from: { scale: 0 },
 		to: { scale: 1 },
@@ -97,7 +100,7 @@ const Ethemerals = () => {
 				{descriptionListItem(liItem6)}
 			</div>
 			<div className="flex justify-center pb-20">
-				<a href={Links.ETHEMERALS} className="uppercase font-bold py-4 px-6 md:text-lg rounded bg-brandColor shadow-lg text-white text-md hover:bg-yellow-400 ">
+				<a onClick={toggle} className="uppercase font-bold py-4 px-6 md:text-lg rounded bg-brandColor shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
 					All Minted Ethemerals
 				</a>
 			</div>

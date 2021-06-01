@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useTransition, useSpring, animated } from '@react-spring/web';
 
+import LinkModal from '../Modals/LinkModal';
+
 import MobileNavItems from './MobileMenuItems';
 import MenuItems from './MenuItems';
 
@@ -11,6 +13,17 @@ const logo = '/ethemavator.png';
 const Navbar = () => {
 	const [isVisible, setIsVisible] = useState(false);
 	const [isTop, setIsTop] = useState(true);
+
+	const [showCountdown, setShowCountdown] = useState(false);
+
+	const toggleCountdown = () => {
+		setShowCountdown(!showCountdown);
+	};
+
+	const toggleMobCountdown = () => {
+		setShowCountdown(!showCountdown);
+		setIsVisible(!isVisible);
+	};
 
 	const mobileNavTransition = useTransition(isVisible, {
 		from: { y: 600, opacity: 0 },
@@ -57,7 +70,7 @@ const Navbar = () => {
 							</div>
 
 							{/* <!-- secondary nav --> */}
-							<MenuItems />
+							<MenuItems toggleCountdown={toggleCountdown} />
 						</div>
 					</nav>
 				</div>
@@ -90,11 +103,12 @@ const Navbar = () => {
 						item && (
 							<animated.div style={style} className="flex justify-center">
 								<div onClick={toggle} className="fixed w-full h-screen"></div>
-								<MobileNavItems toggle={toggle} />
+								<MobileNavItems toggle={toggle} toggleMobCountdown={toggleMobCountdown} />
 							</animated.div>
 						)
 				)}
 			</animated.header>
+			{showCountdown && <LinkModal toggle={toggleCountdown} />}
 		</>
 	);
 };
