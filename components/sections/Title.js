@@ -14,7 +14,6 @@ const Title = () => {
 				<Image src={imgTitlebgMob} className="absolute h-full w-full object-cover" alt="three characters looking into the sunset ready for battle" layout="fill" />
 			</div>
 
-			{/* <Image src={imgTitlebg} className="absolute h-full w-full object-cover" layout="fill" /> */}
 			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full">
 				<div className="flex flex-col items-start relative z-10 md:w-3/4 xl:w-4/5 lg:w-3/5 md:-mt-20">
 					<span className="hidden md:flex font-bold uppercase text-2xl xl:text-4xl text-yellow-400 pb-4 font-ubuntu">Kingdom of the Ethemerals</span>
@@ -41,6 +40,7 @@ const Title = () => {
 							</svg>
 						</a>
 					</div>
+
 					<a href={Links.APP} className="block bg-brandColor shadow-lg bg-opacity-100 hover:bg-yellow-400 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16 transition duration-300">
 						Open a Capsule
 					</a>

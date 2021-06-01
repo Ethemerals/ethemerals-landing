@@ -22,6 +22,7 @@ export default function Layout({ children }) {
 			</Head>
 			<div className={isMobile ? 'overflow-hidden text-white bg-black font-sans' : 'text-white bg-black font-sans'}>
 				<NavBar />
+
 				{children}
 				<Footer />
 			</div>
