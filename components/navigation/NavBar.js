@@ -5,7 +5,7 @@ import { useTransition, useSpring, animated } from '@react-spring/web';
 
 import LinkModal from '../Modals/LinkModal';
 
-import MobileNavItems from './MobileMenuItems';
+import MobileMenuItems from './MobileMenuItems';
 import MenuItems from './MenuItems';
 
 const logo = '/ethemavator.png';
@@ -103,7 +103,7 @@ const Navbar = () => {
 						item && (
 							<animated.div style={style} className="flex justify-center">
 								<div onClick={toggle} className="fixed w-full h-screen"></div>
-								<MobileNavItems toggle={toggle} toggleMobCountdown={toggleMobCountdown} />
+								<MobileMenuItems toggle={toggle} toggleMobCountdown={toggleMobCountdown} />
 							</animated.div>
 						)
 				)}

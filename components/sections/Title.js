@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Links from '../../constants/Links';
 
 const imgTitlebg = '/bg_title.jpg';
-const imgTitlebgMob = '/bg_title_mob.jpg';
 
 const Title = ({ toggle }) => {
 	return (
@@ -11,7 +10,7 @@ const Title = ({ toggle }) => {
 				<Image src={imgTitlebg} className="absolute h-full w-full object-cover" alt="three characters looking into the sunset ready for battle" layout="fill" />
 			</div>
 			<div className="flex md:hidden">
-				<Image src={imgTitlebgMob} className="absolute h-full w-full object-cover" alt="three characters looking into the sunset ready for battle" layout="fill" />
+				<Image src={imgTitlebg} className="absolute h-full w-full titleBgMob" alt="three characters looking into the sunset ready for battle" layout="fill" />
 			</div>
 
 			<div className="items-center container mx-auto px-4 md:px-8 z-10 flex h-full">

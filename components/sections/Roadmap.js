@@ -28,6 +28,7 @@ const Roadmap = () => {
 			<br></br>- Core NFT mainnet launch
 			<br></br>- Eternal Battle contract mainnet launch
 			<br></br>- App update and intergration
+			<br></br>- The Graph intergration
 			<br></br>- Marketing and social media push
 			<br></br>- 100 Mintable Ethemeral classes available
 		</>
@@ -44,7 +45,7 @@ const Roadmap = () => {
 			<br></br>- ELF staking implementation
 			<br></br>- PVP Battle contract testnet launch
 			<br></br>- Continue Ethemeral coin designs
-			<br></br>- Design and contract NFT set artwork
+			<br></br>- Design and create bonus sets NFT art
 			<br></br>- Continue land and world development
 		</>
 	);
@@ -86,8 +87,8 @@ const Roadmap = () => {
 	const card5body = (
 		<>
 			- Governance research and development
-			<br></br>- Integrate decentralized services
-			<br></br>- Explore further gameplay mechanics
+			<br></br>- Integrate further decentralized services
+			<br></br>- Explore future gameplay mechanics
 			<br></br>- Begin integrating Land and Items
 		</>
 	);

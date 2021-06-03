@@ -52,27 +52,27 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem1 = {
 		title: 'Crypto Sweat and Tears',
-		body: <span>When a cryptocurrency hits the top 100 market cap rankings they become mintable as an Ethemeral</span>,
+		body: <span>Ethemerals are painstakingly designed by our artists. Each and every cryptocurrency that enters the top 100 market cap rankings will be immortalized</span>,
 	};
 
 	const liItem2 = {
 		title: 'Enter the Metaverse',
-		body: <span>Owning an Ethemeral unlocks a suite of games and an interactive world</span>,
+		body: <span>Your Ethemeral is the key that unlocks an ecosystem of cryptocurrency related games and an interactive world to explore</span>,
 	};
 
 	const liItem3 = {
 		title: 'For Honor and Glory!',
-		body: <span>Test your might. Only the skilled and resolute gain ranks and earn rewards</span>,
+		body: <span>Test your might. Only the skilled and resolute players gain ranks, earn rewards and take the crown</span>,
 	};
 
 	const liItem4 = {
 		title: 'Own, Verify and Trade',
-		body: <span>Verifiable native assets on the Etheruem blockchain. Available to trade on Opensea.io </span>,
+		body: <span>Verifiable native assets on the Etheruem blockchain. Available to be traded on our marketplace and secondary markets such as opensea.io </span>,
 	};
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless. There is no mercy, no second chances. Proceed with caution!</span>,
+		body: <span>Ethemerals are ruthless. Stake your Honor Points. There is no mercy, no second chances. Proceed with caution!</span>,
 	};
 
 	const liItem6 = {
@@ -92,8 +92,8 @@ const Ethemerals = ({ toggle }) => {
 			<SplideCarousel />
 
 			<div className="justify-center py-20 md:py-40 grid md:grid-cols-2 max-w-5xl mx-auto">
-				{descriptionListItem(liItem2)}
 				{descriptionListItem(liItem1)}
+				{descriptionListItem(liItem2)}
 				{descriptionListItem(liItem4)}
 				{descriptionListItem(liItem3)}
 				{descriptionListItem(liItem5)}

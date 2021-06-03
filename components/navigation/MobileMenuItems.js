@@ -4,7 +4,7 @@ import Links from '../../constants/Links';
 
 const symbol = '/logo_elf.svg';
 
-const MobileNavItems = ({ toggle, toggleMobCountdown }) => {
+const MobileMenuItems = ({ toggle, toggleMobCountdown }) => {
 	return (
 		<>
 			<div className="fixed w-3/4 justify-center rounded-2xl text-gray-300 text-center shadow-2xl bg-opacity-100 py-4 mx-auto border-4 border-gray-800 customblue font-medium">
@@ -53,4 +53,4 @@ const MobileNavItems = ({ toggle, toggleMobCountdown }) => {
 	);
 };
 
-export default MobileNavItems;
+export default MobileMenuItems;

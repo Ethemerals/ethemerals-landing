@@ -55,7 +55,7 @@ const Community = () => {
 						<h2 className="textMetric text-5xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu overflow-hidden pb-4">Community</h2>
 					</a>
 					<p className="md:text-xl pb-4">
-						Join our rapidly growing community of players, chat with the devs and artists, interact with others players and have your say in shaping the future of the Kingdom of the Ethemerals.
+						Join our rapidly growing community of players, chat with the devs and artists, interact with other players and have your say in shaping the future of the Kingdom of the Ethemerals.
 					</p>
 				</div>
 				<div className="text-center sm:grid sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 md:max-w-3xl lg:max-w-5xl m-auto text-gray-700">
@@ -103,7 +103,7 @@ const Community = () => {
 				<div className="mx-auto p-4 z-10 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
 					<p className="md:text-xl py-4">
-						Kingdom of the Ethemerals was created by a small team of Developers and Artists who strive to create beautiful and unique NFT assets for individuals to collect and enjoy!
+						Kingdom of the Ethemerals was created by a small team of Developers and Artists who strive to create beautiful and unique NFT assets for players to collect and enjoy!
 					</p>
 					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists and collectors.</p>
 					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>

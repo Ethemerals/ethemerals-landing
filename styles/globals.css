@@ -119,6 +119,10 @@ FiraSans
 	.landBg {
 		background: rgb(12, 7, 29);
 	}
+	.titleBgMob {
+		object-fit: cover;
+		object-position: 55% 100%;
+	}
 }
 
 .splide-thumb .splide__slide {
