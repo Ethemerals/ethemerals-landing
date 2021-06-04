@@ -86,9 +86,10 @@ const SplideCarousel = () => {
 		type: 'slide',
 		perPage: 1,
 		speed: 800,
-		gap: '30vw',
-		padding: '20vw',
+		gap: '40vw',
+		padding: '34vw',
 		lazyLoad: false,
+		trimSpace: true,
 		breakpoints: {
 			640: {
 				speed: 400,
@@ -96,8 +97,16 @@ const SplideCarousel = () => {
 				padding: '0vw',
 			},
 			1200: {
-				gap: '20vw',
-				padding: '10vw',
+				gap: '28vw',
+				padding: '12vw',
+			},
+			1800: {
+				gap: '30vw',
+				padding: '24vw',
+			},
+			1800: {
+				gap: '36vw',
+				padding: '28vw',
 			},
 		},
 		perMove: 1,
@@ -105,10 +114,10 @@ const SplideCarousel = () => {
 		pagination: false,
 		arrows: false,
 	};
+
 	const secondaryOptions = {
 		type: 'slide',
 		width: '100vw',
-		gap: '1rem',
 		pagination: false,
 		fixedWidth: 80,
 		fixedHeight: 60,
@@ -135,7 +144,7 @@ const SplideCarousel = () => {
 					ref={primaryRef}
 				>
 					{chars.map((charObj, index) => (
-						<SplideSlide key={index}>
+						<SplideSlide key={index} className="">
 							<CharCard charName={charObj.name} />
 						</SplideSlide>
 					))}
