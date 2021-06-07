@@ -27,6 +27,9 @@ const MenuItems = ({ toggleCountdown }) => {
 				<Link href="/#community">
 					<a className="px-3 hover:text-gray-100">Community</a>
 				</Link>
+				<Link href="/#roadmap">
+					<a className="px-3 hover:text-gray-100">Roadmap</a>
+				</Link>
 
 				<a onClick={toggleCountdown} className="py-2 px-3 bg-brandColor hover:bg-yellow-400 text-white shadow-lg rounded cursor-pointer transition duration-300">
 					Open App
