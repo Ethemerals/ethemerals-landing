@@ -103,7 +103,8 @@ const Community = () => {
 				<div className="mx-auto p-4 z-10 max-w-5xl ">
 					<h3 className="text-3xl font-medium pt-20 md:pt-40 font-ubuntu textMetric">About the Team</h3>
 					<p className="md:text-xl py-4">
-						Kingdom of the Ethemerals was created by a small team of Developers and Artists who strive to create beautiful and unique NFT assets for players to collect and enjoy!
+						Kingdom of the Ethemerals is an on going project, created by a small talented team of Developers and Artists from around the globe. We strive to create beautiful and unique NFT assets to
+						collect and enjoy!
 					</p>
 					<p className="md:text-xl py-4">We are committed to creating an engaging universe and to build a vibrant community of players, traders, artists and collectors.</p>
 					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>

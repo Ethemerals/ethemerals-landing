@@ -11,12 +11,12 @@ const Terms = () => {
 		<section className="ethemeralsBg privacyPolicy px-4 pb-24 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 leading-loose">
 			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
 				<a id="battle">
-					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Terms & Conditions</h2>
+					<h2 className="text-6xl font-medium pt-20 md:pt-40 font-ubuntu">Terms & Conditions</h2>
 				</a>
 
 				<p>Welcome to Kingdom of the Ethemerals!</p>
 
-				<p>These terms and conditions outline the rules and regulations for the use of ethemerals.com's Website, located at ethemerals.com.</p>
+				<p>These terms and conditions outline the rules and regulations for the use of Kingdom of the Ethemerals Website, located at ethemerals.com.</p>
 
 				<p>
 					By accessing this website we assume you accept these terms and conditions. Do not continue to use Kingdom of the Ethemerals if you do not agree to take all of the terms and conditions stated

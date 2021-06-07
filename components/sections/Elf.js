@@ -55,9 +55,10 @@ const Elf = ({ toggle }) => {
 				<h3 className="text-lg sm:text-2xl font-extrabold pt-4 md:pt-8">Introducing the Ethemeral Life Force Token</h3>
 				<p className="mt-3 sm:mt-4">
 					Ethemeral Life Force <span className="font-bold">(ELF)</span> flows within each Ethemeral and is an integral part of the ecosystem. ELF holders will be able to revive damaged Ethemerals,
-					mint at a discount, purchase land and items. ELF tokens do not have monetary value and are used to incentivize player participation.
+					mint at a discount, purchase land and items and much more.
 				</p>
 				<p className="mt-3 sm:mt-4">Ethemerals are born with a fixed amount of ELF and gain more by engaging in battle. Players are able to redeem the locked ELF from their Ethemerals.</p>
+				<p className="mt-3 sm:mt-4">ELF are native Etheruem ERC20 tokens and do not have monetary value but are used to incentivize community participation.</p>
 				<p className="mt-3 sm:mt-4 font-bold">
 					ELF is deflationary, on each transaction a fee of 2% is sent to the core NFT contract, to be used as rewards for active players and to reduce circulating supply.
 				</p>

@@ -14,26 +14,32 @@ const Battle = ({ toggle }) => {
 					<h2 className="text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Battle</h2>
 				</a>
 				<p className="md:text-xl py-4">
-					The Kingdom of the Ethemerals needs you! Send your Ethemerals into battle to gain ranks, earn rewards and honor. Only the skilled and degenerates will rise to greatness.
+					The Kingdom of the Ethemerals needs you! Send your Ethemerals into battle to gain ranks, earn rewards and honor points. Only the skilled and degenerates will rise to greatness.
 				</p>
 			</div>
 			<div className="mt-16 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8 lg:gap-x-20 lg:max-w-4xl">
 				<div className="hidden sm:block">
 					<Image src={imgBattle2} className="rounded-lg mx-auto justify-center" alt="Two fighters attacking" width="270" height="270" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
-					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes are determined by the coins real price action and group stat bonuses.</p>
+					<p className="mt-2 mb-20">
+						Settle those scores jump into the PvP arena and battle other players for keeps. One on one matches or group battles. Create your very own perfect portfolio of Ethemerals.
+					</p>
 				</div>
 
 				<div className="">
 					<Image src={imgBattle1} className="rounded-lg mx-auto justify-center" alt="Two fighters close up" width="270" height="270" />
 					<p className="text-2xl font-bold pt-4">Eternal Battle</p>
-					<p className="mt-2 mb-20">Stake your Ethemerals Honor Points and join the eternal battle between cryptocurrencies. But be warned, Reapers are waiting on the sidelines.</p>
+					<p className="mt-2 mb-20">
+						Stake your Ethemerals Honor Points and join the eternal battle between cryptocurrencies. Outcomes are based on price action from Chainlink, Uniswap and other onchain oracles
+					</p>
 				</div>
 
 				<div className="visible sm:hidden">
 					<Image src={imgBattle2} className="rounded-lg mx-auto justify-center" alt="Two fighters attacking" width="270" height="270" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
-					<p className="mt-2 mb-20">Settle those scores! Jump into the PvP arena. Outcomes are determined by the coins real price action and group stat bonuses.</p>
+					<p className="mt-2 mb-20">
+						Settle those scores jump into the PvP arena and battle other players for keeps. One on one matches or group battles. Create your very own perfect portfolio of Ethemerals.
+					</p>
 				</div>
 
 				<div className="">
@@ -49,8 +55,8 @@ const Battle = ({ toggle }) => {
 				<p className="text-2xl font-bold">Play to Earn</p>
 
 				<p className="mt-3">
-					Ethemerals earn ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards are allocated to the{' '}
-					<span className="font-bold">Highest Honor fund.</span> Redeemable by top ranking Ethemerals
+					Ethemerals earn $ELF each time they are sent to battle. Rewards increase based on how well they performed. A percentage of the rewards are allocated to the{' '}
+					<span className="font-bold">Highest Honor fund</span> Redeemable by top ranking Ethemerals.
 				</p>
 			</div>
 			<div className="flex justify-center py-20">

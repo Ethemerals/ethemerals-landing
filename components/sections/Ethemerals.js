@@ -52,32 +52,32 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem1 = {
 		title: 'Crypto Sweat and Tears',
-		body: <span>Ethemerals are painstakingly designed by our artists. Each and every cryptocurrency that enters the top 100 market cap rankings will be immortalized</span>,
+		body: <span>Each dynamic NFT stats are based on coins that enters the top 100 Coinmarketcap.com rankings. Etheruem, Bitcoin, Link, Sushiswap + 100s more, which one will you mint?</span>,
 	};
 
 	const liItem2 = {
 		title: 'Enter the Metaverse',
-		body: <span>Your Ethemeral is the key that unlocks an ecosystem of cryptocurrency related games and an interactive world to explore</span>,
+		body: <span>Your Ethemeral is the key that unlocks an ecosystem of cryptocurrency related games and an interactive world to explore and conquer</span>,
 	};
 
 	const liItem3 = {
 		title: 'For Honor and Glory!',
-		body: <span>Test your might. Only the skilled and resolute players gain ranks, earn rewards and take the crown</span>,
+		body: <span>Test your resolve. Only the skilled and determined climb the rankings, gain Honor Points and earn $ELF rewards</span>,
 	};
 
 	const liItem4 = {
-		title: 'Own, Verify and Trade',
-		body: <span>Verifiable native assets on the Etheruem blockchain. Available to be traded on our marketplace and secondary markets such as opensea.io </span>,
+		title: 'Collectable Ownable Tradeable',
+		body: <span>Verifiable scarce native assets on the Etheruem blockchain. Available to be traded on our marketplace and secondary markets such as opensea.io </span>,
 	};
 
 	const liItem5 = {
 		title: 'Blood on the Streets',
-		body: <span>Ethemerals are ruthless. Stake your Honor Points. There is no mercy, no second chances. Proceed with caution!</span>,
+		body: <span>Ethemerals are ruthless. Stake your Honor Points. There is no mercy, no second chances. Angel and Reaper Ethemerals are waiting on the sidelines. Proceed with caution!</span>,
 	};
 
 	const liItem6 = {
 		title: 'Collectable Sets',
-		body: <span>Holding certain Ethemerals unlocks set bonuses and redeemable one of a kind art NFTs. 100s of combinations to be discovered</span>,
+		body: <span>Owning certain Ethemerals unlocks set bonuses and redeemable one of a kind art NFTs. 100s of combinations to be discovered</span>,
 	};
 
 	return (
@@ -87,7 +87,10 @@ const Ethemerals = ({ toggle }) => {
 				<a id="ethemerals">
 					<h2 className="text-5xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
 				</a>
-				<p className="md:text-xl py-4">Warrior maidens, rebirthed from the souls of the top ranking cryptocurrencies. Adopt one now and enter the Kingdom of The Ethemerals!</p>
+				<p className="md:text-xl py-4">
+					Anime inspired warrior maidens, birthed from the souls of the top ranking cryptocurrencies and beautifully handcrafted by our talented artists. Adopt one now and enter the interactive
+					Kingdom of The Ethemerals!
+				</p>
 			</div>
 			<SplideCarousel />
 
@@ -113,7 +116,7 @@ const Ethemerals = ({ toggle }) => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Initial Supply</h3>
 					<p className="py-2">
-						100 unique Ethemeral Classes released at launch, with a maximum of <span className="font-bold">10 editions</span> each. Total 1000 Initial Supply
+						100 unique Ethemeral classes released at launch, with a maximum of <span className="font-bold">10 editions</span> each. Total 1000 Initial Supply
 					</p>
 				</div>
 				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
@@ -125,7 +128,7 @@ const Ethemerals = ({ toggle }) => {
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
 						A new Ethemeral class will become mintable once a cryptocurrency enter the <span className="font-bold">top 100</span> CoinMarketcap rankings. On average a single Ethemeral class will be
-						released each week
+						released each week. Plus monthly bonus community voted coins.
 					</p>
 				</div>
 				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
@@ -136,7 +139,7 @@ const Ethemerals = ({ toggle }) => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Total Supply</h3>
 					<p className="py-2">
-						Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> ever to be minted. Claim your piece of the kingdom now!
+						A Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> will ever be mintable. Claim your piece of the kingdom now!
 					</p>
 				</div>
 			</div>

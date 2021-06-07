@@ -21,7 +21,7 @@ const Title = ({ toggle }) => {
 						<br />
 						of a lifetime
 					</h1>
-					<span className="pt-6 text-xl sm:text-2xl font-medium">Unique and Verifiably Rare NFT Collectables</span>
+					<span className="pt-6 text-xl sm:text-2xl font-medium">Unique, Dynamic and Verifiably Rare NFT Collectables</span>
 					<div className="flex items-center space-x-5 py-4 lg:mb-8 text-gray-100">
 						<a href={Links.TWITTER} target="_blank" className="hover:text-white">
 							<svg width="28" height="28" viewBox="0 0 204 163" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +44,7 @@ const Title = ({ toggle }) => {
 						onClick={toggle}
 						className="block cursor-pointer bg-brandColor shadow-lg bg-opacity-100 hover:bg-yellow-400 py-2 px-4 rounded-lg text-lg font-bold uppercase mt-6 sm:mt-16 transition duration-300"
 					>
-						Open a Capsule
+						Mint an Ethemeral
 					</a>
 					<div onClick={toggle} className="block cursor-pointer bg-brandColor-purple shadow-lg bg-opacity-100 hover:bg-yellow-400 p-3 py-2 mt-6 text-sm font-bold transition duration-300">
 						<a>$ELF is launching! 🚀 Trade on Uniswap</a>
