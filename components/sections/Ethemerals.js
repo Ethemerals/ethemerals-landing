@@ -52,7 +52,7 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem1 = {
 		title: 'Crypto Sweat and Tears',
-		body: <span>Each dynamic NFT stats are based on coins that enters the top 100 Coinmarketcap.com rankings. Etheruem, Bitcoin, Link, Sushiswap + 100s more, which one will you mint?</span>,
+		body: <span>Each dynamic NFT stats are based on coins that enter the top 100 Coinmarketcap.com rankings. Etheruem, Bitcoin, Link, Sushiswap + 100s more, which one will you mint?</span>,
 	};
 
 	const liItem2 = {
@@ -127,7 +127,7 @@ const Ethemerals = ({ toggle }) => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
-						A new Ethemeral class will become mintable once a cryptocurrency enter the <span className="font-bold">top 100</span> CoinMarketcap rankings. On average a single Ethemeral class will be
+						A new Ethemeral class will become mintable once a cryptocurrency enters the <span className="font-bold">top 100</span> CoinMarketcap rankings. On average a single Ethemeral class will be
 						released each week. Plus monthly bonus community voted coins.
 					</p>
 				</div>

@@ -22,7 +22,7 @@ const Battle = ({ toggle }) => {
 					<Image src={imgBattle2} className="rounded-lg mx-auto justify-center" alt="Two fighters attacking" width="270" height="270" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
 					<p className="mt-2 mb-20">
-						Settle those scores jump into the PvP arena and battle other players for keeps. One on one matches or group battles. Create your very own perfect portfolio of Ethemerals.
+						Settle those scores, jump into the PvP arena and battle other players for keeps. One on one matches or group battles. Create your very own perfect portfolio of Ethemerals.
 					</p>
 				</div>
 
@@ -38,7 +38,7 @@ const Battle = ({ toggle }) => {
 					<Image src={imgBattle2} className="rounded-lg mx-auto justify-center" alt="Two fighters attacking" width="270" height="270" />
 					<p className="text-2xl font-bold pt-4">PvP</p>
 					<p className="mt-2 mb-20">
-						Settle those scores jump into the PvP arena and battle other players for keeps. One on one matches or group battles. Create your very own perfect portfolio of Ethemerals.
+						Settle those scores, jump into the PvP arena and battle other players for keeps. One on one matches or group battles. Create your very own perfect portfolio of Ethemerals.
 					</p>
 				</div>
 

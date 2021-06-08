@@ -27,8 +27,8 @@ const Roadmap = () => {
 			- ELF mainnet launch
 			<br></br>- Core NFT mainnet launch
 			<br></br>- Eternal Battle contract mainnet launch
-			<br></br>- App update and intergration
-			<br></br>- The Graph intergration
+			<br></br>- App update and integration
+			<br></br>- The Graph integration
 			<br></br>- Marketing and social media push
 			<br></br>- 100 Mintable Ethemeral classes available
 		</>
