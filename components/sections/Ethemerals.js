@@ -52,7 +52,12 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem1 = {
 		title: 'Crypto Sweat and Tears',
-		body: <span>Each dynamic NFT stats are based on coins that enter the top 100 Coinmarketcap.com rankings. Etheruem, Bitcoin, Link, Sushiswap + 100s more, which one will you mint?</span>,
+		body: (
+			<span>
+				These dynamic playable characters are based on every coin in the top 100 Coinmarketcap.com rankings. Bitcoin, Etheruem, Uniswap, Polkadot... Even lesser known coins are beautifully brought to
+				life.
+			</span>
+		),
 	};
 
 	const liItem2 = {
@@ -67,7 +72,7 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem4 = {
 		title: 'Collectable Ownable Tradeable',
-		body: <span>Verifiable scarce native assets on the Etheruem blockchain. Available to be traded on our marketplace and secondary markets such as opensea.io </span>,
+		body: <span>Limited and scarce native assets on the Etheruem blockchain. Available to be traded on the marketplace and secondary markets such as opensea.io </span>,
 	};
 
 	const liItem5 = {
@@ -77,7 +82,7 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem6 = {
 		title: 'Collectable Sets',
-		body: <span>Owning certain Ethemerals unlocks set bonuses and redeemable one of a kind art NFTs. 100s of combinations to be discovered</span>,
+		body: <span>Owning certain Ethemerals unlocks set bonuses and redeemable one of a kind NFTs. 100s of combinations to be discovered</span>,
 	};
 
 	return (
@@ -88,7 +93,7 @@ const Ethemerals = ({ toggle }) => {
 					<h2 className="text-5xl md:text-7xl font-medium pt-20 md:pt-40 font-ubuntu">Meet the Ethemerals</h2>
 				</a>
 				<p className="md:text-xl py-4">
-					Anime inspired warrior maidens, birthed from the souls of the top ranking cryptocurrencies and beautifully handcrafted by our talented artists. Adopt one now and enter the interactive
+					Anime inspired female warriors, birthed from the souls of the top ranking cryptocurrencies and beautifully handcrafted by our talented artists. Adopt one now and enter the interactive
 					Kingdom of The Ethemerals!
 				</p>
 			</div>
