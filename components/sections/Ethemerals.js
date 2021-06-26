@@ -54,7 +54,7 @@ const Ethemerals = ({ toggle }) => {
 		title: 'Crypto Sweat and Tears',
 		body: (
 			<span>
-				These dynamic playable characters are based on every coin in the top 100 Coinmarketcap.com rankings. Bitcoin, Etheruem, Uniswap, Polkadot... Even lesser known coins are beautifully brought to
+				These dynamic playable characters are based on every coin in the top 100 Coinmarketcap.com rankings. Bitcoin, Ethereum, Uniswap, Polkadot... Even lesser known coins are beautifully brought to
 				life.
 			</span>
 		),
@@ -72,7 +72,7 @@ const Ethemerals = ({ toggle }) => {
 
 	const liItem4 = {
 		title: 'Collectable Ownable Tradeable',
-		body: <span>Limited and scarce native assets on the Etheruem blockchain. Available to be traded on the marketplace and secondary markets such as opensea.io </span>,
+		body: <span>Limited and scarce native assets on the Ethereum blockchain. Available to be traded on the marketplace and secondary markets such as opensea.io </span>,
 	};
 
 	const liItem5 = {
