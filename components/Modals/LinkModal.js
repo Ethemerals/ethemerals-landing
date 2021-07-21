@@ -4,7 +4,7 @@ import Links from '../../constants/Links';
 const LinkModal = ({ toggle }) => {
 	const calculateTimeLeft = () => {
 		let year = new Date().getFullYear();
-		const difference = +new Date(`${year}-9-1`) - +new Date();
+		const difference = +new Date(`${year}-9-30`) - +new Date();
 		let timeLeft = {};
 
 		if (difference > 0) {
