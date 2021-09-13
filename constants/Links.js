@@ -11,7 +11,7 @@ const Links = {
 	GITHUB: 'https://github.com/Ethemerals',
 	INSTAGRAM: 'https://www.instagram.com/ethemeralsart/',
 	TWITTER: 'https://twitter.com/ethemerals',
-	DISCORD: 'https://discord.gg/Ad72VZ2mUj',
+	DISCORD: 'https://discord.gg/5GUbsxed6G',
 	MEDIUM: 'https://google.com',
 };
 
