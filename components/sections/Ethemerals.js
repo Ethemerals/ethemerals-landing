@@ -144,7 +144,7 @@ const Ethemerals = ({ toggle }) => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Total Supply</h3>
 					<p className="py-2">
-						A Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">4200</span> will ever be mintable. Claim your piece of the kingdom now!
+						A Maximum 420 Ethemeral classes, with 10 editions each, for a total of <span className="font-bold">8400</span> will ever be mintable. Claim your piece of the kingdom now!
 					</p>
 				</div>
 			</div>

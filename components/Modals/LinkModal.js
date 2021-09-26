@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import Links from '../../constants/Links';
 
+const timeStamp = 1633062600000;
+
 const LinkModal = ({ toggle }) => {
 	const calculateTimeLeft = () => {
 		let year = new Date().getFullYear();
-		const difference = +new Date(`${year}-9-30`) - +new Date();
+		const difference = +new Date(timeStamp) - +new Date();
 		let timeLeft = {};
 
 		if (difference > 0) {

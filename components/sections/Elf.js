@@ -59,9 +59,6 @@ const Elf = ({ toggle }) => {
 				</p>
 				<p className="mt-3 sm:mt-4">Ethemerals are born with a fixed amount of ELF and gain more by engaging in battle. Players are able to redeem the locked ELF from their Ethemerals.</p>
 				<p className="mt-3 sm:mt-4">ELF are native Ethereum ERC20 tokens and do not have monetary value but are used to incentivize community participation.</p>
-				<p className="mt-3 sm:mt-4 font-bold">
-					ELF is deflationary, on each transaction a fee of 2% is sent to the core NFT contract, to be used as rewards for active players and to reduce circulating supply.
-				</p>
 			</div>
 			<div className="text-center justify-center grid md:grid-cols-2 lg:grid-cols-4 lg:gap-x-4 lg:max-w-5xl m-auto">
 				<ElfCard

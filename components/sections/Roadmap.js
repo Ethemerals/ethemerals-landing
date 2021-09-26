@@ -41,61 +41,71 @@ const Roadmap = () => {
 
 	const card2body = (
 		<>
-			- Explore layer 2 posibilities
-			<br></br>- ELF staking implementation
-			<br></br>- PVP Battle contract testnet launch
-			<br></br>- Continue Ethemeral coin designs
-			<br></br>- Design and create bonus sets NFT art
-			<br></br>- Continue land and world development
+			- Early Adoptors rewards air dropped
+			<br></br>- Continued work on equip able items and pets
+			<br></br>- Start Community voting on the next Ethemeral Coins
 		</>
 	);
 
 	const card2 = {
-		heading: 'Q4 2021',
+		heading: '2% Minted',
 		body: card2body,
 	};
 
 	const card3body = (
 		<>
-			- IFPS Integration
-			<br></br>- PVP Battle launch
-			<br></br>- Layer 2 scaling testnet launch
-			<br></br>- Boss Battle testnet launch
-			<br></br>- Release redeemable set bonus NFT artwork
+			- ⚔️ Eternal Battle Contract deployed ⚔️
+			<br></br>- Start design of 2nd set of 1000 mintable Ethemerals (the next 200 characters)
 		</>
 	);
 
 	const card3 = {
-		heading: 'Q1 2022',
+		heading: '20% Minted',
 		body: card3body,
 	};
 
 	const card4body = (
 		<>
-			- Layer 2 mainnet launch
-			<br></br>- Boss Battle mainnet launch
-			<br></br>- Additional NFT Mining Features
-			<br></br>- Release new mintable Ethemeral classes
+			- Commission artists to create 1 of 1 NFT artworks. Rewards for holding certain special sets of Ethemerals. Freely tradable
+			<br></br>- Commission artist to create full anime depictions of the Ethemerals, part of the dynamic levelling system
 		</>
 	);
 
 	const card4 = {
-		heading: 'Q2 2022',
+		heading: '40% Minted',
 		body: card4body,
 	};
 
 	const card5body = (
 		<>
-			- Governance research and development
-			<br></br>- Integrate further decentralized services
-			<br></br>- Explore future gameplay mechanics
-			<br></br>- Begin integrating Land and Items
+			- Start artwork on the 2nd set of Ethemerals
+			<br></br>- Continue to work on a primary marketplace (everything will still be available on opensea.io from the get go)
+			<br></br>- ELF Liquidity locked and available for trading
 		</>
 	);
 
 	const card5 = {
-		heading: 'Q3 2022',
+		heading: '60% Minted',
 		body: card5body,
+	};
+
+	const card6body = <>- ⚔️ Into the Wilds Contract deployed⚔️ more details to come</>;
+
+	const card6 = {
+		heading: '80% Minted',
+		body: card6body,
+	};
+
+	const card7body = (
+		<>
+			- Gen2 Ethemerals Released!
+			<br></br>- Continued work on building the Ethemerals Metaverse and real time interactive games.
+		</>
+	);
+
+	const card7 = {
+		heading: '100% Minted (1000 tokens)',
+		body: card7body,
 	};
 
 	return (
@@ -127,6 +137,16 @@ const Roadmap = () => {
 					<div className="flex md:contents">
 						{cssLine}
 						{cssRCard(card5)}
+					</div>
+
+					<div className="flex flex-row-reverse md:contents">
+						{cssLCard(card6)}
+						{cssLine}
+					</div>
+
+					<div className="flex flex-row-reverse md:contents">
+						{cssLCard(card7)}
+						{cssLine}
 					</div>
 				</div>
 			</div>
