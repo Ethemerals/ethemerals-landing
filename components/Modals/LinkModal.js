@@ -56,7 +56,7 @@ const LinkModal = ({ toggle }) => {
 						<a href={Links.DISCORD} target="_blank" className="hover:text-white">
 							discord
 						</a>{' '}
-						and become a beta tester
+						to stay up to date
 					</p>
 				</div>
 			</div>
