@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Links from '../../constants/Links';
-
+import Image from 'next/image';
 import LinkModal from '../Modals/LinkModal';
+
+const imgNFTCal = '/nftcalander.png';
 
 const Footer = () => {
 	const [showModal, setShowModal] = useState(false);
@@ -31,13 +33,21 @@ const Footer = () => {
 								<li className="mb-4  hover:text-white transition-colors duration-200">
 									<Link href={Links.PRIVACY}>Privacy Policy</Link>
 								</li>
-								<li className="mb-4  hover:text-white transition-colors duration-200">
+								<li className="  hover:text-white transition-colors duration-200">
 									<Link href={Links.TERMS}>Terms & Conditions</Link>
 								</li>
 							</ul>
 						</div>
 					</li>
 				</ul>
+				<div className="flex mx-auto items-center gap-5 w-64 justify-center mb-4">
+					<a href="https://nftcalendar.io/event/ethemerals/" target="_blank" className="hover:text-white">
+						As Seen On
+					</a>
+					<a href="https://nftcalendar.io/event/ethemerals/" target="_blank" className="hover:text-white">
+						<Image src={imgNFTCal} width="60px" height="60px" className="" />
+					</a>
+				</div>
 				<div className="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-center space-x-6">
 					<a href={Links.TWITTER} target="_blank" className="hover:text-white">
 						<svg width="20" height="20" viewBox="0 0 204 163" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

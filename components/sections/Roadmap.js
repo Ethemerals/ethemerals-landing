@@ -26,7 +26,6 @@ const Roadmap = () => {
 		<>
 			- ELF mainnet launch
 			<br></br>- Core NFT mainnet launch
-			<br></br>- Eternal Battle contract mainnet launch
 			<br></br>- App update and integration
 			<br></br>- The Graph integration
 			<br></br>- Marketing and social media push
@@ -60,7 +59,7 @@ const Roadmap = () => {
 	);
 
 	const card3 = {
-		heading: '20% Minted',
+		heading: '30% Minted',
 		body: card3body,
 	};
 
@@ -72,7 +71,7 @@ const Roadmap = () => {
 	);
 
 	const card4 = {
-		heading: '40% Minted',
+		heading: '50% Minted',
 		body: card4body,
 	};
 
@@ -85,27 +84,21 @@ const Roadmap = () => {
 	);
 
 	const card5 = {
-		heading: '60% Minted',
+		heading: '70% Minted',
 		body: card5body,
 	};
 
-	const card6body = <>- ⚔️ Into the Wilds Contract deployed⚔️ more details to come</>;
-
-	const card6 = {
-		heading: '80% Minted',
-		body: card6body,
-	};
-
-	const card7body = (
+	const card6body = (
 		<>
-			- Gen2 Ethemerals Released!
+			- ⚔️ Into the Wilds Contract deployed⚔️ more details to come
+			<br></br>- Gen2 Ethemerals Released!
 			<br></br>- Continued work on building the Ethemerals Metaverse and real time interactive games.
 		</>
 	);
 
-	const card7 = {
-		heading: '100% Minted (1000 tokens)',
-		body: card7body,
+	const card6 = {
+		heading: '100% Minted',
+		body: card6body,
 	};
 
 	return (
@@ -141,11 +134,6 @@ const Roadmap = () => {
 
 					<div className="flex flex-row-reverse md:contents">
 						{cssLCard(card6)}
-						{cssLine}
-					</div>
-
-					<div className="flex flex-row-reverse md:contents">
-						{cssLCard(card7)}
 						{cssLine}
 					</div>
 				</div>
