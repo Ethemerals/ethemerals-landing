@@ -70,7 +70,7 @@ const Navbar = () => {
 							</div>
 
 							{/* <!-- secondary nav --> */}
-							<MenuItems toggleCountdown={toggleCountdown} />
+							<MenuItems />
 						</div>
 					</nav>
 				</div>

@@ -49,10 +49,10 @@ const LinkModal = ({ toggle }) => {
 		<div onClick={toggle} className="fixed w-full h-full top-0 left-0 flex items-center justify-center z-40 bg-opacity-60 bg-black">
 			<div className="mx-5 max-w-lg h-40 w-full relative border-gray-400 bg-opacity-100 bg-gray-700 border-2 rounded-xl flex justify-center">
 				<div className="vertical-center text-center">
-					<p className="text-xl">Mainnet Launch In:</p>
-					<p className="text-base md:text-2xl pb-4"> {timerComponents.length ? timerComponents : <span>Time's up!</span>}</p>
+					<p className="text-xl">Mainnet Launch TBD</p>
+					{/* <p className="text-base md:text-2xl pb-4"> {timerComponents.length ? timerComponents : <span>Time's up!</span>}</p> */}
 					<p className="text-xs md:text-sm">
-						Can't wait? Join our{' '}
+						Join our{' '}
 						<a href={Links.DISCORD} target="_blank" className="hover:text-white">
 							discord
 						</a>{' '}

@@ -18,9 +18,9 @@ const Content = () => {
 
 	return (
 		<>
-			<Title toggle={toggle} />
-			<Ethemerals toggle={toggle} />
-			<Battle toggle={toggle} />
+			<Title />
+			<Ethemerals />
+			<Battle />
 			<Elf toggle={toggle} />
 			<Land />
 			<Community />

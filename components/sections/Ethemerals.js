@@ -14,7 +14,7 @@ const imgTotalSupply = '/icon_totalsupply.png';
 
 const SplideCarousel = dynamic(import('../splide/SplideCarousel'), { ssr: false });
 
-const Ethemerals = ({ toggle }) => {
+const Ethemerals = () => {
 	const animation = {
 		from: { scale: 0 },
 		to: { scale: 1 },
@@ -108,7 +108,7 @@ const Ethemerals = ({ toggle }) => {
 				{descriptionListItem(liItem6)}
 			</div>
 			<div className="flex justify-center pb-20">
-				<a onClick={toggle} className="uppercase font-bold py-4 px-6 md:text-lg rounded bg-brandColor shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
+				<a href={Links.ETHEMERALS} className="uppercase font-bold py-4 px-6 md:text-lg rounded bg-brandColor shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
 					All Minted Ethemerals
 				</a>
 			</div>

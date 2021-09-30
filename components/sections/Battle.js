@@ -6,7 +6,7 @@ const imgBattle2 = '/battle_pvp.png';
 const imgBattle3 = '/battle_boss.png';
 const imgPlayToEarn = '/icon_playtoearn.png';
 
-const Battle = ({ toggle }) => {
+const Battle = () => {
 	return (
 		<section className="battleBg px-4 pb-24 mx-auto sm:pb-16 sm:px-6 lg:px-8 xl:pb-32 leading-normal">
 			<div className="mx-auto p-4 z-10 pb-10 md:pb-20 max-w-5xl ">
@@ -60,7 +60,7 @@ const Battle = ({ toggle }) => {
 				</p>
 			</div>
 			<div className="flex justify-center py-20">
-				<a onClick={toggle} className="uppercase font-bold py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
+				<a href={Links.APP} className="uppercase font-bold py-4 px-6 xs:text-sm md:text-lg rounded bg-indigo-900 shadow-lg text-white text-md hover:bg-yellow-400 cursor-pointer">
 					TO Battle!
 				</a>
 			</div>

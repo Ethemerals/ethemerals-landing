@@ -25,10 +25,10 @@ const Footer = () => {
 									<Link href="/">Home</Link>
 								</li>
 								<li className="mb-4  hover:text-white transition-colors duration-200 cursor-pointer">
-									<a onClick={toggle}>Open App</a>
+									<a href={Links.APP}>Open App</a>
 								</li>
 								<li className="mb-4  hover:text-white transition-colors duration-200">
-									<a onClick={toggle}>Docs / Help</a>
+									<a href={Links.APP}>Docs / Help</a>
 								</li>
 								<li className="mb-4  hover:text-white transition-colors duration-200">
 									<Link href={Links.PRIVACY}>Privacy Policy</Link>
@@ -40,14 +40,14 @@ const Footer = () => {
 						</div>
 					</li>
 				</ul>
-				<div className="flex mx-auto items-center gap-5 w-64 justify-center mb-4">
+				{/* <div className="flex mx-auto items-center gap-5 w-64 justify-center mb-4">
 					<a href="https://nftcalendar.io/event/ethemerals/" target="_blank" className="hover:text-white">
 						As Seen On
 					</a>
 					<a href="https://nftcalendar.io/event/ethemerals/" target="_blank" className="hover:text-white">
 						<Image src={imgNFTCal} width="60px" height="60px" className="" />
 					</a>
-				</div>
+				</div> */}
 				<div className="pt-8 flex border-t border-gray-200 max-w-xs mx-auto items-center justify-center space-x-6">
 					<a href={Links.TWITTER} target="_blank" className="hover:text-white">
 						<svg width="20" height="20" viewBox="0 0 204 163" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
