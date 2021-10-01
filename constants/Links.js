@@ -12,7 +12,7 @@ const Links = {
 	INSTAGRAM: 'https://www.instagram.com/ethemeralsart/',
 	TWITTER: 'https://twitter.com/ethemerals',
 	DISCORD: 'https://discord.gg/6uVBgFDtek',
-	MEDIUM: 'https://google.com',
+	MEDIUM: 'https://google.co',
 };
 
 export default Links;
