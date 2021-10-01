@@ -47,7 +47,7 @@ const Roadmap = () => {
 	);
 
 	const card2 = {
-		heading: '2% Minted',
+		heading: 'October',
 		body: card2body,
 	};
 
@@ -59,7 +59,7 @@ const Roadmap = () => {
 	);
 
 	const card3 = {
-		heading: '30% Minted',
+		heading: 'November',
 		body: card3body,
 	};
 
@@ -71,7 +71,7 @@ const Roadmap = () => {
 	);
 
 	const card4 = {
-		heading: '50% Minted',
+		heading: 'December',
 		body: card4body,
 	};
 
@@ -84,7 +84,7 @@ const Roadmap = () => {
 	);
 
 	const card5 = {
-		heading: '70% Minted',
+		heading: 'January',
 		body: card5body,
 	};
 
@@ -97,7 +97,7 @@ const Roadmap = () => {
 	);
 
 	const card6 = {
-		heading: '100% Minted',
+		heading: '2022 and Beyond',
 		body: card6body,
 	};
 

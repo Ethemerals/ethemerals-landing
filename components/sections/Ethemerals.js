@@ -132,8 +132,7 @@ const Ethemerals = () => {
 					</div>
 					<h3 className="text-xl font-bold py-2">Inflation Rate</h3>
 					<p className="py-2">
-						A new Ethemeral class will become mintable once a cryptocurrency enters the <span className="font-bold">top 100</span> CoinMarketcap rankings. On average a single Ethemeral class will be
-						released each week. Plus monthly bonus community voted coins.
+						A new Ethemeral class will become mintable once a cryptocurrency enters the <span className="font-bold">top 100</span> CoinMarketcap rankings or community voted coins. Batched in seasons
 					</p>
 				</div>
 				<div className="p-4 bg-customLightBlue shadow-lg rounded-lg w-72 mt-10">
