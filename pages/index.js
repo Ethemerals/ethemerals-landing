@@ -22,7 +22,7 @@ const Content = () => {
 			<Ethemerals />
 			<Battle />
 			<Elf toggle={toggle} />
-			<Land />
+			{/* <Land /> */}
 			<Community />
 			<Roadmap />
 			{showModal && <LinkModal toggle={toggle} />}

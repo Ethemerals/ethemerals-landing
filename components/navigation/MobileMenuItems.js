@@ -29,11 +29,11 @@ const MobileMenuItems = ({ toggle, toggleMobCountdown }) => {
 						<span className="pl-2">ELF</span>
 					</a>
 				</Link>
-				<Link href="/#land">
+				{/* <Link href="/#land">
 					<a onClick={toggle} href="#land" className="block py-4 border-b border-gray-800">
 						Land
 					</a>
-				</Link>
+				</Link> */}
 				<Link href="/#community">
 					<a onClick={toggle} href="#community" className="block py-4 border-b border-gray-800">
 						Community

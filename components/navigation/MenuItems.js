@@ -20,9 +20,9 @@ const MenuItems = () => {
 						<span className="pl-2">ELF</span>
 					</a>
 				</Link>
-				<Link href="/#land">
+				{/* <Link href="/#land">
 					<a className="px-3 hover:text-gray-100">Land</a>
-				</Link>
+				</Link> */}
 				<Link href="/#community">
 					<a className="px-3 hover:text-gray-100">Community</a>
 				</Link>

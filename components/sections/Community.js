@@ -110,12 +110,12 @@ const Community = () => {
 					<p className="md:text-xl py-4">To get in touch, send an email to contact@ethemerals.com</p>
 				</div>
 			</section>
-			<div className="bg-gray-200 hidden md:flex justify-center">
+			{/* <div className="bg-gray-200 hidden md:flex justify-center">
 				<Image src={imgL} alt="four artist and developers" width="1920" height="555" />
 			</div>
 			<div className="bg-gray-200 flex md:hidden justify-center">
 				<Image src={imgS} alt="four artist and developers" width="1080" height="407" />
-			</div>
+			</div> */}
 		</>
 	);
 };
